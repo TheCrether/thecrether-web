@@ -69,7 +69,6 @@ input[type=submit] {
 }
 
 #error {
-    font-family: $arial;
     color: red;
     font-weight: bold;
     font-size: 20px;
@@ -78,7 +77,6 @@ input[type=submit] {
 
 #success {
     display: none;
-    font-family: $arial;
     color: green;
     font-weight: bold;
     font-size: 20px;

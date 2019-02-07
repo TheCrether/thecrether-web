@@ -4,7 +4,9 @@
     font-family: 'Permanent Marker', cursive;
     font-size: 100px;
     opacity: 0.7;
-    top: 250px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     position: absolute;
     text-align: center;
     z-index: 999;
@@ -43,7 +45,6 @@
         line-height: 45px;
     }
     & h4 {
-        font-family: $allerta;
         font-size: 30px;
     }
 }

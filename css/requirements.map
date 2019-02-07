@@ -1,0 +1,16 @@
+{
+	"version": 3,
+	"file": "../scss/requirements.css",
+	"sources": [
+		"../scss/requirements.scss",
+		"../scss/_vars.scss",
+		"../scss/_mixins.scss"
+	],
+	"sourcesContent": [
+		"@import \"vars\";\r\n@import \"mixins\";\r\n\r\n.bgimg-1 {\r\n    background-image: url('../images/requirements/trainStation.jpg');\r\n    min-height: 550px;\r\n}\r\n\r\n#svg {\r\n    margin: 0 auto;\r\n    height: 300px;\r\n    width: 100%;\r\n}\r\n\r\n.requirements button {\r\n    border: 1px solid lightgrey;\r\n    background: -webkit-gradient(linear, left top, right top, from(rgba(180, 174, 174, 0.9)), to(rgba(198, 192, 192, 0.4)));\r\n    background: -o-linear-gradient(left, rgba(180, 174, 174, 0.9), rgba(198, 192, 192, 0.4));\r\n    background: linear-gradient(to right, rgba(180, 174, 174, 0.9), rgba(198, 192, 192, 0.4));\r\n    width: 200px;\r\n    height: 100px;\r\n    margin: 10px;\r\n    font-size: 55px;\r\n    cursor: pointer;\r\n}\r\n",
+		"$allerta: 'Allerta Stencil', serif;\r\n$anonPro: 'Anonymous Pro', monospace;\r\n$arial: Arial, serif;",
+		"@mixin transition($prop1, $prop2) {\r\n    -webkit-transition: $prop1, $prop2;\r\n    -o-transition: $prop1, $prop2;\r\n    transition: $prop1, $prop2;\r\n}\r\n\r\n@mixin box-sizing($property){\r\n    -webkit-box-sizing: $property;\r\n    box-sizing: $property;\r\n}\r\n\r\n@mixin filter($property){\r\n    -webkit-filter: $property;\r\n    filter: $property;\r\n}\r\n\r\n@mixin justify-content($property){\r\n    -webkit-box-pack: $property;\r\n    -ms-flex-pack: $property;\r\n    justify-content: $property;\r\n}\r\n\r\n@mixin flex-wrap($property){\r\n    -ms-flex-wrap: $property;\r\n    flex-wrap: $property;\r\n}\r\n\r\n@mixin box-shadow($property){\r\n    -webkit-box-shadow: $property;\r\n    box-shadow: $property;\r\n}\r\n\r\n//\r\n@mixin bg-linear-gradient($property){\r\n    background: -webkit-gradient($property);\r\n    background: -o-linear-gradient($property);\r\n    background: linear-gradient($property);\r\n}\r\n\r\n@mixin flexDisplay{\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n}\r\n\r\n@mixin allLinkColor($color, $bgHover){\r\n    &:link {\r\n        color: $color;\r\n    }\r\n\r\n    &:visited {\r\n        color: $color;\r\n    }\r\n\r\n    &:hover {\r\n        background: $bgHover;\r\n        color: $color;\r\n    }\r\n\r\n    &:active {\r\n        color: $color;\r\n    }\r\n}\r\n\r\n@mixin parallaxBG {\r\n    .bgimg {\r\n        opacity: 0.7;\r\n        background-attachment: fixed;\r\n        background-position: center;\r\n        background-repeat: no-repeat;\r\n        background-size: cover;\r\n    }\r\n}"
+	],
+	"mappings": ";AAGA,AAAA,QAAQ,CAAC;EACL,gBAAgB,EAAE,8CAAG;EACrB,UAAU,EAAE,KAAM,GACrB;;;AAED,AAAA,IAAI,CAAC;EACD,MAAM,EAAE,MAAO;EACf,MAAM,EAAE,KAAM;EACd,KAAK,EAAE,IAAK,GACf;;;AAED,AAAc,aAAD,CAAC,MAAM,CAAC;EACjB,MAAM,EAAE,mBAAoB;EAC5B,UAAU,EAAE,2GAAgB;EAC5B,UAAU,EAAE,4EAAkB;EAC9B,UAAU,EAAE,6EAAe;EAC3B,KAAK,EAAE,KAAM;EACb,MAAM,EAAE,KAAM;EACd,MAAM,EAAE,IAAK;EACb,SAAS,EAAE,IAAK;EAChB,MAAM,EAAE,OAAQ,GACnB",
+	"names": []
+}

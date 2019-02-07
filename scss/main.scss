@@ -1,13 +1,14 @@
 @import "vars";
 @import "mixins";
+@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display|Roboto+Condensed');
 
 * {
     margin: 0;
     padding: 0;
-    font-family: $anonPro;
 }
 
 body {
+    font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
     width: 100%;
     height: 100%;
     background: #ede8e8;
@@ -16,8 +17,9 @@ body {
 }
 
 h1 {
-    font-family: $allerta;
-    font-size: 60px
+    font-family: 'Major Mono Display', Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    text-transform: lowercase;
 }
 
 nav {
@@ -28,31 +30,20 @@ nav {
     text-align: center;
     @include box-shadow(0 5px 4px 1px rgba(0, 0, 0, 0.4));
     @include transition(top 500ms, top 500ms);
-}
-
-.nav {
     z-index: 999;
-    height: 60px;
 
-    .flex {
+    a {
+        padding: 0 10px;
+        @include box-sizing(border-box);
+        font-size: 35px;
+        text-transform: uppercase;
         height: 60px;
-    }
-
-    div {
-        font-size: 60px;
-        font-weight: normal;
-        margin: 0 10px 0 10px;
-        a {
-            @include box-sizing(border-box);
-            text-transform: uppercase;
-            height: 60px;
-            text-decoration: none;
-            @include transition(background 0.3s,
-            background 0.3s);
-            line-height: 60px;
-            display: block;
-            @include allLinkColor(lightgrey, #51637f);
-        }
+        line-height: 60px;
+        text-decoration: none;
+        @include transition(background 0.3s, background 0.3s);
+        display: block;
+        @include allLinkColor(lightgrey, #51637f);
+        font-family: 'Major Mono Display', Arial, Helvetica, sans-serif;
     }
 }
 
@@ -72,12 +63,12 @@ nav {
     svg {
         width: 60px;
         height: 60px;
-    }
 
-    svg line {
-        stroke: black;
-        stroke-width: 2.5px;
-        stroke-linecap: round;
+        line {
+            stroke: black;
+            stroke-width: 2.5px;
+            stroke-linecap: round;
+        }
     }
 }
 
@@ -156,7 +147,6 @@ footer {
 
 .copyright {
     font-size: 35px;
-    font-family: $allerta;
     a {
         color: #ede8e8;
         text-decoration: none;
