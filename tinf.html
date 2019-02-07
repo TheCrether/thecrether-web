@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TINF</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/tinf.css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro" rel="stylesheet">
+</head>
+
+<body>
+    <div class="sidenav">
+        <h1>Contents</h1>
+        <button onclick="sideScroll('animation')">
+            <h2>Animation</h2>
+        </button>
+        <button onclick="sideScroll('BMI')">
+            <h2>BMI Calculator</h2>
+        </button>
+        <button onclick="sideScroll('login')">
+            <h2>Login Form</h2>
+        </button>
+    </div>
+    <div id="outerWrapper">
+        <nav class="nav">
+            <div class="flex">
+                <div id="btn">
+                    <svg onclick="btn();">
+                        <line x1="5" y1="10" x2="45" y2="10" id="line1"></line>
+                        <line x1="5" y1="30" x2="45" y2="30" id="close"></line>
+                        <line x1="5" y1="50" x2="45" y2="50" id="line2"></line>
+                    </svg>
+                </div>
+                <div><a href="index.html">Home</a></div>
+                <div><a href="requirements.html">requirements</a></div>
+                <div><a href="contact.html">Contact</a></div>
+            </div>
+        </nav>
+        <div class="wrapper">
+            <div class="bgimg bgimg-1"></div>
+            <div class="section" id="animation">
+                <h1>Animation</h1>
+                <svg>
+                    <circle cx="50" cy="150" r="15" fill="#dae3f2">
+                        <animate attributename="cx" from="50" to="250" dur="2s" repeatCount="indefinite"></animate>
+                    </circle>
+                    <circle cx="100" cy="150" r="15" fill="#dae3f2">
+                        <animate attributename="cx" from="100" to="300" dur="2s" repeatCount="indefinite"></animate>
+                    </circle>
+                    <line x1="50" y1="145" x2="100" y2="145">
+                        <animate attributename="x1" from="50" to="250" dur="2s" repeatCount="indefinite"></animate>
+                        <animate attributename="x2" from="100" to="300" dur="2s" repeatCount="indefinite"></animate>
+                    </line>
+                    <rect x="25" y="87" height="50" width="100">
+                        <animate attributename="x" from="25" to="223" dur="2s" repeatCount="indefinite"></animate>
+                    </rect>
+                    <rect x="25" y="67" height="20" width="40">
+                        <animate attributename="x" from="25" to="223" dur="2s" repeatCount="indefinite"></animate>
+                    </rect>
+                </svg>
+            </div>
+            <div class="bgimg bgimg-2"></div>
+            <div class="section" id="BMI">
+                <h1>BMI</h1>
+                <div class="bmi">
+                    <label for="kg">KG</label>
+                    <input class="niceInput" id="kg" placeholder="10" name="kg">
+                    <label for="m">Körpergröße (m)</label>
+                    <input class="niceInput" id="m" placeholder="1,2" name="m">
+                    <button id="compute" onclick="bmi()">Compute</button>
+                    <div>
+                        <label for="BMI">BMI ERGEBNIS</label>
+                        <textarea id="bmitext" name="BMI"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="bgimg bgimg-3"></div>
+            <div class="section" id="login">
+                <h1>Form</h1>
+                <form class="form" onsubmit="return false;" id="loginForm">
+                    <label for="username">Username</label>
+                    <input name="username" class="niceInput" type="text" id="username" placeholder="rasierschnitte93">
+                    <label for="password">Password</label>
+                    <input name="password" class="niceInput" type="password" id="password">
+                    <input type="submit" id="logSub">
+                </form>
+                <h3 style="display: none" id="error">Your Username or Password is not here</h3>
+                <h3 style="display: none" id="success">You successfully logged in</h3>
+            </div>
+        </div>
+    </div>
+    <script src="js/tinf.js"></script>
+    <script src="js/main.js"></script>
+    <footer>
+        <div class="copyright">
+            made by <a href="https://twitter.com/thecrether">Denis</a>
+        </div>
+    </footer>
+</body>
+
+</html>

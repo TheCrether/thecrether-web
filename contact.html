@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" href="css/contact.css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro" rel="stylesheet">
+</head>
+
+<body>
+    <div class="sidenav">
+        <h1>Contents</h1>
+        <button onclick="sideScroll('socials')">
+            <h2> Socials</h2>
+        </button>
+    </div>
+    <div id="outerWrapper">
+        <nav class="nav">
+            <div class="flex">
+                <div id="btn">
+                    <svg onclick="btn();">
+                        <line x1="5" y1="10" x2="45" y2="10" id="line1"></line>
+                        <line x1="5" y1="30" x2="45" y2="30" id="close"></line>
+                        <line x1="5" y1="50" x2="45" y2="50" id="line2"></line>
+                    </svg>
+                </div>
+                <div><a href="index.html">Home</a></div>
+                <div><a href="requirements.html">requirements</a></div>
+                <div><a href="contact.html">Contact</a></div>
+            </div>
+        </nav>
+        <div id="wrapper">
+            <div class="bgimg-1 bgimg"></div>
+            <div class="section">
+                <div id="socials" class="flex">
+                    <div class="social flex" id="twitter">
+                        <div class="socialColor"></div>
+                        <div class="socialImg">
+                            <a href="https://twitter.com/thecrether">
+                                <img src="images/contact/twitter.svg" />
+                            </a>
+                        </div>
+                        <div class="twitterTag tag">
+                            <a href="https://twitter.com/thecrether">
+                                @TheCrether
+                            </a>
+                        </div>
+                    </div>
+                    <div class="social flex" id="discord">
+                        <div class="socialColor"></div>
+                        <div class="socialImg">
+                            <img src="images/contact/discordLogo.svg" />
+                        </div>
+                        <div class="discordTag tag">
+                            <a href="https://discordapp.com/">
+                                TheCrether#4109
+                            </a>
+                        </div>
+                    </div>
+                    <div class="social flex" id="github">
+                        <div class="socialColor"></div>
+                        <div class="socialImg">
+                            <a href="https://github.com/thecrether">
+                                <img src="images/contact/github.png" />
+                            </a>
+                        </div>
+                        <div class="githubTag tag">
+                            <a href="https://github.com/thecrether">
+                                TheCrether
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="copyright">
+            made by <a href="https://twitter.com/thecrether">Denis</a>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

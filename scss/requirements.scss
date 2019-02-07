@@ -1,0 +1,25 @@
+@import "vars";
+@import "mixins";
+
+.bgimg-1 {
+    background-image: url('../images/requirements/trainStation.jpg');
+    min-height: 550px;
+}
+
+#svg {
+    margin: 0 auto;
+    height: 300px;
+    width: 100%;
+}
+
+.requirements button {
+    border: 1px solid lightgrey;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(180, 174, 174, 0.9)), to(rgba(198, 192, 192, 0.4)));
+    background: -o-linear-gradient(left, rgba(180, 174, 174, 0.9), rgba(198, 192, 192, 0.4));
+    background: linear-gradient(to right, rgba(180, 174, 174, 0.9), rgba(198, 192, 192, 0.4));
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+    font-size: 55px;
+    cursor: pointer;
+}
