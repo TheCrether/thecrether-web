@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./assets/vars";
+@import "./assets/mixins";
+@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display|Roboto+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+  font-size: 30px;
+}
+
+.flex {
+  @include flexDisplay;
+}
+
+@include parallaxBG;
+
+.mr-auto {
+  margin-right: auto;
+}

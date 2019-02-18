@@ -1,0 +1,46 @@
+@import "../assets/mixins";
+@import "../assets/vars";
+
+header {
+  background: none;
+  height: 60px;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  background: none;
+  z-index: 999;
+
+  nav {
+    width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    @include justify-content(space-between);
+
+    a {
+      font-family: "Oswald", Arial, Helvetica, sans-serif;
+      height: 100%;
+      line-height: 60px;
+      color: black;
+      padding: 0 12px;
+      text-decoration: none;
+      text-transform: capitalize;
+      -webkit-transition: background 300ms;
+      -o-transition: background 300ms;
+      transition: background 300ms;
+      @include box-sizing(border-box);
+      cursor: pointer;
+
+      &:hover {
+        background: rgba(7, 6, 6, 0.2);
+      }
+    }
+
+    .mainLink {
+      font-size: 40px;
+    }
+
+    .sideLink {
+      font-size: 30px;
+    }
+  }
+}
