@@ -9,9 +9,14 @@ header {
   top: 0;
   background: none;
   z-index: 999;
+  -webkit-transition: background 250ms, -webkit-box-shadow 500ms;
+  transition: background 250ms, -webkit-box-shadow 500ms;
+  -o-transition: background 250ms, box-shadow 500ms;
+  transition: background 250ms, box-shadow 500ms;
+  transition: background 250ms, box-shadow 500ms, -webkit-box-shadow 500ms;
 
   nav {
-    width: 1200px;
+    width: 1100px;
     margin: 0 auto;
     height: 100%;
     @include justify-content(space-between);
@@ -31,16 +36,18 @@ header {
       cursor: pointer;
 
       &:hover {
-        background: rgba(7, 6, 6, 0.2);
+        background: rgba(163, 158, 158, 0.335);
       }
     }
 
     .mainLink {
-      font-size: 40px;
+      font-size: 30px;
+      font-family: "Major Mono Display", Oswald, Arial, Helvetica, sans-serif;
     }
 
     .sideLink {
-      font-size: 30px;
+      padding: 10px 12px;
+      font-size: 20px;
     }
   }
 }

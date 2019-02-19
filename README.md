@@ -14,7 +14,8 @@ thecrether.net
 
 This project (my own website) was made with [Angular][1]
 **Why:**
-1. I wanted an own website for showing of my work
+
+1. I wanted an own website for showing off my work
 2. Get more experience in Angular (i.e. RouteAnimations)
 
 ---
@@ -23,6 +24,7 @@ This project (my own website) was made with [Angular][1]
 
 - [ ] Make Website
 - [ ] good structure
-- [ ] maybe something on the backend
+- [ ] maybe something on the [backend (express)][2]
 
 [1]: https://angular.io
+[2]: https://github.com/thecrether/web-backend
