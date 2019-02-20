@@ -9,10 +9,19 @@ import { ProjectsComponent } from './projects/projects.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ContactComponent } from './contact/contact.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-	declarations: [ AppComponent, HomeComponent, ProjectsComponent, PageNotFoundComponent, ContactComponent ],
-	imports: [ BrowserModule, AppRoutingModule, FontAwesomeModule, HttpClientModule ],
+	declarations: [
+		AppComponent,
+		HomeComponent,
+		ProjectsComponent,
+		PageNotFoundComponent,
+		ContactComponent,
+		ContactFormComponent
+	],
+	imports: [ BrowserModule, AppRoutingModule, FontAwesomeModule, HttpClientModule, ReactiveFormsModule ],
 	providers: [ Title ],
 	bootstrap: [ AppComponent ]
 })

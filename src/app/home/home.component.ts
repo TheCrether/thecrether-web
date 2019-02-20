@@ -14,5 +14,9 @@ export class HomeComponent implements OnInit {
 
 	ngOnInit() {
 		this.titleService.setTitle('Homepage');
+		const more = document.getElementsByClassName('more')[0];
+		more.addEventListener('click', (e) => {
+			document.getElementById('scrollTo').scrollIntoView({ behavior: 'smooth', block: 'start' });
+		});
 	}
 }

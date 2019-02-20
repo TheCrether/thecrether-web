@@ -21,6 +21,33 @@ export class AppComponent implements OnInit {
 		}
 	];
 
+	socials = [
+		{
+			icon_url: '/images/socials/twitter.svg',
+			handle: '@TheCrether',
+			url: 'http://twitter.com/thecrether',
+			alt: 'Twitter - TheCrether'
+		},
+		{
+			icon_url: '/images/socials/github.png',
+			handle: '@thecrether',
+			url: 'http://github.com/thecrether',
+			alt: 'Github - TheCrether'
+		},
+		{
+			icon_url: '/images/socials/youtube.png',
+			handle: 'TheCrether',
+			url: 'http://thecrether.net/yt',
+			alt: 'Youtube - TheCrether'
+		},
+		{
+			icon_url: '/images/socials/discord.svg',
+			handle: 'Discord',
+			url: 'https://discord.gg/XwD6wqP',
+			alt: 'Discord - TheCrether'
+		}
+	];
+
 	title = '';
 
 	ngOnInit(): void {

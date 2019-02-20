@@ -10,6 +10,8 @@
   </nav>
 </header>
 <router-outlet></router-outlet>
-<footer>
-
+<footer class="flex">
+  <a *ngFor="let social of socials" href="{{social.url}}">
+    <img src="{{social.icon_url}}" alt="{{social.alt}}">
+  </a>
 </footer>
