@@ -16,11 +16,11 @@
     <h1>Github Repositories</h1>
     <ul class="projectFlex flex">
       <li *ngFor="let project of projects">
-        <a href="{{project.gitlink}}">
+        <a href="{{project.gitlink}}" target="_blank">
           <h5>{{project.name}}</h5>
           <p>{{project.description}}</p>
         </a>
-        <a *ngIf="project.url!=''" href="{{project.url}}" class="demolink flex">
+        <a *ngIf="project.url!=''" href="{{project.url}}" target="_blank" class="demolink flex">
           DEMO
           <fa-icon [icon]="faArrowRight" class="fa-xm"></fa-icon>
         </a>

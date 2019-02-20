@@ -42,7 +42,7 @@
     border: 2px solid rgb(100, 180, 255);
     @include box-sizing(border-box);
     padding: 5px;
-    min-width: calc(50% - 20px);
+    width: calc(50% - 20px);
     height: 150px;
     position: relative;
 

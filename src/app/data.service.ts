@@ -7,7 +7,8 @@ import { Project } from './interfaces/project';
 	providedIn: 'root'
 })
 export class DataService {
-	private githubURL = 'http://localhost:8000/api/github';
+	// TODO maybe move to Environment
+	private githubURL = 'http://localhost:8000/api/github'; // TODO change when deploying
 
 	constructor(private http: HttpClient) {}
 
