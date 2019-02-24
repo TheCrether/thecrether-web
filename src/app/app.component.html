@@ -9,9 +9,13 @@
     </div>
   </nav>
 </header>
+<div id="scrollTo"></div>
 <router-outlet></router-outlet>
-<footer class="flex">
-  <a *ngFor="let social of socials" href="{{social.url}}">
-    <img src="{{social.icon_url}}" alt="{{social.alt}}">
-  </a>
+<footer>
+  <div class="section">
+    <h1>Contact me here</h1>
+    <div class="flex">
+      <a *ngFor="let social of socials" href="{{social.url}}" class="socials-{{socials.indexOf(social)}}"></a>
+    </div>
+  </div>
 </footer>

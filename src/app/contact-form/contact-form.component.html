@@ -6,7 +6,7 @@
   <input type="email" formControlName="email" id="email">
 
   <label for="message">Message</label>
-  <input type="text" formControlName="message" id="message">
+  <textarea type="text" formControlName="message" id="message"></textarea>
 
-  <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+  <button type="submit" [disabled]="!contactForm.valid">Submit</button>
 </form>

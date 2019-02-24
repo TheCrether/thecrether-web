@@ -15,10 +15,11 @@ export class ContactFormComponent {
 		email: [ '', Validators.required ],
 		message: [ '', Validators.required ]
 	});
+	message: Contact;
 	constructor(private data: DataService, private fb: FormBuilder) {}
 
 	onSubmit(): void {
 		const message: Contact = this.contactForm.value;
-		this.data.pushMessage(message);
+		this.data.pushMessage(message).subscribe((message) => (this.message = message));
 	}
 }

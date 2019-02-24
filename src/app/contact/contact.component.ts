@@ -13,9 +13,5 @@ export class ContactComponent implements OnInit {
 
 	ngOnInit() {
 		this.titleService.setTitle('Contact');
-		const more = document.getElementsByClassName('more')[0];
-		more.addEventListener('click', (e) => {
-			document.getElementById('scrollTo').scrollIntoView({ behavior: 'smooth', block: 'start' });
-		});
 	}
 }
