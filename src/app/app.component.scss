@@ -56,7 +56,7 @@ footer {
   width: 100%;
   height: 200px;
   background: rgb(138, 138, 138);
-  padding: 20px;
+  padding: 20px 0;
 
   h1 {
     padding: 40px;
@@ -93,13 +93,15 @@ footer {
 }
 
 .socials-1 {
-  background-image: url("./images/socials/github.png")
+  background-image: url("./images/socials/github.png");
+  background-image: url("./images/socials/github.webp");
 }
 
 .socials-2 {
-  background-image: url("./images/socials/youtube.png")
+  background-image: url("./images/socials/youtube.png");
+  background-image: url("./images/socials/youtube.webp");
 }
 
 .socials-3 {
-  background-image: url("./images/socials/discord.svg")
+  background-image: url("./images/socials/discord.svg");
 }
