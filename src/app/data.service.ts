@@ -16,8 +16,8 @@ const httpOptions = {
 })
 export class DataService {
 	// TODO maybe move to Environment
-	private githubURL = 'http://localhost:8000/api/github'; // TODO change when deploying
-	private contactURL = 'http://localhost:8000/api/contact';
+	private githubURL = 'http://thecrether.net/api/github'; // TODO change when deploying
+	private contactURL = 'http://thecrether.net/api/contact';
 
 	constructor(private http: HttpClient) {}
 
@@ -26,7 +26,6 @@ export class DataService {
 	}
 
 	pushMessage(message: Contact): Observable<Contact> {
-		console.log(message);
 		return this.http.post<Contact>(this.contactURL, message, httpOptions).pipe(catchError(this.handleError));
 	}
 

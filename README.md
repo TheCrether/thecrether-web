@@ -22,9 +22,9 @@ This project (my own website) was made with [Angular][1]
 
 ### Todolist
 
-- [ ] Make Website
+- [x] Make Website
 - [ ] good structure
 - [ ] maybe something on the [backend (express)][2]
 
 [1]: https://angular.io
-[2]: https://github.com/thecrether/web-backend
+[2]: https://github.com/thecrether/express-backend
