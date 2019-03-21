@@ -4,15 +4,11 @@
 header {
   background: none;
   height: 60px;
-  width: 100vw;
+  width: 100%;
   position: fixed;
   top: 0;
   background: none;
   z-index: 999;
-  -webkit-transition: background 250ms, -webkit-box-shadow 500ms;
-  transition: background 250ms, -webkit-box-shadow 500ms;
-  -o-transition: background 250ms, box-shadow 500ms;
-  transition: background 250ms, box-shadow 500ms;
   transition: background 250ms, box-shadow 500ms, -webkit-box-shadow 500ms;
 
   nav {
@@ -72,7 +68,7 @@ footer {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    width: 1000px;
+    width: 1100px;
     margin: 0 auto;
 
     a {
@@ -83,6 +79,20 @@ footer {
       display: block;
       background-position: center;
       background-size: cover;
+    }
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  header {
+    nav {
+      width: 100%;
+    }
+  }
+
+  footer {
+    .flex {
+      width: 100%;
     }
   }
 }
