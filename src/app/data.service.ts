@@ -15,8 +15,7 @@ const httpOptions = {
 	providedIn: 'root'
 })
 export class DataService {
-	// TODO maybe move to Environment
-	private githubURL = 'http://thecrether.net/api/github'; // TODO change when deploying
+	private githubURL = 'http://thecrether.net/api/github';
 	private contactURL = 'http://thecrether.net/api/contact';
 
 	constructor(private http: HttpClient) {}
