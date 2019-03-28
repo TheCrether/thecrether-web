@@ -1,11 +1,12 @@
 <header>
   <nav class="flex unscrolled-nav expanded-nav">
     <a routerLink="/" class="mainLink">TheCrether</a>
-    <div class="flex unscrolled-sidelinks expanded-sidelinks">
-      <ul>
+    <div>
+      <fa-icon [icon]="faCompass" class="fa-1x navBtn"></fa-icon>
+      <div class="flex" id="sideLinks">
         <a routerLink="/projects" class="sideLink">Projects</a>
         <a routerLink="/contact" class="sideLink">Contact</a>
-      </ul>
+      </div>
     </div>
   </nav>
 </header>

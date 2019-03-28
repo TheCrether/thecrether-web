@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { fas, faCompass } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
 	selector: 'app-root',
@@ -48,7 +49,10 @@ export class AppComponent implements OnInit {
 		}
 	];
 
-	title = '';
+	faCompass = faCompass;
+	navBtn;
+	sidelinks;
+	clicked: boolean;
 
 	ngOnInit(): void {
 		const header = document.getElementsByTagName('header')[0];
@@ -68,6 +72,20 @@ export class AppComponent implements OnInit {
 			} else {
 				header.style.background = 'none';
 				header.style.boxShadow = 'none';
+			}
+		});
+		this.navBtn = document.getElementsByClassName('navBtn')[0];
+		this.sidelinks = document.getElementById('sideLinks');
+		this.navBtn.addEventListener('click', () => {
+			this.clicked = !this.clicked;
+			if (this.clicked) {
+				this.navBtn.id = 'clicked';
+				this.sidelinks.style.height = '300px';
+				this.sidelinks.style.opacity = '1';
+			} else {
+				this.navBtn.id = '';
+				this.sidelinks.style.height = '0';
+				this.sidelinks.style.opacity = '0';
 			}
 		});
 	}

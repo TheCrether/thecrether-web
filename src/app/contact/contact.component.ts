@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -9,9 +9,11 @@ import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
 })
 export class ContactComponent implements OnInit {
 	faAngleDoubleDown = faAngleDoubleDown;
-	constructor(private titleService: Title) {}
+	constructor(private title: Title, private meta: Meta) {}
 
 	ngOnInit() {
-		this.titleService.setTitle('Contact');
+		this.title.setTitle('Contact');
+		this.meta.updateTag({ name: 'og:url', content: 'http://thecrether.net' });
+		this.meta.updateTag({ name: 'description', content: 'Send a message at @TheCrether!' });
 	}
 }
