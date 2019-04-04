@@ -2,3 +2,26 @@
   background-image: url("../images/home/introbg.jpg");
   background-image: url("../images/home/introbg.webp");
 }
+
+.work {
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  li {
+    margin: 10px;
+    box-sizing: border-box;
+    padding: 15px;
+    width: 300px;
+
+    h2 {
+      font-size: 30px;
+      border-bottom: 1px solid lightgrey;
+      margin-bottom: 15px;
+    }
+
+    .work-content {
+      font-size: 20px;
+    }
+  }
+}

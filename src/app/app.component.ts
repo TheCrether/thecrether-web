@@ -60,7 +60,7 @@ export class AppComponent implements OnInit {
 	ngOnInit(): void {
 		const header = document.getElementsByTagName('header')[0];
 		window.addEventListener('scroll', () => {
-			if (window.scrollY > 230) {
+			if (window.scrollY > window.innerHeight * 0.05) {
 				header.style.background = 'white';
 				header.style.boxShadow = '0 3px 10px black';
 			} else {
@@ -69,7 +69,7 @@ export class AppComponent implements OnInit {
 			}
 		});
 		document.addEventListener('ready', () => {
-			if (window.scrollY > 230) {
+			if (window.scrollY > window.innerHeight * 0.05) {
 				header.style.background = 'white';
 				header.style.boxShadow = '0 3px 10px black';
 			} else {
