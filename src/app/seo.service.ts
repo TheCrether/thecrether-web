@@ -13,7 +13,9 @@ export class SEOService {
 		this.meta.updateTag({ name: 'og:url', content: url });
 	}
 
-	updateDescription(desc: string) {
-
+	updateMeta(name: string, content: string) {
+		this.meta.updateTag({ name: name, content: content });
 	}
+
+	updateDescription(desc: string) {}
 }

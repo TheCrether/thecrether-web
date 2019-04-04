@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { fas, faCompass } from '@fortawesome/free-solid-svg-icons';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
 	selector: 'app-root',
@@ -54,6 +55,8 @@ export class AppComponent implements OnInit {
 	sidelinks;
 	clicked: boolean;
 
+	constructor(private meta: Meta) {}
+
 	ngOnInit(): void {
 		const header = document.getElementsByTagName('header')[0];
 		window.addEventListener('scroll', () => {
@@ -88,5 +91,6 @@ export class AppComponent implements OnInit {
 				this.sidelinks.style.opacity = '0';
 			}
 		});
+		this.meta.updateTag({ name: 'robots', content: 'follow' });
 	}
 }
