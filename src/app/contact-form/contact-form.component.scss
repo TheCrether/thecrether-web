@@ -1,23 +1,25 @@
 form {
   width: 100%;
   color: white;
-  text-shadow: 1px 1px 2px black;
 
   label {
     padding-top: 10px;
     padding-bottom: 5px;
     text-align: center;
     display: block;
+    font-size: 40px;
   }
 
   input {
     display: block;
+    border: none;
     width: 100%;
     height: 40px;
     outline: none;
-    border-radius: 20px;
+    border-radius: 10px;
     box-sizing: border-box;
     padding: 5px 10px;
+    margin-bottom: 20px;
   }
 
   textarea {
@@ -25,10 +27,11 @@ form {
     width: 100%;
     height: 300px;
     resize: none;
-    border-radius: 20px;
+    border-radius: 10px;
     box-sizing: border-box;
-    padding: 5px 10px;
+    padding: 10px;
     outline: none;
+    border: none;
   }
 
   button {
@@ -38,7 +41,13 @@ form {
     text-align: center;
     margin: 10px auto;
     width: 100px;
-    border-radius: 20px;
+    border-radius: 10px;
     border: 1px solid black;
+    transition: all 0.5s;
+    cursor: pointer;
+
+    &:hover {
+      background: lightgreen;
+    }
   }
 }
