@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { fas, faCompass } from '@fortawesome/free-solid-svg-icons';
 import { Meta } from '@angular/platform-browser';
+import { faTwitter, faGithub, faInstagram, faYoutube, faDiscord } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
 	selector: 'app-root',
@@ -51,6 +52,11 @@ export class AppComponent implements OnInit {
 	];
 
 	faCompass = faCompass;
+	faTwitter = faTwitter;
+	faInstagram = faInstagram;
+	faDiscord = faDiscord;
+	faGithub = faGithub;
+	faYoutube = faYoutube;
 	navBtn;
 	sidelinks;
 	clicked: boolean;
