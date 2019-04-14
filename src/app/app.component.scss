@@ -18,6 +18,8 @@ header {
     @include justify-content(space-between);
 
     ul {
+      -webkit-transition: opacity 1s;
+      -o-transition: opacity 1s;
       transition: opacity 1s;
     }
 
@@ -47,11 +49,17 @@ header {
       font-size: 40px;
       cursor: pointer;
       top: 5px;
+      -webkit-transition: -webkit-transform 500ms;
+      transition: -webkit-transform 500ms;
+      -o-transition: transform 500ms;
       transition: transform 500ms;
+      transition: transform 500ms, -webkit-transform 500ms;
     }
 
     fa-icon#clicked {
-      transform: rotate(-135deg);
+      -webkit-transform: rotate(-135deg);
+          -ms-transform: rotate(-135deg);
+              transform: rotate(-135deg);
     }
 
     .mainLink {
@@ -94,12 +102,15 @@ footer {
       background: white;
       height: 80px;
       width: 80px;
-      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
       padding: 10px;
       margin: 10px;
       border-radius: 50%;
       display: block;
       color: black;
+      -webkit-transition: background 0.5s;
+      -o-transition: background 0.5s;
       transition: background 0.5s;
 
       &:hover {
@@ -117,6 +128,15 @@ footer {
   header {
     nav {
       width: 100%;
+      background: white;
+      -webkit-box-shadow: 0 3px 10px black;
+              box-shadow: 0 3px 10px black;
+
+      #sideLinks {
+        a {
+          text-shadow: 1px 1px 10px white;
+        }
+      }
     }
   }
 
@@ -142,9 +162,13 @@ footer {
         overflow: hidden;
         display: block;
         opacity: 0;
-        text-overflow: clip;
+        -o-text-overflow: clip;
+           text-overflow: clip;
         left: 0;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
 
         a {
           width: 100%;
