@@ -11,7 +11,9 @@
   </nav>
 </header>
 <div id="scrollTo"></div>
-<router-outlet></router-outlet>
+<div [@routeAnimation]="prepareRoute(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>
 <footer>
   <div class="section">
     <h1>Contact me here</h1>

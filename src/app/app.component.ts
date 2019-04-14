@@ -1,56 +1,88 @@
 import { Component, OnInit } from '@angular/core';
 import { fas, faCompass } from '@fortawesome/free-solid-svg-icons';
 import { Meta } from '@angular/platform-browser';
-import { faTwitter, faGithub, faInstagram, faYoutube, faDiscord } from '@fortawesome/free-brands-svg-icons';
+import {
+	faTwitter,
+	faGithub,
+	faInstagram,
+	faYoutube,
+	faDiscord
+} from '@fortawesome/free-brands-svg-icons';
+import { RouterOutlet } from '@angular/router';
+
+import { trigger, transition, group, query, style, animate } from '@angular/animations';
 
 @Component({
 	selector: 'app-root',
 	templateUrl: './app.component.html',
-	styleUrls: [ './app.component.scss' ]
+	styleUrls:
+		[
+			'./app.component.scss'
+		],
+	animations:
+		[
+			trigger('routeAnimation', [
+				transition('* => 3', [
+					style({ height: '!', position: 'relative' }),
+					query(':enter', style({ transform: 'translateX(100%)' })),
+					query(':enter, :leave', style({ position: 'absolute', top: 0, left: 0 })),
+					group([
+						query(':leave', [
+							animate(
+								'0.3s cubic-bezier(.63,.07,.27,.98)',
+								style({ transform: 'translateX(-100%)' })
+							)
+						]),
+						query(':enter', [
+							animate(
+								'0.3s cubic-bezier(.63,.07,.27,.98)',
+								style({ transform: 'translateX(100%)' })
+							)
+						])
+					])
+				]),
+				transition('1 => 2', [
+					style({ height: '!', position: 'relative' }),
+					query(':enter', style({ transform: 'translateX(100%)' })),
+					query(':enter, :leave', style({ position: 'absolute', top: 0, left: 0 })),
+					group([
+						query(':leave', [
+							animate(
+								'0.3s cubic-bezier(.63,.07,.27,.98)',
+								style({ transform: 'translateX(-100%)' })
+							)
+						]),
+						query(':enter', [
+							animate(
+								'0.3s cubic-bezier(.63,.07,.27,.98)',
+								style({ transform: 'translateX(100%)' })
+							)
+						])
+					])
+				]),
+				transition('* => 1', [
+					style({ height: '!', position: 'relative' }),
+					query(':enter', style({ transform: 'translateX(-100%)' })),
+					query(':enter, :leave', style({ position: 'absolute', top: 0, left: 0 })),
+					group([
+						query(':leave', [
+							animate(
+								'0.3s cubic-bezier(.63,.07,.27,.98)',
+								style({ transform: 'translateX(100%)' })
+							)
+						]),
+						query(':enter', [
+							animate(
+								'0.3s cubic-bezier(.63,.07,.27,.98)',
+								style({ transform: 'translateX(-100%)' })
+							)
+						])
+					])
+				])
+			])
+		]
 })
 export class AppComponent implements OnInit {
-	routerLinks: object[] = [
-		{
-			link: '/home',
-			name: 'Home'
-		},
-		{
-			link: '/projects',
-			name: 'Projects'
-		},
-		{
-			link: '/contact',
-			name: 'Contact'
-		}
-	];
-
-	socials = [
-		{
-			icon_url: './images/socials/twitter.svg',
-			handle: '@TheCrether',
-			url: 'http://twitter.com/thecrether',
-			alt: 'Twitter - TheCrether'
-		},
-		{
-			icon_url: './images/socials/github.png',
-			handle: '@thecrether',
-			url: 'http://github.com/thecrether',
-			alt: 'Github - TheCrether'
-		},
-		{
-			icon_url: './images/socials/youtube.png',
-			handle: 'TheCrether',
-			url: 'http://thecrether.net/yt',
-			alt: 'Youtube - TheCrether'
-		},
-		{
-			icon_url: './images/socials/discord.svg',
-			handle: 'Discord',
-			url: 'https://discord.gg/XwD6wqP',
-			alt: 'Discord - TheCrether'
-		}
-	];
-
 	faCompass = faCompass;
 	faTwitter = faTwitter;
 	faInstagram = faInstagram;
@@ -69,7 +101,8 @@ export class AppComponent implements OnInit {
 			if (window.scrollY > window.innerHeight * 0.05) {
 				header.style.background = 'white';
 				header.style.boxShadow = '0 3px 10px black';
-			} else {
+			}
+			else {
 				header.style.background = 'none';
 				header.style.boxShadow = 'none';
 			}
@@ -78,7 +111,8 @@ export class AppComponent implements OnInit {
 			if (window.scrollY > window.innerHeight * 0.05) {
 				header.style.background = 'white';
 				header.style.boxShadow = '0 3px 10px black';
-			} else {
+			}
+			else {
 				header.style.background = 'none';
 				header.style.boxShadow = 'none';
 			}
@@ -91,12 +125,17 @@ export class AppComponent implements OnInit {
 				this.navBtn.id = 'clicked';
 				this.sidelinks.style.height = '300px';
 				this.sidelinks.style.opacity = '1';
-			} else {
+			}
+			else {
 				this.navBtn.id = '';
 				this.sidelinks.style.height = '0';
 				this.sidelinks.style.opacity = '0';
 			}
 		});
 		this.meta.updateTag({ name: 'robots', content: 'follow' });
+	}
+
+	prepareRoute(outlet: RouterOutlet) {
+		return outlet.activatedRouteData['position'];
 	}
 }
