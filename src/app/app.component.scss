@@ -37,132 +37,147 @@ header {
         &:hover {
           background: rgba(163, 158, 158, 0.335);
         }
-      }
-    }
 
-    fa-icon {
-      display: none;
-      position: absolute;
-      right: 10px;
-      font-size: 40px;
-      cursor: pointer;
-      top: 5px;
-      transition: transform 500ms;
-    }
+        ul {
+          transition: opacity 1s;
+        }
 
-    fa-icon#clicked {
-      transform: rotate(-135deg);
-    }
+        fa-icon {
+          display: none;
+          position: absolute;
+          right: 10px;
+          font-size: 40px;
+          cursor: pointer;
+          top: 5px;
+          transition: transform 500ms;
+        }
 
-    .mainLink {
-      font-size: 30px;
-      font-family: "Major Mono Display", Oswald, Arial, Helvetica, sans-serif;
-      line-height: 60px;
-    }
+        fa-icon#clicked {
+          transform: rotate(-135deg);
+        }
 
-    .sideLink {
-      padding: 0px 12px;
-      font-size: 20px;
-    }
-  }
-}
-
-footer {
-  width: 100%;
-  height: 200px;
-  background: rgb(138, 138, 138);
-  padding: 20px 0;
-
-  h1 {
-    padding: 40px;
-    text-transform: uppercase;
-    font-size: 25px;
-    letter-spacing: 8px;
-    font-family: "Chakra Petch", Arial, Helvetica, sans-serif;
-    font-weight: normal;
-    text-align: center;
-  }
-
-  .flex {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    width: 1100px;
-    margin: 0 auto;
-
-    a {
-      margin: 10px;
-      border-radius: 25px;
-      width: 50px;
-      height: 50px;
-      display: block;
-      background-position: center;
-      background-size: cover;
-    }
-  }
-}
-
-@media only screen and (max-width: 1150px) {
-  header {
-    nav {
-      width: 100%;
-      background: white;
-      box-shadow: 0 3px 10px black;
-    }
-  }
-
-  footer {
-    .flex {
-      width: 100%;
-    }
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  header {
-    nav {
-      fa-icon {
-        display: block;
-      }
-
-      #sideLinks {
-        position: absolute;
-        top: 60px;
-        width: 100%;
-        height: 0;
-        overflow: hidden;
-        display: block;
-        opacity: 0;
-        text-overflow: clip;
-        left: 0;
-        flex-direction: column;
-
-        a {
-          width: 100%;
-          display: block;
-          height: 60px;
-          text-align: center;
+        .mainLink {
+          font-size: 30px;
+          font-family: "Major Mono Display", Oswald, Arial, Helvetica, sans-serif;
           line-height: 60px;
+        }
+
+        .sideLink {
+          padding: 0px 12px;
+          font-size: 20px;
         }
       }
     }
-  }
-}
 
-.socials-0 {
-  background-image: url("./images/socials/twitter.svg");
-}
+    footer {
+      width: 100%;
+      height: 200px;
+      background: rgb(138, 138, 138);
+      padding: 20px 0;
 
-.socials-1 {
-  background-image: url("./images/socials/github.png");
-  background-image: url("./images/socials/github.webp");
-}
+      h1 {
+        padding: 30px 0;
+        text-transform: uppercase;
+        font-size: 25px;
+        letter-spacing: 8px;
+        font-family: "Chakra Petch", Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        text-align: center;
+      }
 
-.socials-2 {
-  background-image: url("./images/socials/youtube.png");
-  background-image: url("./images/socials/youtube.webp");
-}
+      .flex {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 1100px;
+        margin: 0 auto;
+        font-size: 45px;
+        text-align: center;
 
-.socials-3 {
-  background-image: url("./images/socials/discord.svg");
-}
+        a {
+          background: white;
+          height: 80px;
+          width: 80px;
+          box-sizing: border-box;
+          padding: 10px;
+          margin: 10px;
+          border-radius: 50%;
+          display: block;
+          color: black;
+          transition: background 0.5s;
+
+          &:hover {
+            background: #dadada;
+          }
+
+          fa-icon {
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+
+    @media only screen and (max-width: 1150px) {
+      header {
+        nav {
+          width: 100%;
+          background: white;
+          box-shadow: 0 3px 10px black;
+        }
+      }
+
+      footer {
+        .flex {
+          width: 100%;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 450px) {
+      header {
+        nav {
+          fa-icon {
+            display: block;
+          }
+
+          #sideLinks {
+            position: absolute;
+            top: 60px;
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+            display: block;
+            opacity: 0;
+            text-overflow: clip;
+            left: 0;
+            flex-direction: column;
+
+            a {
+              width: 100%;
+              display: block;
+              height: 60px;
+              text-align: center;
+              line-height: 60px;
+            }
+          }
+        }
+      }
+    }
+
+    .socials-0 {
+      background-image: url("./images/socials/twitter.svg");
+    }
+
+    .socials-1 {
+      background-image: url("./images/socials/github.png");
+      background-image: url("./images/socials/github.webp");
+    }
+
+    .socials-2 {
+      background-image: url("./images/socials/youtube.png");
+      background-image: url("./images/socials/youtube.webp");
+    }
+
+    .socials-3 {
+      background-image: url("./images/socials/discord.svg");
+    }

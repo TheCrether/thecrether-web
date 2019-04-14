@@ -6,10 +6,27 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
-	{ path: '', redirectTo: '/', pathMatch: 'full' },
-	{ path: '', component: HomeComponent },
-	{ path: 'projects', component: ProjectsComponent },
-	{ path: 'contact', component: ContactComponent },
+	{
+		path: '',
+		component: HomeComponent,
+		data: {
+			position: 1
+		}
+	},
+	{
+		path: 'projects',
+		component: ProjectsComponent,
+		data: {
+			position: 2
+		}
+	},
+	{
+		path: 'contact',
+		component: ContactComponent,
+		data: {
+			position: 3
+		}
+	},
 	{
 		path: 'yt',
 		component: PageNotFoundComponent,
