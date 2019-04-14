@@ -11,12 +11,28 @@
   </nav>
 </header>
 <div id="scrollTo"></div>
-<router-outlet></router-outlet>
+<div [@routeAnimation]="prepareRoute(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>
 <footer>
   <div class="section">
     <h1>Contact me here</h1>
     <div class="flex">
-      <a *ngFor="let social of socials" href="{{social.url}}" class="socials-{{socials.indexOf(social)}}"></a>
+      <a target="_blank" href="https://twitter.com/thecrether">
+        <fa-icon [icon]="faTwitter"></fa-icon>
+      </a>
+      <a target="_blank" href="https://github.com/thecrether">
+        <fa-icon [icon]="faGithub"></fa-icon>
+      </a>
+      <a target="_blank" href="https://discord.gg/XwD6wqP">
+        <fa-icon [icon]="faDiscord"></fa-icon>
+      </a>
+      <a target="_blank" href="http://thecrether.net/yt">
+        <fa-icon [icon]="faYoutube"></fa-icon>
+      </a>
+      <a target="_blank" href="https://instagram.com/thecrether">
+        <fa-icon [icon]="faInstagram"></fa-icon>
+      </a>
     </div>
   </div>
 </footer>

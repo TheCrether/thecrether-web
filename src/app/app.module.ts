@@ -10,18 +10,34 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ContactComponent } from './contact/contact.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-	declarations: [
-		AppComponent,
-		HomeComponent,
-		ProjectsComponent,
-		PageNotFoundComponent,
-		ContactComponent,
-		ContactFormComponent
-	],
-	imports: [ BrowserModule, AppRoutingModule, FontAwesomeModule, HttpClientModule, ReactiveFormsModule ],
-	providers: [ Title ],
-	bootstrap: [ AppComponent ]
+	declarations:
+		[
+			AppComponent,
+			HomeComponent,
+			ProjectsComponent,
+			PageNotFoundComponent,
+			ContactComponent,
+			ContactFormComponent
+		],
+	imports:
+		[
+			BrowserModule,
+			AppRoutingModule,
+			FontAwesomeModule,
+			HttpClientModule,
+			ReactiveFormsModule,
+			BrowserAnimationsModule
+		],
+	providers:
+		[
+			Title
+		],
+	bootstrap:
+		[
+			AppComponent
+		]
 })
 export class AppModule {}
