@@ -15,72 +15,70 @@ import { trigger, transition, group, query, style, animate } from '@angular/anim
 @Component({
 	selector: 'app-root',
 	templateUrl: './app.component.html',
-	styleUrls:
-		[
-			'./app.component.scss'
-		],
-	animations:
-		[
-			trigger('routeAnimation', [
-				transition('* => 3', [
-					style({ height: '!', position: 'relative' }),
-					query(':enter', style({ transform: 'translateX(100%)' })),
-					query(':enter, :leave', style({ position: 'absolute', top: 0, left: 0 })),
-					group([
-						query(':leave', [
-							animate(
-								'0.3s cubic-bezier(.63,.07,.27,.98)',
-								style({ transform: 'translateX(-100%)' })
-							)
-						]),
-						query(':enter', [
-							animate(
-								'0.3s cubic-bezier(.63,.07,.27,.98)',
-								style({ transform: 'translateX(100%)' })
-							)
-						])
-					])
-				]),
-				transition('1 => 2', [
-					style({ height: '!', position: 'relative' }),
-					query(':enter', style({ transform: 'translateX(100%)' })),
-					query(':enter, :leave', style({ position: 'absolute', top: 0, left: 0 })),
-					group([
-						query(':leave', [
-							animate(
-								'0.3s cubic-bezier(.63,.07,.27,.98)',
-								style({ transform: 'translateX(-100%)' })
-							)
-						]),
-						query(':enter', [
-							animate(
-								'0.3s cubic-bezier(.63,.07,.27,.98)',
-								style({ transform: 'translateX(100%)' })
-							)
-						])
-					])
-				]),
-				transition('* => 1', [
-					style({ height: '!', position: 'relative' }),
-					query(':enter', style({ transform: 'translateX(-100%)' })),
-					query(':enter, :leave', style({ position: 'absolute', top: 0, left: 0 })),
-					group([
-						query(':leave', [
-							animate(
-								'0.3s cubic-bezier(.63,.07,.27,.98)',
-								style({ transform: 'translateX(100%)' })
-							)
-						]),
-						query(':enter', [
-							animate(
-								'0.3s cubic-bezier(.63,.07,.27,.98)',
-								style({ transform: 'translateX(-100%)' })
-							)
-						])
-					])
-				])
-			])
-		]
+	styleUrls: [
+		'./app.component.scss'
+	],
+	// animations: [
+	// 	trigger('routeAnimation', [
+	// 		transition('* => 3', [
+	// 			style({ height: '!', width: '100%' }),
+	// 			query(':enter', style({ transform: 'translateX(100%)' })),
+	// 			query(':enter, :leave', style({ position: 'absolute', top: 0, left: 0 })),
+	// 			group([
+	// 				query(':leave', [
+	// 					animate(
+	// 						'0.6s cubic-bezier(.63,.07,.27,.98)',
+	// 						style({ transform: 'translateX(-100%)' })
+	// 					)
+	// 				]),
+	// 				query(':enter', [
+	// 					animate(
+	// 						'0.6s cubic-bezier(.63,.07,.27,.98)',
+	// 						style({ transform: 'translateX(100%)' })
+	// 					)
+	// 				])
+	// 			])
+	// 		]),
+	// 		transition('1 => 2', [
+	// 			style({ height: '!', width: '100%' }),
+	// 			query(':enter', style({ transform: 'translateX(100%)' })),
+	// 			query(':enter, :leave', style({ position: 'absolute', top: 0, left: 0 })),
+	// 			group([
+	// 				query(':leave', [
+	// 					animate(
+	// 						'0.6s cubic-bezier(.63,.07,.27,.98)',
+	// 						style({ transform: 'translateX(-100%)' })
+	// 					)
+	// 				]),
+	// 				query(':enter', [
+	// 					animate(
+	// 						'0.6s cubic-bezier(.63,.07,.27,.98)',
+	// 						style({ transform: 'translateX(100%)' })
+	// 					)
+	// 				])
+	// 			])
+	// 		]),
+	// 		transition('* => 1', [
+	// 			style({ height: '!', width: '100%' }),
+	// 			query(':enter', style({ transform: 'translateX(-100%)' })),
+	// 			query(':enter, :leave', style({ position: 'absolute', top: 0, left: 0 })),
+	// 			group([
+	// 				query(':leave', [
+	// 					animate(
+	// 						'0.6s cubic-bezier(.63,.07,.27,.98)',
+	// 						style({ transform: 'translateX(100%)' })
+	// 					)
+	// 				]),
+	// 				query(':enter', [
+	// 					animate(
+	// 						'0.6s cubic-bezier(.63,.07,.27,.98)',
+	// 						style({ transform: 'translateX(-100%)' })
+	// 					)
+	// 				])
+	// 			])
+	// 		])
+	// 	])
+	// ]
 })
 export class AppComponent implements OnInit {
 	faCompass = faCompass;
