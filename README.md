@@ -2,12 +2,11 @@
 
 ## Table of Contents
 
-- [thecrether.at](#thecrethernet)
+- [thecrether.at](#thecretherat)
   - [Table of Contents](#table-of-contents)
     - [About](#about)
 
 ### About
 
-This is my new website where I still need to decide on which technology to use.
-
-
+This is my new website built with Angular and Nest.js
+Technology used to manage monorepo: nx
