@@ -1,0 +1,15 @@
+$scrolledHeight: 90px;
+$homeHeight: 140px;
+
+.header {
+  height: $homeHeight;
+  transition: height 500ms;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.scrolled {
+  composes: header;
+  height: $scrolledHeight;
+}

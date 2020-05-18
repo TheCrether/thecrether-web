@@ -1,16 +1,60 @@
-import { NextPage } from "next";
+import Head from "next/head";
+import Layout, { siteTitle } from "../components/layout";
 
-interface Props {
-  userAgent: string;
+export default function Home() {
+  return (
+    <Layout home>
+      <Head>
+        <title>{siteTitle}</title>
+      </Head>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+      <p>dd</p>
+    </Layout>
+  );
 }
-
-const Home: NextPage<Props> = ({ userAgent }) => (
-  <h1>Hello world! - user agent: {userAgent}</h1>
-);
-
-Home.getInitialProps = async ({ req }) => {
-  const userAgent = req ? req.headers["user-agent"] || "" : navigator.userAgent;
-  return { userAgent };
-};
-
-export default Home;
