@@ -1,0 +1,26 @@
+@mixin fixed($top, $left, $translateX, $translateY) {
+  position: fixed;
+  top: $top;
+  left: $left;
+  transform: translate($translateX, $translateY);
+}
+
+@mixin parallax() {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin centerBG() {
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin zoomedBG() {
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+}

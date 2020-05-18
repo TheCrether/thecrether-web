@@ -25,11 +25,17 @@
   "homepage": "https://github.com/TheCrether/thecrether-web#readme",
   "dependencies": {
     "@types/date-fns": "^2.6.0",
+    "@types/smoothscroll-polyfill": "^0.3.1",
     "date-fns": "^2.13.0",
+    "lqip-loader": "^2.2.0",
     "next": "^9.4.1",
+    "next-optimized-images": "^2.6.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "sass": "^1.26.5"
+    "sass": "^1.26.5",
+    "smoothscroll-polyfill": "^0.4.4",
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
+    "webp-loader": "^0.6.0"
   },
   "devDependencies": {
     "@types/node": "^13.13.6",
@@ -39,5 +45,9 @@
     "eslint": "^7.0.0",
     "eslint-plugin-react": "^7.20.0",
     "typescript": "^3.9.2"
-  }
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%"
+  ]
 }

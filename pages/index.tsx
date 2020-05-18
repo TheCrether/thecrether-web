@@ -1,9 +1,13 @@
 import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout";
+import Layout, { siteTitle } from "../components/Layout/Layout";
+import Intro from "../components/Intro";
 
 export default function Home() {
+  const intro = (
+    <Intro title="TheCrether" introType="home" height="50vh"></Intro>
+  );
   return (
-    <Layout home>
+    <Layout home intro={intro}>
       <Head>
         <title>{siteTitle}</title>
       </Head>

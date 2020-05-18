@@ -1,15 +1,25 @@
-import styles from "./layout.module.scss";
-import { MutableRefObject } from "react";
+import styles from "./Layout/layout.module.scss";
 
 interface Props {
   children: React.ReactNode;
   id?: string;
   className?: string;
+  maxWidth?: boolean;
 }
 
-export default function Container({ children, id, className }: Props) {
+export default function Container({
+  children,
+  id,
+  className,
+  maxWidth,
+}: Props) {
   return (
-    <div className={`${styles.container} ${className}`} id={id}>
+    <div
+      className={`${maxWidth ? styles.maxWidth : styles.container} ${
+        className || ""
+      } container`}
+      id={id}
+    >
       {children}
     </div>
   );

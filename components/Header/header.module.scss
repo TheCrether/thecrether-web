@@ -1,0 +1,89 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.header {
+  height: $notScrolled;
+  transition: height $duration, padding $duration;
+  position: fixed;
+  top: 0;
+  padding: 10px;
+  z-index: 20;
+
+  img {
+    border-radius: 50%;
+    transition: width $duration, height $duration, padding $duration;
+    height: $scrolledHeight - 10 * 2;
+    width: $scrolledHeight - 10 * 2;
+  }
+
+  #notScrolled {
+    height: $notScrolled;
+    width: $notScrolled;
+    transition: top $duration;
+    padding: $homeMargin;
+    @include fixed(0, 50%, 0, -$notScrolled / 2);
+    transform: translateX(-$notScrolled / 2);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    #centerProfile {
+      width: $notScrolled - $homeMargin * 4;
+      height: $notScrolled - $homeMargin * 4;
+    }
+
+    #bottom {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  .container {
+    transition: transform $duration;
+    transform: translateY(-$notScrolled);
+  }
+
+  #left,
+  #right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #right a {
+    padding: 10px 25px;
+  }
+
+  #bottom a,
+  #right a {
+    transition: background-color 300ms;
+    padding: 5px 10px;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  p {
+    padding-left: $homeMargin;
+    font-size: 1.5rem;
+    margin: 0;
+    color: white;
+    transition: padding $duration;
+    font-weight: bold;
+  }
+}
+
+.scrolled {
+  composes: header;
+  height: $scrolledHeight;
+
+  #notScrolled {
+    top: -$notScrolled;
+  }
+
+  .container {
+    transform: translateY(0);
+  }
+}

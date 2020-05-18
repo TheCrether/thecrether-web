@@ -1,0 +1,113 @@
+@import "../styles/variables";
+
+.menu {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 5vh 0 15vh;
+  --marquee-width: 100%;
+  --offset: 25em;
+  --move-initial: calc(-20% + var(--offset));
+  --move-final: calc(-45% + var(--offset));
+  --item-font-size: 5em;
+  width: 100%;
+}
+
+.menuItem {
+  cursor: default;
+  position: relative;
+  padding: 0 5em;
+}
+
+.menuItemLink {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  -webkit-text-stroke: 1.5px $color;
+  text-stroke: 1.5px $color;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  color: transparent;
+  transition: opacity 0.4s;
+  &:hover {
+    transition-duration: 0.1s;
+    opacity: 0;
+    text-decoration: none;
+  }
+  &:hover + .menuItemImg {
+    opacity: 1;
+    transform: translate3d(calc(-100% - 6vw), -30%, 0) rotate3d(0, 0, 1, 4deg);
+    transition: all 0.4s;
+  }
+  &:hover ~ .marquee .marqueeInner {
+    animation-play-state: running;
+    opacity: 1;
+    transition-duration: 0.4s;
+  }
+}
+
+.menuItemImg {
+  pointer-events: none;
+  position: absolute;
+  height: 50vh;
+  max-height: 200px;
+  width: 80px;
+  height: 80px;
+  z-index: 5;
+  opacity: 0;
+  left: 90%;
+  top: 0;
+  transform: translate3d(calc(-100% - 6vw), -30%, 0) translate3d(0, 20px, 0);
+
+  img {
+    width: 10em;
+    height: 10em;
+  }
+}
+
+/* Make sure 3 items are visible in the viewport by setting suitable font size. */
+.marquee {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--marquee-width);
+  overflow: hidden;
+  pointer-events: none;
+  mix-blend-mode: color-burn;
+  span {
+    font-style: italic;
+    text-align: center;
+  }
+}
+
+.marqueeInner {
+  width: fit-content;
+  display: flex;
+  position: relative;
+  transform: translate3d(var(--move-initial), 0, 0);
+  animation: marquee 5s linear infinite;
+  animation-play-state: paused;
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+
+.menuItemLink,
+.marquee span {
+  white-space: nowrap;
+  font-size: var(--item-font-size);
+  padding: 0 1vw;
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(var(--move-initial), 0, 0);
+  }
+
+  100% {
+    transform: translate3d(var(--move-final), 0, 0);
+  }
+}
