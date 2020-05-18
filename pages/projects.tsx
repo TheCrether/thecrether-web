@@ -13,13 +13,13 @@ const languages = [
   },
   {
     name: "Java",
-    amount: 12,
-    margin: "0 30px",
+    amount: 8,
+    margin: "0 50px",
   },
   {
     name: "Go",
-    amount: 20,
-    margin: "0 50px",
+    amount: 15,
+    margin: "0 80px",
   },
 ];
 
