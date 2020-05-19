@@ -15,7 +15,7 @@
     "jsx": "preserve",
     "baseUrl": "./",
     "paths": {
-      "@components": ["components/index.ts"],
+      "@components": ["components"],
       "@styles": ["styles/*"],
       "@pages": ["pages/*"]
     }

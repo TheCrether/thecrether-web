@@ -43,3 +43,10 @@
   composes: intro;
   background-image: url("/images/bg/intro.png");
 }
+
+#homeProfilePic {
+  width: $notScrolled * 2;
+  height: $notScrolled * 2;
+  border-radius: 50%;
+  margin: 10px;
+}

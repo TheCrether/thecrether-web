@@ -37,16 +37,14 @@ export default function Header({ home }: Props) {
   return (
     <header className={scrolled ? styles.scrolled : styles.header}>
       <div id={styles.notScrolled}>
-        <Link href="/">
-          <a>
-            <Image
-              path="profile.jpg"
-              id={styles.centerProfile}
-              alt="Profile Picture"
-            ></Image>
-          </a>
-        </Link>
-        <div id={styles.bottom}>
+        {!home && (
+          <Link href="/">
+            <a className={styles.centerProfile}>
+              <Image path="profile.jpg" alt="Profile Picture"></Image>
+            </a>
+          </Link>
+        )}
+        <div id={styles.notScrolledLinks}>
           <Link href="/projects">
             <a>Projects</a>
           </Link>

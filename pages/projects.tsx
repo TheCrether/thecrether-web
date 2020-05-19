@@ -9,17 +9,17 @@ const languages = [
   {
     name: "TypeScript",
     amount: 8,
-    margin: "0 10px",
+    margin: "0 10px 0 0",
   },
   {
     name: "Java",
     amount: 8,
-    margin: "0 50px",
+    margin: "0 50px 0 0",
   },
   {
     name: "Go",
-    amount: 15,
-    margin: "0 80px",
+    amount: 14,
+    margin: "0 80px 0 0",
   },
 ];
 
@@ -61,9 +61,9 @@ export default function Projects() {
         ))}
       </nav>
       <div className={layout.container}>
-        <h2 id="typescript">Typescript</h2>
-        <h2 id="java">Java</h2>
-        <h2 id="go">Go</h2>
+        <h1 id="typescript">Typescript</h1>
+        <h1 id="java">Java</h1>
+        <h1 id="go">Go</h1>
       </div>
     </Layout>
   );

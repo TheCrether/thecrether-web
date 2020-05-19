@@ -6,19 +6,19 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  padding: 5vh 0 15vh;
+  padding: 5vh 0 5vh;
   --marquee-width: 100%;
-  --offset: 25em;
+  --offset: 25vw;
   --move-initial: calc(-20% + var(--offset));
   --move-final: calc(-45% + var(--offset));
-  --item-font-size: 5em;
+  --item-font-size: 5vw;
   width: 100%;
 }
 
 .menuItem {
   cursor: default;
   position: relative;
-  padding: 0 5em;
+  padding: 0 2em;
 }
 
 .menuItemLink {
@@ -51,10 +51,10 @@
 .menuItemImg {
   pointer-events: none;
   position: absolute;
-  height: 50vh;
-  max-height: 200px;
-  width: 80px;
-  height: 80px;
+  max-height: 30vh;
+  max-width: 30vh;
+  width: 30vw;
+  height: 30vw;
   z-index: 5;
   opacity: 0;
   left: 90%;
@@ -62,8 +62,8 @@
   transform: translate3d(calc(-100% - 6vw), -30%, 0) translate3d(0, 20px, 0);
 
   img {
-    width: 10em;
-    height: 10em;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -76,6 +76,7 @@
   overflow: hidden;
   pointer-events: none;
   mix-blend-mode: color-burn;
+  overflow: hidden;
   span {
     font-style: italic;
     text-align: center;
@@ -91,10 +92,12 @@
   animation-play-state: paused;
   opacity: 0;
   transition: opacity 0.1s;
+  overflow: hidden;
 }
 
 .menuItemLink,
 .marquee span {
+  overflow: hidden;
   white-space: nowrap;
   font-size: var(--item-font-size);
   padding: 0 1vw;

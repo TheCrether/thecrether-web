@@ -18,30 +18,36 @@
 
   #notScrolled {
     height: $notScrolled;
-    width: $notScrolled;
+    // width: 100%;
     transition: top $duration;
-    padding: $homeMargin;
-    @include fixed(0, 50%, 0, -$notScrolled / 2);
-    transform: translateX(-$notScrolled / 2);
+    // padding: $homeMargin;
+    @include fixed(0, 50%, -50%, 0);
+    // transform: translateX(-$notScrolled / 2);
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
 
-    #centerProfile {
-      width: $notScrolled - $homeMargin * 4;
-      height: $notScrolled - $homeMargin * 4;
+    .centerProfile {
+      width: $notScrolled - $homeMargin;
+      height: $notScrolled - $homeMargin;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
 
-    #bottom {
+    #notScrolledLinks {
       display: flex;
       flex-direction: row;
+      margin-left: $homeMargin;
     }
   }
 
   .container {
     transition: transform $duration;
-    transform: translateY(-$notScrolled);
+    transform: translateY(-$scrolledHeight);
   }
 
   #left,
@@ -53,9 +59,11 @@
 
   #right a {
     padding: 10px 25px;
+    color: $color;
+    text-decoration: underline;
   }
 
-  #bottom a,
+  #notScrolledLinks a,
   #right a {
     transition: background-color 300ms;
     padding: 5px 10px;

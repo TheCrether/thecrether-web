@@ -1,4 +1,5 @@
 import styles from "./intro.module.scss";
+import Image from "components/Image";
 
 export type IntroType = "home" | "projects" | "about";
 
@@ -15,6 +16,16 @@ export default function Intro({ introType, title, height }: Props) {
       height,
     };
   }
+  let image: JSX.Element = <></>;
+  if (introType === "home") {
+    image = (
+      <Image
+        path="profile.jpg"
+        alt="Profile Picture"
+        id={styles.homeProfilePic}
+      ></Image>
+    );
+  }
   return (
     <div
       className={`${styles.intro} ${
@@ -23,6 +34,7 @@ export default function Intro({ introType, title, height }: Props) {
       style={style}
     >
       <div>
+        {image}
         <h1 id="introTitle">{title}</h1>
       </div>
     </div>
