@@ -13,6 +13,7 @@ export interface ProjectPost {
   language: string;
   website: string;
   imgPath: string;
+  desc: string;
 }
 
 const postsDirectory = path.join(process.cwd(), "posts", "projects");

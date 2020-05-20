@@ -4,6 +4,7 @@ import Intro from "@components/Intro";
 import styles from "./projects.module.scss";
 import Image from "@components/Image";
 import layout from "@components/Layout/layout.module.scss";
+// eslint-disable-next-line no-unused-vars
 import { getProjectsByCategory, ProjectPosts } from "@lib/projects";
 import Project from "@components/Project";
 
@@ -80,6 +81,7 @@ export default function Projects({ posts }: Props) {
                       imgPath={project.imgPath}
                       title={project.title}
                       key={project.id}
+                      desc={project.desc}
                     ></Project>
                   ))}
                 {!projects && <p>Coming soon!</p>}
