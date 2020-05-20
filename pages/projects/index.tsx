@@ -1,9 +1,11 @@
-import Layout from "../components/Layout/Layout";
+import Layout from "@components/Layout";
 import Head from "next/head";
-import Intro from "../components/Intro";
+import Intro from "@components/Intro";
 import styles from "./projects.module.scss";
-import Image from "../components/Image";
-import layout from "../components/Layout/layout.module.scss";
+import Image from "@components/Image";
+import layout from "@components/Layout/layout.module.scss";
+import { getProjectsByCategory, ProjectPosts } from "@lib/projects";
+import Project from "@components/Project";
 
 const languages = [
   {
@@ -23,7 +25,11 @@ const languages = [
   },
 ];
 
-export default function Projects() {
+interface Props {
+  posts: ProjectPosts;
+}
+
+export default function Projects({ posts }: Props) {
   const intro = <Intro introType="projects" title="Projects"></Intro>;
 
   function onClick(id: string) {
@@ -60,10 +66,27 @@ export default function Projects() {
           </div>
         ))}
       </nav>
-      <div className={layout.container}>
-        <h1 id="typescript">Typescript</h1>
-        <h1 id="java">Java</h1>
-        <h1 id="go">Go</h1>
+      <div className={`${layout.container} ${styles.projects}`}>
+        {languages.map((lang) => {
+          let projects = posts[lang.name.toLowerCase()];
+          return (
+            <div key={lang.name}>
+              <h1 id={lang.name.toLowerCase()}>{lang.name}</h1>
+              <div className={styles.language}>
+                {projects &&
+                  projects.map((project) => (
+                    <Project
+                      id={project.id}
+                      imgPath={project.imgPath}
+                      title={project.title}
+                      key={project.id}
+                    ></Project>
+                  ))}
+                {!projects && <p>Coming soon!</p>}
+              </div>
+            </div>
+          );
+        })}
       </div>
     </Layout>
   );
@@ -79,4 +102,13 @@ function getSpans(name: string, amount: number, margin: string) {
     );
   }
   return spans;
+}
+
+export async function getStaticProps() {
+  const posts = getProjectsByCategory();
+  return {
+    props: {
+      posts,
+    },
+  };
 }

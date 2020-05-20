@@ -7,7 +7,7 @@ import Footer from "../Footer";
 
 interface Props {
   children: React.ReactNode;
-  intro: JSX.Element;
+  intro?: JSX.Element;
   home?: boolean;
   maxWidth?: boolean;
 }
@@ -27,7 +27,7 @@ export default function Layout({ children, home, intro, maxWidth }: Props) {
         <title>{siteTitle}</title>
       </Head>
       <Header home={home}></Header>
-      {intro}
+      {intro && intro}
       <main className={styles.main} id="main">
         <Container maxWidth={maxWidth}>{children}</Container>
       </main>

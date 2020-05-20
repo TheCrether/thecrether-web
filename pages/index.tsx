@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Layout, { siteTitle } from "../components/Layout/Layout";
-import Intro from "../components/Intro";
+import Layout, { siteTitle } from "@components/Layout";
+import Intro from "@components/Intro";
 
 export default function Home() {
   const intro = (
