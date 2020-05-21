@@ -12,6 +12,7 @@
   width: 100%;
   height: 100%;
   padding: 10px 0;
+  transition: max-width $duration;
 }
 
 .main {
@@ -23,6 +24,7 @@
     transparentize($bg2, 0.1) $homeMargin * 5,
     $bg
   );
+  transition: padding $duration;
 }
 
 .main,
@@ -40,13 +42,13 @@
   z-index: 4;
 }
 
-@media screen and (max-width: 1000px) {
-  .container :global .resetContainer {
+@media screen and (max-width: 1100px) {
+  .container {
     max-width: 850px;
   }
 }
 
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 900px) {
   .main {
     padding: $homeMargin * 4 1em 0 1em;
   }

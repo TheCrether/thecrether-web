@@ -10,6 +10,7 @@ interface Props {
   intro?: JSX.Element;
   home?: boolean;
   maxWidth?: boolean;
+  customHeaderScroll:
 }
 
 export const siteTitle = "TheCrether's website";
@@ -31,15 +32,17 @@ export default function Layout({ children, home, intro, maxWidth }: Props) {
       <main className={styles.main} id="main">
         <Container maxWidth={maxWidth}>{children}</Container>
       </main>
-      <Container>
-        {!home && (
+      {!home && (
+        <Container>
+          (
           <div className={styles.backToHome}>
             <Link href="/">
               <a>← Back to home</a>
             </Link>
           </div>
-        )}
-      </Container>
+          )
+        </Container>
+      )}
       <Footer></Footer>
     </div>
   );

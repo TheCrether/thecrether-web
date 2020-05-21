@@ -16,18 +16,18 @@ export interface ProjectPost {
   desc: string;
 }
 
-const postsDirectory = path.join(process.cwd(), "posts", "projects");
+const projectPostDir = path.join(process.cwd(), "posts", "projects");
 
 export function getProjectsByCategory(): ProjectPosts {
   // Get file names under /posts
-  const fileNames = fs.readdirSync(postsDirectory);
+  const fileNames = fs.readdirSync(projectPostDir);
   const projectsPosts: ProjectPosts = {};
   fileNames.forEach(fileName => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, "");
 
     // Read markdown file as string
-    const fullPath = path.join(postsDirectory, fileName);
+    const fullPath = path.join(projectPostDir, fileName);
     const fileContents = fs.readFileSync(fullPath, "utf8");
 
     // Use gray-matter to parse the post metadata section
@@ -61,4 +61,30 @@ export function getProjectsByCategory(): ProjectPosts {
 
   // Sort posts by programming language and then title
   return projectsPosts;
+}
+
+export function getAllProjectIds() {
+  const fileNames = fs.readdirSync(projectPostDir);
+
+  return fileNames.map(fileName => {
+    return {
+      params: {
+        id: fileName.replace(/\.md$/, '')
+      }
+    };
+  });
+}
+
+export function getProjectData(id: string): ProjectPost {
+  const fullPath = path.join(projectPostDir, `${id}.md`);
+  const fileContents = fs.readFileSync(fullPath, 'utf8');
+
+  // Use gray-matter to parse the post metadata section
+  const matterResult = matter(fileContents);
+
+  // Combine the data with the id
+  return {
+    id,
+    ...matterResult.data
+  } as ProjectPost;
 }

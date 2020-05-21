@@ -21,7 +21,7 @@ a,
   color: #0070f3;
   text-decoration: none;
   cursor: pointer;
-  transition: text-decoration 500ms;
+  transition: text-decoration $duration;
 }
 
 a:hover,

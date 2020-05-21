@@ -1,6 +1,12 @@
 import Layout from "@components/Layout";
+import { getAllProjectIds, ProjectPost, getProjectData } from "@lib/projects";
 
-export default function ProjectPage() {
+interface Props {
+  projectData: ProjectPost;
+}
+
+export default function ProjectPage({ projectData }: Props) {
+  console.log(projectData);
   return (
     <Layout>
       <p>d</p>
@@ -8,10 +14,19 @@ export default function ProjectPage() {
   );
 }
 
-//export async function getStaticPaths() {
-  //// Return a list of possible value for id
-//}
+export async function getStaticPaths() {
+  const paths = getAllProjectIds();
+  return {
+    paths,
+    fallback: false,
+  };
+}
 
-//export async function getStaticProps({ params }) {
-  //// Fetch necessary data for the blog post using params.id
-//}
+export async function getStaticProps({ params }: { params: { id: string } }) {
+  const projectData = getProjectData(params.id);
+  return {
+    props: {
+      projectData,
+    },
+  };
+}
