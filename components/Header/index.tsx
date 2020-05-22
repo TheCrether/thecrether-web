@@ -5,37 +5,63 @@ import Link from "next/link";
 import Image from "../Image";
 
 interface Props {
-  home: boolean | undefined;
+  home?: boolean;
+  projectPost?: boolean;
 }
 
-export default function Header({ home }: Props) {
-  const [scrolled, setScrolled] = useState(false);
+export default function Header({ home, projectPost }: Props) {
+  const [currScrolled, setScrolled] = useState(false);
 
   // if (home) {
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      const introTitle = document.getElementById("introTitle");
-      if (introTitle) {
-        const isScrolled = introTitle.offsetTop - 50 < window.scrollY;
-        if (isScrolled && !scrolled) setScrolled(true);
-        else if (scrolled && !isScrolled) setScrolled(false);
-      } else {
-        // check if 50% of window height scrolled
-        const isScrolled = window.innerHeight / 2 < window.scrollY;
-        if (isScrolled && !scrolled) {
-          setScrolled(true);
-        } else if (scrolled && !isScrolled) {
-          setScrolled(false);
+    let newScrolled;
+    if (projectPost) {
+      window.addEventListener("scroll", () => {
+        const topPart = document.getElementById("topPart");
+        if (topPart) {
+          newScrolled =
+            topPart.getBoundingClientRect().height * 0.8 < window.scrollY;
+        } else {
+          // check if 50% of window height scrolled if no intro is found
+          newScrolled = window.innerHeight / 2 < window.scrollY;
         }
-      }
-    });
+        console.log("ds" + newScrolled);
+        changeScrolled(newScrolled);
+      });
+    } else {
+      window.addEventListener("scroll", () => {
+        const introTitle = document.getElementById("introTitle");
+        if (introTitle) {
+          newScrolled = introTitle.offsetTop - 50 < window.scrollY;
+        } else {
+          // check if 50% of window height scrolled if no intro is found
+          newScrolled = window.innerHeight / 2 < window.scrollY;
+        }
+        changeScrolled(newScrolled);
+      });
+    }
   });
+
+  function changeScrolled(newScrolled: boolean) {
+    if (newScrolled && !currScrolled) {
+      setScrolled(true);
+    } else if (currScrolled && !newScrolled) {
+      setScrolled(false);
+    }
+  }
   // } else if (!scrolled) {
   //   setScrolled(true);
   // }
 
+  let className = "";
+  if (projectPost) {
+    className = currScrolled ? styles.scrolled : styles.projectPost;
+  } else {
+    className = currScrolled ? styles.scrolled : styles.header;
+  }
+
   return (
-    <header className={scrolled ? styles.scrolled : styles.header}>
+    <header className={className}>
       <div id={styles.notScrolled}>
         {!home && (
           <Link href="/">

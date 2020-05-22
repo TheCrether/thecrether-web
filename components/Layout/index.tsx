@@ -11,11 +11,19 @@ interface Props {
   home?: boolean;
   maxWidth?: boolean;
   customHeader?: boolean;
+  mainClassName?: string;
 }
 
 export const siteTitle = "TheCrether's website";
 
-export default function Layout({ children, home, intro, maxWidth, customHeader }: Props) {
+export default function Layout({
+  children,
+  home,
+  intro,
+  maxWidth,
+  customHeader,
+  mainClassName,
+}: Props) {
   return (
     <div className={styles.layout}>
       <Head>
@@ -27,22 +35,21 @@ export default function Layout({ children, home, intro, maxWidth, customHeader }
         <meta name="twitter:card" content="summary_large_image" />
         <title>{siteTitle}</title>
       </Head>
-      {!customHeader &&
-        <Header home={home}></Header>
-      }
+      {!customHeader && <Header home={home}></Header>}
       {intro && intro}
-      <main className={styles.main} id="main">
+      <main
+        className={`${styles.main} ${mainClassName ? mainClassName : ""}`}
+        id="main"
+      >
         <Container maxWidth={maxWidth}>{children}</Container>
       </main>
       {!home && (
         <Container>
-          (
           <div className={styles.backToHome}>
             <Link href="/">
               <a>← Back to home</a>
             </Link>
           </div>
-          )
         </Container>
       )}
       <Footer></Footer>

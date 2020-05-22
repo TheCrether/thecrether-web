@@ -33,6 +33,8 @@
     "next-optimized-images": "^2.6.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "remark": "^12.0.0",
+    "remark-html": "^11.0.2",
     "sass": "^1.26.5",
     "smoothscroll-polyfill": "^0.4.4",
     "tsconfig-paths-webpack-plugin": "^3.2.0",

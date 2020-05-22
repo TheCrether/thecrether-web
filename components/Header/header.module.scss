@@ -83,6 +83,18 @@
   }
 }
 
+.projectPost {
+  composes: header;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  text-overflow: clip;
+
+  #notScrolled {
+    display: none;
+  }
+}
+
 .scrolled {
   composes: header;
   height: $scrolledHeight;

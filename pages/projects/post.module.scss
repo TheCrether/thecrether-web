@@ -1,0 +1,110 @@
+@import "variables";
+
+$skewDeg: -3deg;
+
+.main {
+  margin: 0;
+  padding: 0 !important;
+  background: $bg;
+
+  & > div {
+    padding: 0;
+  }
+}
+
+.topPart {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  // height: 60vh;
+  height: fit-content;
+  min-height: 300px;
+  background: $bg;
+  position: relative;
+  max-width: 1500px;
+  overflow: hidden;
+
+  .info {
+    transform-origin: top left;
+    transform: rotate($skewDeg) skewY($skewDeg);
+    transition: transform $duration;
+    z-index: 5;
+    width: 102%;
+    height: 20vh;
+    background: inherit;
+    transition: transform $duration;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & > div {
+      transform: skewY(-$skewDeg) rotate($skewDeg);
+      padding: 0;
+    }
+
+    .properties {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      width: 100%;
+      & > * {
+        width: 33%;
+      }
+    }
+
+    h1,
+    p {
+      margin: 0;
+    }
+  }
+
+  picture {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+.noImg {
+  composes: topPart;
+
+  .info {
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .info {
+    padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .topPart {
+    height: fit-content;
+    .info {
+      transform: none;
+      position: static;
+      height: auto;
+
+      & > div {
+        transform: none;
+      }
+    }
+
+    picture {
+      height: auto;
+    }
+  }
+}
