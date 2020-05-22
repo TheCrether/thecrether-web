@@ -10,12 +10,12 @@ interface Props {
   intro?: JSX.Element;
   home?: boolean;
   maxWidth?: boolean;
-  customHeaderScroll:
+  customHeader?: boolean;
 }
 
 export const siteTitle = "TheCrether's website";
 
-export default function Layout({ children, home, intro, maxWidth }: Props) {
+export default function Layout({ children, home, intro, maxWidth, customHeader }: Props) {
   return (
     <div className={styles.layout}>
       <Head>
@@ -27,7 +27,9 @@ export default function Layout({ children, home, intro, maxWidth }: Props) {
         <meta name="twitter:card" content="summary_large_image" />
         <title>{siteTitle}</title>
       </Head>
-      <Header home={home}></Header>
+      {!customHeader &&
+        <Header home={home}></Header>
+      }
       {intro && intro}
       <main className={styles.main} id="main">
         <Container maxWidth={maxWidth}>{children}</Container>
