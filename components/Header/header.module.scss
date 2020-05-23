@@ -16,6 +16,10 @@
     width: $scrolledHeight - 10 * 2;
   }
 
+  a {
+    font-weight: bold;
+  }
+
   #notScrolled {
     height: $notScrolled;
     // width: 100%;
