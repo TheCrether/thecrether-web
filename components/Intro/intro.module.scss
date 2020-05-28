@@ -25,6 +25,7 @@
       font-size: 2.5em;
       background-color: transparentize($color: #000000, $amount: 0.75);
       padding: 20px 40px;
+      transition: margin $duration;
     }
   }
 }
@@ -49,4 +50,15 @@
   height: $notScrolled * 2;
   border-radius: 50%;
   margin: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .intro > div {
+    flex-direction: column;
+    align-items: flex-start;
+
+    h1 {
+      margin: 0;
+    }
+  }
 }

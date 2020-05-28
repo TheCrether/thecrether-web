@@ -12,6 +12,7 @@ interface Props {
   maxWidth?: boolean;
   customHeader?: boolean;
   mainClassName?: string;
+  className?: string;
 }
 
 export const siteTitle = "TheCrether's website";
@@ -23,9 +24,10 @@ export default function Layout({
   maxWidth,
   customHeader,
   mainClassName,
+  className,
 }: Props) {
   return (
-    <div className={styles.layout}>
+    <div className={`${styles.layout} ${className ? className : ""}`}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Website of TheCrether" />

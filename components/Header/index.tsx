@@ -74,6 +74,9 @@ export default function Header({ home, projectPost }: Props) {
           <Link href="/projects">
             <a>Projects</a>
           </Link>
+          <Link href="/about">
+            <a>About</a>
+          </Link>
         </div>
       </div>
 
@@ -87,6 +90,9 @@ export default function Header({ home, projectPost }: Props) {
         <div id={styles.right}>
           <Link href="/projects">
             <a>Projects</a>
+          </Link>
+          <Link href="/about">
+            <a>About</a>
           </Link>
         </div>
       </Container>
