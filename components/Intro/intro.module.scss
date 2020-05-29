@@ -32,17 +32,21 @@
 
 .home {
   composes: intro;
-  background-image: url("/images/bg/intro.jpg");
+  // background-image: url("/images/bg/intro.jpg");
 }
 
 .projects {
   composes: intro;
-  background-image: url("/images/bg/projects.jpg");
+  // background-image: url("/images/bg/projects.jpg");
 }
 
 .about {
   composes: intro;
-  background-image: url("/images/bg/intro.png");
+  // background-image: url("/images/bg/intro.png");
+
+  & > div {
+    background: inherit;
+  }
 }
 
 #homeProfilePic {

@@ -14,4 +14,16 @@ export function Image({ path, className, id, alt }: Props) {
   );
 }
 
+export function getBackgrounds(path: string, webp: boolean) {
+  const images = [
+    require(`images/bg/${path}?webp`),
+    require(`images/bg/${path}`),
+  ];
+  return images.map((img) => `url("${img}")`).join(",");
+}
+
+export function checkWebpSupport() {
+  
+}
+
 export default Image;

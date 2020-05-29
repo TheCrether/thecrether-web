@@ -1,20 +1,32 @@
 import styles from "./intro.module.scss";
-import Image from "components/Image";
+import Image, { getBackgrounds } from "components/Image";
+import { CSSProperties, useEffect, useState } from "react";
 
 export type IntroType = "home" | "projects" | "about";
 
 interface Props {
-  introType?: IntroType;
+  introType: IntroType;
   title: string;
   height?: string;
 }
 
+type Urls = {
+  [type in IntroType]: string;
+};
+
+const backgrounds: Urls = {
+  home: getBackgrounds("intro.jpg"),
+  projects: getBackgrounds("projects.jpg"),
+  about: ``,
+};
+
 export function Intro({ introType, title, height }: Props) {
-  let style = {};
+  const [style, setStyle] = useState<CSSProperties>({});
+  // let style: CSSProperties = {
+  //   backgroundImage: backgrounds[introType],
+  // };
   if (height) {
-    style = {
-      height,
-    };
+    setStyle({ height });
   }
   let image: JSX.Element = <></>;
   if (introType === "home") {
@@ -26,6 +38,17 @@ export function Intro({ introType, title, height }: Props) {
       ></Image>
     );
   }
+
+  useEffect(() => {
+    var elem = document.createElement("canvas");
+    if (elem.getContext && elem.getContext("2d")) {
+      // was able or not to get WebP representation
+      return elem.toDataURL("image/webp").indexOf("data:image/webp") == 0;
+    }
+    // very old browser like IE 8, canvas not supported
+    return false;
+  });
+
   return (
     <div
       className={`${styles.intro} ${

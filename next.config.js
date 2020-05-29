@@ -1,8 +1,9 @@
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
-const withOptimizedImages = require("next-optimized-images");
+const optimizedImages = require("next-optimized-images");
+const withPlugins = require("next-compose-plugins");
 const path = require("path");
 
-module.exports = withOptimizedImages({
+const nextConf = {
   webpack: (config, options) => {
     if (config.resolve.plugins) {
       config.resolve.plugins.push(new TsconfigPathsPlugin());
@@ -19,4 +20,19 @@ module.exports = withOptimizedImages({
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },
-});
+};
+
+module.exports = withPlugins(
+  [
+    [
+      optimizedImages,
+      {
+        optimizeImagesInDev: true,
+        webp: {
+          quality: 50,
+        },
+      },
+    ],
+  ],
+  nextConf
+);
