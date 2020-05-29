@@ -1,11 +1,7 @@
-import Layout from "@components/Layout";
+import { Layout, Header, Image, Container, Date } from "@components";
 import { getAllProjectIds, ProjectPost, getProjectData } from "@lib/projects";
-import Header from "@components/Header";
-import layout from "@components/Layout/layout.module.scss";
+import { layout } from "@styles";
 import styles from "./post.module.scss";
-import Image from "@components/Image";
-import Container from "@components/Container";
-import Date from "@components/Date";
 
 interface Props {
   projectData: ProjectPost;

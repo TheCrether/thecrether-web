@@ -4,7 +4,7 @@ interface Props {
   id?: string;
   alt?: string;
 }
-export default function Image({ path, className, id, alt }: Props) {
+export function Image({ path, className, id, alt }: Props) {
   return (
     <picture className={`${className || ""}`}>
       <source srcSet={require(`images/${path}?webp`)} type="image/webp" />
@@ -13,3 +13,5 @@ export default function Image({ path, className, id, alt }: Props) {
     </picture>
   );
 }
+
+export default Image;

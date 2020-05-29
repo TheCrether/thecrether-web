@@ -9,7 +9,7 @@ interface Props {
   height?: string;
 }
 
-export default function Intro({ introType, title, height }: Props) {
+export function Intro({ introType, title, height }: Props) {
   let style = {};
   if (height) {
     style = {
@@ -40,3 +40,5 @@ export default function Intro({ introType, title, height }: Props) {
     </div>
   );
 }
+
+export default Intro;

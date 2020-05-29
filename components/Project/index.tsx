@@ -9,7 +9,7 @@ interface Props {
   desc: string;
 }
 
-export default function Project({ id, title, imgPath, desc }: Props) {
+export function Project({ id, title, imgPath, desc }: Props) {
   return (
     <Link href="/projects/[id]" as={`/projects/${id}`}>
       <a className={styles.wrapper}>
@@ -25,3 +25,5 @@ export default function Project({ id, title, imgPath, desc }: Props) {
     </Link>
   );
 }
+
+export default Project;

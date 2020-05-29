@@ -17,7 +17,7 @@ interface Props {
 
 export const siteTitle = "TheCrether's website";
 
-export default function Layout({
+export function Layout({
   children,
   home,
   intro,
@@ -58,3 +58,5 @@ export default function Layout({
     </div>
   );
 }
+
+export default Layout;

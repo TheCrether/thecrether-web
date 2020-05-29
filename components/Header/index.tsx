@@ -9,7 +9,7 @@ interface Props {
   projectPost?: boolean;
 }
 
-export default function Header({ home, projectPost }: Props) {
+export function Header({ home, projectPost }: Props) {
   const [currScrolled, setScrolled] = useState(false);
 
   // if (home) {
@@ -99,3 +99,5 @@ export default function Header({ home, projectPost }: Props) {
     </header>
   );
 }
+
+export default Header;

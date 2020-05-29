@@ -1,6 +1,5 @@
 import Head from "next/head";
-import Layout, { siteTitle } from "@components/Layout";
-import Intro from "@components/Intro";
+import { Layout, Intro, siteTitle } from "@components";
 import Link from "next/link";
 import styles from "./index.module.scss";
 import layout from "@components/Layout/layout.module.scss";
@@ -15,7 +14,7 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
       <h2>
-        <span>Hello</span>, I am Denis "TheCrether" Imeri
+        <span>Hello</span>, I am Denis &quot;TheCrether&quot; Imeri
       </h2>
 
       <ul className={styles.section}>

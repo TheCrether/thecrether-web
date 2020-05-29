@@ -18,7 +18,11 @@
       "@components/*": ["components/*"],
       "@styles/*": ["styles/*"],
       "@pages/*": ["pages/*"],
-      "@lib/*": ["lib/*"]
+      "@lib/*": ["lib/*"],
+      "@components": ["components"],
+      "@styles": ["components/styles"],
+      "@pages": ["pages"],
+      "@lib": ["lib"]
     }
   },
   "exclude": ["node_modules"],

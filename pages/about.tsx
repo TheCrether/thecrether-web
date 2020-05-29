@@ -1,5 +1,6 @@
-import Layout from "@components/Layout";
+import { Intro, Layout } from "@components";
 
 export default function AboutPage() {
-  return <Layout intro={<></>}>d</Layout>;
+  const intro = <Intro title="About Me" introType="about"></Intro>;
+  return <Layout intro={intro}>d</Layout>;
 }

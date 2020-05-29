@@ -1,12 +1,8 @@
-import Layout from "@components/Layout";
+import { Layout, Intro, Image, Project } from "@components";
 import Head from "next/head";
-import Intro from "@components/Intro";
 import styles from "./projects.module.scss";
-import Image from "@components/Image";
-import layout from "@components/Layout/layout.module.scss";
-// eslint-disable-next-line no-unused-vars
+import { layout } from "@styles";
 import { getProjectsByCategory, ProjectPosts } from "@lib/projects";
-import Project from "@components/Project";
 
 const languages = [
   {

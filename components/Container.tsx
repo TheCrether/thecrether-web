@@ -7,12 +7,7 @@ interface Props {
   maxWidth?: boolean;
 }
 
-export default function Container({
-  children,
-  id,
-  className,
-  maxWidth,
-}: Props) {
+export function Container({ children, id, className, maxWidth }: Props) {
   return (
     <div
       className={`${maxWidth ? styles.maxWidth : styles.container} ${
@@ -24,3 +19,5 @@ export default function Container({
     </div>
   );
 }
+
+export default Container;

@@ -1,7 +1,7 @@
 import Container from "../Container";
 import styles from "./footer.module.scss";
 
-export default function Footer() {
+export function Footer() {
   return (
     <footer className={styles.footer}>
       <Container>
@@ -10,3 +10,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+export default Footer;
