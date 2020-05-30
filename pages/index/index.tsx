@@ -17,7 +17,7 @@ export default function Home() {
         <span>Hello</span>, I am Denis &quot;TheCrether&quot; Imeri
       </h2>
 
-      <ul className={styles.section}>
+      <ul className="section">
         <h3>About</h3>
         <li>I am an 17-year old student</li>
         <li>
@@ -31,14 +31,13 @@ export default function Home() {
             </Link>
           </div>
         </li>
-      </ul>
-      <section className={styles.section}>
+      <section className="section">
         <h3>Projects</h3>
         <p>sa</p>
         <p>sa</p>
         <p>sa</p>
       </section>
-      <section className={styles.section}>
+      <section className="section">
         <p>dd</p>
         <p>dd</p>
         <p>dd</p>
