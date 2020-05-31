@@ -49,32 +49,36 @@ header {
 }
 
 .section {
-    width: 100%;
-    margin: $spacing 0 $spacing * 2 0;
-    position: relative;
-    padding: 0;
+  width: 100%;
+  margin: $spacing 0 $spacing * 2 0;
+  position: relative;
+  padding: 0;
 
-    & > p {
-      width: 90%;
-    }
-
-    &:nth-child(2n) {
-      
-    }
-
-    &:not(:last-child)::after {
-      width: 90%;
-      height: 4px;
-      background-color: transparentize($color: $color, $amount: 0.5);
-      border-radius: 2px;
-      content: "";
-      display: block;
-      position: absolute;
-      bottom: -$spacing;
-      left: 50%;
-      transform: translateX(-50%);
-    }
+  & > p {
+    width: 90%;
   }
-  .section:last-child::after {
-    content: none;
+
+  &:nth-child(2n) {
+    text-align: right;
   }
+
+  &:nth-child(2n + 1) {
+    text-align: left;
+  }
+
+  &:not(:last-child)::after {
+    width: 90%;
+    height: 4px;
+    background-color: transparentize($color: $color, $amount: 0.5);
+    border-radius: 2px;
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -$spacing;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.section:last-child::after {
+  content: none;
+}

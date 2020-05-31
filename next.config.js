@@ -29,7 +29,7 @@ module.exports = withPlugins(
       {
         optimizeImagesInDev: true,
         webp: {
-          quality: 50,
+          quality: 35,
         },
       },
     ],

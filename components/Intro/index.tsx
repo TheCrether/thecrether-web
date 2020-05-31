@@ -14,19 +14,22 @@ type Urls = {
   [type in IntroType]: string;
 };
 
+// TODO make webp checking
 const backgrounds: Urls = {
-  home: getBackgrounds("intro.jpg"),
-  projects: getBackgrounds("projects.jpg"),
+  home: getBackgrounds("intro.jpg", true),
+  projects: getBackgrounds("projects.jpg", true),
   about: ``,
 };
 
 export function Intro({ introType, title, height }: Props) {
-  const [style, setStyle] = useState<CSSProperties>({});
+  const [style, setStyle] = useState<CSSProperties>({
+    backgroundImage: backgrounds[introType],
+  });
   // let style: CSSProperties = {
   //   backgroundImage: backgrounds[introType],
   // };
   if (height) {
-    setStyle({ height });
+    if (!style.height) setStyle({ height, ...style });
   }
   let image: JSX.Element = <></>;
   if (introType === "home") {

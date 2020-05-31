@@ -25,12 +25,13 @@ export default function Home() {
           <a href="https://www.htl-kaindorf.at/">HTBLA Kaindorf</a>
         </li>
         <li>
-          <div className={layout.backToHome}>
+          <div>
             <Link href="/About">
               <a>find out more on my About page →</a>
             </Link>
           </div>
         </li>
+      </ul>
       <section className="section">
         <h3>Projects</h3>
         <p>sa</p>

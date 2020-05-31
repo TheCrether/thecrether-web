@@ -47,7 +47,7 @@ export function Layout({
       </main>
       {!home && (
         <Container>
-          <div className={styles.backToHome}>
+          <div>
             <Link href="/">
               <a>← Back to home</a>
             </Link>
