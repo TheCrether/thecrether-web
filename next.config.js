@@ -31,6 +31,12 @@ module.exports = withPlugins(
         webp: {
           quality: 35,
         },
+        mozjpeg: {
+          quality: 50,
+        },
+        optipng: {
+          quality: 50,
+        },
       },
     ],
   ],
