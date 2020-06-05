@@ -3,11 +3,12 @@ import styles from "./footer.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
+import { flex } from "@lib/utils";
 
 export function Footer() {
   return (
     <footer>
-      <Container className={styles.footer}>
+      <Container className={flex(styles.footer)}>
         <p>© 2020 TheCrether</p>
         <div className={styles.socials}>
           <a href="https://github.com/TheCrether">

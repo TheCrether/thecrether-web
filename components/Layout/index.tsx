@@ -4,6 +4,7 @@ import Link from "next/link";
 import Container from "../Container";
 import Header from "../Header";
 import Footer from "../Footer";
+import { flex } from "@lib/utils";
 
 interface Props {
   children: React.ReactNode;
@@ -13,6 +14,7 @@ interface Props {
   customHeader?: boolean;
   mainClassName?: string;
   className?: string;
+  noFooter?: boolean;
 }
 
 export const siteTitle = "TheCrether's website";
@@ -25,9 +27,10 @@ export function Layout({
   customHeader,
   mainClassName,
   className,
+  noFooter,
 }: Props) {
   return (
-    <div className={`${styles.layout} ${className ? className : ""}`}>
+    <div className={flex(`${styles.layout} ${className ? className : ""}`)}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Website of TheCrether" />
@@ -54,7 +57,7 @@ export function Layout({
           </div>
         </Container>
       )}
-      <Footer></Footer>
+      {!noFooter && <Footer></Footer>}
     </div>
   );
 }

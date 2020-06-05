@@ -1,0 +1,57 @@
+@import "variables";
+
+.contact {
+  flex-direction: column;
+  height: 100%;
+}
+
+.main {
+  background: $bg2;
+  flex-grow: 1;
+  flex-basis: 0;
+  margin-top: $notScrolled;
+  padding: 0;
+  height: 100%;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+$socialWidth: 8em;
+
+.socials {
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 1.5em;
+  text-align: center;
+
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: $socialWidth;
+    flex-basis: 0;
+    flex-grow: 0;
+    margin: 50px;
+    color: $color;
+    padding: 10px $socialWidth * 0.3;
+    border-radius: 5px;
+    transition: background-color 500ms;
+
+    &:hover {
+      background-color: transparentize($color: $bg, $amount: 0.2);
+    }
+
+    svg {
+      height: $socialWidth * 0.7;
+      width: $socialWidth * 0.7;
+      min-width: 60px;
+      min-height: 60px;
+      margin-bottom: 20px;
+    }
+  }
+}

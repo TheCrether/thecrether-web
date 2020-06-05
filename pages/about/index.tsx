@@ -12,7 +12,7 @@ export default function AboutPage() {
           I am a 17-year old student from Austria studying Informatics at HTBLA
           Kaindorf
           <br />
-          Below you'll find a lot of stuff about me
+          Below you{"'"}ll find a lot of stuff about me
         </p>
       </div>
 
@@ -26,12 +26,12 @@ export default function AboutPage() {
           The first interaction I can remember, was when my mother said to log
           into her laptop when I was around 6 or 7.
           <br />
-          She told me to type in her password and "Enter" and I did not
+          She told me to type in her password and {'"'}Enter{'"'} and I did not
           understand that there was an actual Enter key.
           <br />
-          So I basically typed in "Enter" key by key and was confused to no end.
-          That first experience got me thinking about computers and getting into
-          Minecraft.
+          So I basically typed in {'"'}Enter{'"'} key by key and was confused to
+          no end. Somehow that first experience got me thinking about computers and
+          getting into Minecraft.
           <br />
         </p>
       </div>
