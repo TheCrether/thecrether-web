@@ -8,10 +8,6 @@
   margin-top: $notScrolled;
 
   & > div {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     background: linear-gradient(
       transparentize($bg2, 0.1) 20%,
       transparentize($bg2, 0.5) 45%,

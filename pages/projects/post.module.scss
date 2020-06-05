@@ -13,10 +13,8 @@ $skewDeg: -3deg;
 }
 
 .topPart {
-  display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
   width: 100%;
   // height: 60vh;
   height: fit-content;
@@ -36,10 +34,7 @@ $skewDeg: -3deg;
     background: inherit;
     transition: transform $duration;
     z-index: 1;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
     & > div {
       transform: skewY(-$skewDeg) rotate($skewDeg);
@@ -47,8 +42,6 @@ $skewDeg: -3deg;
     }
 
     .properties {
-      display: flex;
-      flex-direction: row;
       flex-wrap: wrap;
       justify-content: flex-start;
       width: 100%;

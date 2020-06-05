@@ -3,6 +3,7 @@ import Head from "next/head";
 import styles from "./projects.module.scss";
 import { layout } from "@styles";
 import { getProjectsByCategory, ProjectPosts } from "@lib/projects";
+import { flex } from "@lib/utils";
 
 const languages = [
   {
@@ -69,7 +70,7 @@ export default function Projects({ posts }: Props) {
           return (
             <div key={lang.name}>
               <h1 id={lang.name.toLowerCase()}>{lang.name}</h1>
-              <div className={styles.language}>
+              <div className={flex(styles.language)}>
                 {projects &&
                   projects.map((project) => (
                     <Project

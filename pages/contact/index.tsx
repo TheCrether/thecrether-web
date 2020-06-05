@@ -26,15 +26,15 @@ export default function ContactPage() {
       </div>
       <div className={styles.content}>
         <div className={flex(styles.socials)}>
-          <a href="https://twitter.com/thecrether">
+          <a href="https://twitter.com/thecrether" className="flex">
             <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
             @TheCrether
           </a>
-          <a href="https://github.com/TheCrether">
+          <a href="https://github.com/TheCrether" className="flex">
             <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
             TheCrether
           </a>
-          <a href="https://instagram.com/thecrether">
+          <a href="https://instagram.com/thecrether" className="flex">
             <FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
             @TheCrether
           </a>

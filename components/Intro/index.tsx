@@ -2,7 +2,7 @@ import styles from "./intro.module.scss";
 import Image, { getBackgrounds } from "components/Image";
 import { CSSProperties, useEffect, useState } from "react";
 
-export type IntroType = "home" | "projects" | "about";
+export type IntroType = "home" | "projects";
 
 interface Props {
   introType: IntroType;
@@ -18,16 +18,12 @@ type Urls = {
 const backgrounds: Urls = {
   home: getBackgrounds("intro.jpg", true),
   projects: getBackgrounds("projects.jpg", true),
-  about: ``,
 };
 
 export function Intro({ introType, title, height }: Props) {
   const [style, setStyle] = useState<CSSProperties>({
     backgroundImage: backgrounds[introType],
   });
-  // let style: CSSProperties = {
-  //   backgroundImage: backgrounds[introType],
-  // };
   if (height) {
     if (!style.height) setStyle({ height, ...style });
   }
@@ -59,7 +55,7 @@ export function Intro({ introType, title, height }: Props) {
       }`}
       style={style}
     >
-      <div>
+      <div className="flex">
         {image}
         <h1 id="introTitle">{title}</h1>
       </div>

@@ -53,9 +53,6 @@ export function Header({ home, projectPost, scrolled }: Props) {
       setScrolled(false);
     }
   }
-  // } else if (!scrolled) {
-  //   setScrolled(true);
-  // }
 
   let className = "";
   if (projectPost) {
@@ -72,7 +69,7 @@ export function Header({ home, projectPost, scrolled }: Props) {
 
   return (
     <header className={className}>
-      <div id={styles.notScrolled}>
+      <div id={styles.notScrolled} className="flex">
         {!home && (
           <Link href="/">
             <a className={styles.centerProfile}>
@@ -80,17 +77,21 @@ export function Header({ home, projectPost, scrolled }: Props) {
             </a>
           </Link>
         )}
-        <div id={styles.notScrolledLinks}>{links}</div>
+        <div id={styles.notScrolledLinks} className="flex">
+          {links}
+        </div>
       </div>
 
       <Container className={styles.container}>
         <Link href="/">
-          <a id={styles.left}>
+          <a id={styles.left} className="flex">
             <Image path="profile.jpg" alt="Profile Picture"></Image>
             <p>TheCrether</p>
           </a>
         </Link>
-        <div id={styles.right}>{links}</div>
+        <div id={styles.right} className="flex">
+          {links}
+        </div>
       </Container>
     </header>
   );

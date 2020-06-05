@@ -14,10 +14,7 @@
   height: 100%;
 
   & > div {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 }
 
@@ -30,9 +27,7 @@ $socialWidth: 8em;
   text-align: center;
 
   a {
-    display: flex;
     flex-direction: column;
-    align-items: center;
     width: $socialWidth;
     flex-basis: 0;
     flex-grow: 0;

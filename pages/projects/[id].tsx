@@ -2,6 +2,7 @@ import { Layout, Header, Image, Container, Date } from "@components";
 import { getAllProjectIds, ProjectPost, getProjectData } from "@lib/projects";
 import { layout } from "@styles";
 import styles from "./post.module.scss";
+import { flex } from "@lib/utils";
 
 interface Props {
   projectData: ProjectPost;
@@ -13,12 +14,15 @@ export default function ProjectPage({ projectData }: Props) {
   return (
     <Layout customHeader maxWidth mainClassName={styles.main}>
       <Header projectPost></Header>
-      <div className={imgPath ? styles.topPart : styles.noImg} id="topPart">
+      <div
+        className={flex(imgPath ? styles.topPart : styles.noImg)}
+        id="topPart"
+      >
         {imgPath && <Image id="topImg" path={projectData.imgPath}></Image>}
-        <div className={styles.info}>
+        <div className={flex(styles.info)}>
           <Container>
             <h1>{title}</h1>
-            <div className={styles.properties}>
+            <div className={flex(styles.properties)}>
               {date && <Date dateString={date.toString()}></Date>}
               <p>Language: {language}</p>
               <a href={website}>Website</a>

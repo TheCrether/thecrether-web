@@ -10,11 +10,11 @@ export function Footer() {
     <footer>
       <Container className={flex(styles.footer)}>
         <p>© 2020 TheCrether</p>
-        <div className={styles.socials}>
-          <a href="https://github.com/TheCrether">
+        <div className={flex(styles.socials)}>
+          <a href="https://github.com/TheCrether" className="flex">
             <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>Github
           </a>
-          <a href="https://twitter.com/thecrether">
+          <a href="https://twitter.com/thecrether" className="flex">
             <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>Twitter
           </a>
         </div>
