@@ -1,8 +1,7 @@
 import Head from "next/head";
 import styles from "./layout.module.scss";
 import Link from "next/link";
-import Container from "../Container";
-import { Header, Footer } from "@components";
+import { Header, Footer, Container } from "@components";
 import { flex } from "@lib/utils";
 
 interface Props {

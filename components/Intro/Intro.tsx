@@ -1,6 +1,6 @@
 import styles from "./intro.module.scss";
-import Image, { getBackgrounds, checkWebp } from "components/Image";
-import { CSSProperties, useEffect, useState } from "react";
+import Image, { getBackground, checkWebp } from "components/Image";
+import { CSSProperties, useEffect, useState, useRef } from "react";
 
 export type IntroType = "home" | "projects";
 
@@ -22,9 +22,7 @@ const backgroundNames: Urls = {
 
 export function Intro({ introType, title, height }: Props) {
   const [style, setStyle] = useState<CSSProperties>({});
-  // let style: CSSProperties = {
-  //   backgroundImage: backgrounds[introType],
-  // };
+
   if (height) {
     if (!style.height) setStyle({ height, ...style });
   }
@@ -40,10 +38,11 @@ export function Intro({ introType, title, height }: Props) {
   }
 
   useEffect(() => {
-    setStyle({
-      ...style,
-      backgroundImage: getBackgrounds(backgroundNames[introType], checkWebp()),
-    });
+    if (!style.background) {
+      setStyle({
+        background: `${getBackground(backgroundNames[introType], checkWebp())}`,
+      });
+    }
   });
 
   return (
