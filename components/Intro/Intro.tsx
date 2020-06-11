@@ -2,7 +2,7 @@ import styles from "./intro.module.scss";
 import Image, { getBackgrounds, checkWebp } from "components/Image";
 import { CSSProperties, useEffect, useState } from "react";
 
-export type IntroType = "home" | "projects" | "about";
+export type IntroType = "home" | "projects";
 
 interface Props {
   introType: IntroType;
@@ -18,7 +18,6 @@ type Urls = {
 const backgroundNames: Urls = {
   home: "intro.jpg",
   projects: "projects.jpg",
-  about: ``,
 };
 
 export function Intro({ introType, title, height }: Props) {
@@ -54,7 +53,7 @@ export function Intro({ introType, title, height }: Props) {
       }`}
       style={style}
     >
-      <div>
+      <div className="flex">
         {image}
         <h1 id="introTitle">{title}</h1>
       </div>

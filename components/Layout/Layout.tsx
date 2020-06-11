@@ -2,8 +2,8 @@ import Head from "next/head";
 import styles from "./layout.module.scss";
 import Link from "next/link";
 import Container from "../Container";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
+import { Header, Footer } from "@components";
+import { flex } from "@lib/utils";
 
 interface Props {
   children: React.ReactNode;
@@ -13,6 +13,7 @@ interface Props {
   customHeader?: boolean;
   mainClassName?: string;
   className?: string;
+  noFooter?: boolean;
 }
 
 export const siteTitle = "TheCrether's website";
@@ -25,9 +26,10 @@ export function Layout({
   customHeader,
   mainClassName,
   className,
+  noFooter,
 }: Props) {
   return (
-    <div className={`${styles.layout} ${className ? className : ""}`}>
+    <div className={flex(`${styles.layout} ${className ? className : ""}`)}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Website of TheCrether" />
@@ -40,7 +42,7 @@ export function Layout({
       {!customHeader && <Header home={home}></Header>}
       {intro && intro}
       <main
-        className={`${styles.main} ${mainClassName ? mainClassName : ""}`}
+        className={flex(`${styles.main} ${mainClassName ? mainClassName : ""}`)}
         id="main"
       >
         <Container maxWidth={maxWidth}>{children}</Container>
@@ -54,7 +56,7 @@ export function Layout({
           </div>
         </Container>
       )}
-      <Footer></Footer>
+      {!noFooter && <Footer></Footer>}
     </div>
   );
 }

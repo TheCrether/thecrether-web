@@ -7,40 +7,44 @@ import Image from "../Image";
 interface Props {
   home?: boolean;
   projectPost?: boolean;
+  scrolled?: boolean;
 }
 
-export function Header({ home, projectPost }: Props) {
+const routes: string[] = ["Projects", "About", "Contact"];
+
+export function Header({ home, projectPost, scrolled }: Props) {
   const [currScrolled, setScrolled] = useState(false);
 
-  // if (home) {
-  useEffect(() => {
-    let newScrolled;
-    if (projectPost) {
-      window.addEventListener("scroll", () => {
-        const topPart = document.getElementById("topPart");
-        if (topPart) {
-          newScrolled =
-            topPart.getBoundingClientRect().height * 0.8 < window.scrollY;
-        } else {
-          // check if 50% of window height scrolled if no intro is found
-          newScrolled = window.innerHeight / 2 < window.scrollY;
-        }
-        console.log("ds" + newScrolled);
-        changeScrolled(newScrolled);
-      });
-    } else {
-      window.addEventListener("scroll", () => {
-        const introTitle = document.getElementById("introTitle");
-        if (introTitle) {
-          newScrolled = introTitle.offsetTop - 50 < window.scrollY;
-        } else {
-          // check if 50% of window height scrolled if no intro is found
-          newScrolled = window.innerHeight / 2 < window.scrollY;
-        }
-        changeScrolled(newScrolled);
-      });
-    }
-  });
+  if (!scrolled) {
+    useEffect(() => {
+      let newScrolled;
+      if (projectPost) {
+        window.addEventListener("scroll", () => {
+          const topPart = document.getElementById("topPart");
+          if (topPart) {
+            newScrolled =
+              topPart.getBoundingClientRect().height * 0.8 < window.scrollY;
+          } else {
+            // check if 50% of window height scrolled if no intro is found
+            newScrolled = window.innerHeight / 2 < window.scrollY;
+          }
+          console.log("ds" + newScrolled);
+          changeScrolled(newScrolled);
+        });
+      } else {
+        window.addEventListener("scroll", () => {
+          const introTitle = document.getElementById("introTitle");
+          if (introTitle) {
+            newScrolled = introTitle.offsetTop - 50 < window.scrollY;
+          } else {
+            // check if 50% of window height scrolled if no intro is found
+            newScrolled = window.innerHeight / 2 < window.scrollY;
+          }
+          changeScrolled(newScrolled);
+        });
+      }
+    });
+  }
 
   function changeScrolled(newScrolled: boolean) {
     if (newScrolled && !currScrolled) {
@@ -49,9 +53,6 @@ export function Header({ home, projectPost }: Props) {
       setScrolled(false);
     }
   }
-  // } else if (!scrolled) {
-  //   setScrolled(true);
-  // }
 
   let className = "";
   if (projectPost) {
@@ -60,9 +61,15 @@ export function Header({ home, projectPost }: Props) {
     className = currScrolled ? styles.scrolled : styles.header;
   }
 
+  const links = routes.map((route) => (
+    <Link key={route} href={`/${route.toLowerCase()}`}>
+      <a>{route}</a>
+    </Link>
+  ));
+
   return (
     <header className={className}>
-      <div id={styles.notScrolled}>
+      <div id={styles.notScrolled} className="flex">
         {!home && (
           <Link href="/">
             <a className={styles.centerProfile}>
@@ -70,30 +77,20 @@ export function Header({ home, projectPost }: Props) {
             </a>
           </Link>
         )}
-        <div id={styles.notScrolledLinks}>
-          <Link href="/projects">
-            <a>Projects</a>
-          </Link>
-          <Link href="/about">
-            <a>About</a>
-          </Link>
+        <div id={styles.notScrolledLinks} className="flex">
+          {links}
         </div>
       </div>
 
       <Container className={styles.container}>
         <Link href="/">
-          <a id={styles.left}>
+          <a id={styles.left} className="flex">
             <Image path="profile.jpg" alt="Profile Picture"></Image>
             <p>TheCrether</p>
           </a>
         </Link>
-        <div id={styles.right}>
-          <Link href="/projects">
-            <a>Projects</a>
-          </Link>
-          <Link href="/about">
-            <a>About</a>
-          </Link>
+        <div id={styles.right} className="flex">
+          {links}
         </div>
       </Container>
     </header>

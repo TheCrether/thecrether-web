@@ -10,6 +10,13 @@ body {
   font-size: 18px;
   background: $bg;
   color: $color;
+  width: 100%;
+  height: 100%;
+
+  & > div {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 * {
@@ -18,7 +25,7 @@ body {
 
 a,
 .link {
-  color: #0070f3;
+  color: $link;
   text-decoration: none;
   cursor: pointer;
   transition: text-decoration $duration;
@@ -82,4 +89,19 @@ header {
 }
 .section:last-child::after {
   content: none;
+}
+
+ul {
+  list-style: none;
+
+  li {
+    margin: 5px;
+  }
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }

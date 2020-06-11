@@ -17,10 +17,8 @@
   max-height: 350px;
   position: relative;
   overflow: hidden;
-  // padding: 5px 2px;
-  display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  align-items: flex-start;
   transition: margin $duration;
 
   .topImg {
@@ -28,10 +26,7 @@
     height: 6em;
     overflow: hidden;
     position: relative;
-    display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-items: center;
 
     img {
       position: absolute;
