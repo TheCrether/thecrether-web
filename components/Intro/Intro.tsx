@@ -1,5 +1,5 @@
 import styles from "./intro.module.scss";
-import Image, { getBackgrounds } from "components/Image";
+import Image, { getBackgrounds, checkWebp } from "components/Image";
 import { CSSProperties, useEffect, useState } from "react";
 
 export type IntroType = "home" | "projects" | "about";
@@ -15,16 +15,14 @@ type Urls = {
 };
 
 // TODO make webp checking
-const backgrounds: Urls = {
-  home: getBackgrounds("intro.jpg", true),
-  projects: getBackgrounds("projects.jpg", true),
+const backgroundNames: Urls = {
+  home: "intro.jpg",
+  projects: "projects.jpg",
   about: ``,
 };
 
 export function Intro({ introType, title, height }: Props) {
-  const [style, setStyle] = useState<CSSProperties>({
-    backgroundImage: backgrounds[introType],
-  });
+  const [style, setStyle] = useState<CSSProperties>({});
   // let style: CSSProperties = {
   //   backgroundImage: backgrounds[introType],
   // };
@@ -43,13 +41,10 @@ export function Intro({ introType, title, height }: Props) {
   }
 
   useEffect(() => {
-    // var elem = document.createElement("canvas");
-    // if (elem.getContext && elem.getContext("2d")) {
-    //   // was able or not to get WebP representation
-    //   return elem.toDataURL("image/webp").indexOf("data:image/webp") == 0;
-    // }
-    // // very old browser like IE 8, canvas not supported
-    // return false;
+    setStyle({
+      ...style,
+      backgroundImage: getBackgrounds(backgroundNames[introType], checkWebp()),
+    });
   });
 
   return (
