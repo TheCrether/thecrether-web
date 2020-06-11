@@ -2,8 +2,8 @@ import Head from "next/head";
 import styles from "./layout.module.scss";
 import Link from "next/link";
 import Container from "../Container";
-import Header from "../Header";
-import Footer from "../Footer";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 interface Props {
   children: React.ReactNode;
