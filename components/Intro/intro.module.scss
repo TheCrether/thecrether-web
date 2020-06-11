@@ -26,25 +26,6 @@
   }
 }
 
-.home {
-  composes: intro;
-  // background-image: url("/images/bg/intro.jpg");
-}
-
-.projects {
-  composes: intro;
-  // background-image: url("/images/bg/projects.jpg");
-}
-
-.about {
-  composes: intro;
-  // background-image: url("/images/bg/intro.png");
-
-  & > div {
-    background: inherit;
-  }
-}
-
 #homeProfilePic {
   width: $notScrolled * 2;
   height: $notScrolled * 2;
@@ -52,13 +33,21 @@
   margin: 10px;
 }
 
+@media screen and (max-width: 1000px) {
+  .intro > div {
+    padding: 15px;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .intro > div {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    padding: 0;
 
     h1 {
       margin: 0;
+      width: 100%;
     }
   }
 }
