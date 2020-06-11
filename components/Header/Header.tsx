@@ -3,6 +3,7 @@ import Container from "../Container";
 import styles from "./header.module.scss";
 import Link from "next/link";
 import Image from "../Image";
+import { flex } from "@lib/utils";
 
 interface Props {
   home?: boolean;
@@ -14,6 +15,7 @@ const routes: string[] = ["Projects", "About", "Contact"];
 
 export function Header({ home, projectPost, scrolled }: Props) {
   const [currScrolled, setScrolled] = useState(false);
+  const [navOpen, setNavOpen] = useState(false);
 
   if (!scrolled) {
     useEffect(() => {
@@ -93,6 +95,22 @@ export function Header({ home, projectPost, scrolled }: Props) {
           {links}
         </div>
       </Container>
+      {/* this burger thing is taken from https://www.parkside-interactive.com/ */}
+      <div
+        className={flex(` ${navOpen ? styles.clicked : ""} ${styles.burger}`)}
+      >
+        <div
+          className={flex(styles.burgerWrapper)}
+          onClick={() => setNavOpen(!navOpen)}
+        >
+          <div className={styles.burgerIcon}>
+            <div className={styles.firstLine}></div>
+            <div className={styles.secondLine}></div>
+            <div className={styles.thirdLine}></div>
+          </div>
+        </div>
+        <div className={flex(styles.burgerLinks)}>{links}</div>
+      </div>
     </header>
   );
 }

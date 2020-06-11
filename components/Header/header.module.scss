@@ -18,6 +18,12 @@
 
   a {
     font-weight: bold;
+
+    picture {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 
   #notScrolled {
@@ -45,10 +51,16 @@
     transform: translateY(-$scrolledHeight);
   }
 
-  #right a {
-    padding: 10px 25px;
-    color: $color;
-    text-decoration: underline;
+  #right {
+    overflow: hidden;
+    text-overflow: clip;
+    transition: transform 500ms;
+
+    a {
+      padding: 10px 25px;
+      color: $color;
+      text-decoration: underline;
+    }
   }
 
   #notScrolledLinks a,
@@ -93,5 +105,148 @@
 
   .container {
     transform: translateY(0);
+  }
+}
+
+$burgerContainer: 150px;
+
+.burger {
+  position: fixed;
+  top: 0;
+  right: 0;
+  transition: transform $duration;
+  transform: translateX(120%);
+  align-items: flex-end;
+  flex-direction: column;
+  width: $burgerContainer;
+  // transition: align-items $duration;
+}
+
+$burgerSize: 40px;
+
+.burgerWrapper {
+  width: $scrolledHeight;
+  height: $scrolledHeight;
+  position: absolute;
+  transition: right $duration;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  z-index: 5;
+}
+
+$linkMargin: 4px;
+
+.burgerIcon {
+  position: relative;
+  background-color: transparent;
+  width: $burgerSize;
+  height: $burgerSize;
+  // justify-content: center;
+
+  & > div {
+    position: absolute;
+    height: 2px;
+    right: 10px;
+    width: 50%;
+    display: block;
+
+    &::after {
+      background-color: #fff;
+      bottom: 0;
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: background-color 0.3s cubic-bezier(0.25, 0.74, 0.22, 0.99);
+      width: 100%;
+    }
+  }
+  .firstLine {
+    top: 14px;
+    transition: top 0.1s ease-in 0.25s, opacity 0.1s ease-in 0.14s,
+      transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19),
+      -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  .secondLine {
+    top: 50%;
+    margin-top: -1px;
+    transition: 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19),
+      -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  .thirdLine {
+    bottom: 14px;
+    transition: bottom 0.1s ease-in 0.25s,
+      transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19),
+      -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+}
+
+$linkAmount: 3;
+.burgerLinks {
+  flex-direction: column;
+  padding: 10px 30px;
+  background: $bg3;
+  justify-content: flex-start;
+  overflow: hidden;
+  text-overflow: clip;
+  height: 0;
+  padding: 0 20px;
+  transition: padding $duration, height $duration;
+  position: absolute;
+  top: 0;
+  width: 150px;
+
+  a {
+    height: $scrolledHeight / $linkAmount;
+    margin: $linkMargin 0;
+    color: white;
+  }
+}
+.clicked {
+  align-items: center;
+
+  .burgerWrapper {
+    right: ($burgerContainer - $scrolledHeight) / 2;
+  }
+
+  .burgerLinks {
+    padding: $scrolledHeight - 10px 20px 30px 20px;
+    height: $scrolledHeight + ($scrolledHeight / 4) * $linkAmount + 30px +
+      $linkMargin * 2 * $linkAmount;
+  }
+
+  .firstLine {
+    opacity: 0;
+    top: 19px;
+    transition: top 0.1s ease-out, opacity 0.1s ease-out 0.1s;
+  }
+
+  .secondLine {
+    transform: rotate(225deg);
+    transition-delay: 0.12s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  .thirdLine {
+    bottom: 19px;
+    transform: rotate(135deg);
+    transition: bottom 0.1s ease-out,
+      transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s,
+      -webkit-transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #right {
+    transform: translateX(120%);
+  }
+
+  .burger {
+    transform: translateX(0%);
   }
 }
