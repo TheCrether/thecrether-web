@@ -98,6 +98,7 @@ export function Header({ home, projectPost, scrolled }: Props) {
       {/* this burger thing is taken from https://www.parkside-interactive.com/ */}
       <div
         className={flex(` ${navOpen ? styles.clicked : ""} ${styles.burger}`)}
+        style={{ opacity: currScrolled ? 1 : 0 }}
       >
         <div
           className={flex(styles.burgerWrapper)}

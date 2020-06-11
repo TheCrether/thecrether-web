@@ -2,16 +2,17 @@
 
 .contact {
   flex-direction: column;
-  height: 100%;
+  min-height: 100%;
 }
 
 .main {
   background: $bg2;
   flex-grow: 1;
-  flex-basis: 0;
+  // flex-basis: 0;
   margin-top: $notScrolled;
   padding: 0;
   height: 100%;
+  height: auto;
 
   & > div {
     flex-direction: column;
