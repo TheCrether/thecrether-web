@@ -1,8 +1,8 @@
 import { Intro, Layout } from "@components";
 import styles from "./about.module.scss";
+import Link from "next/link";
 
 export default function AboutPage() {
-  // const intro = <Intro title="About Me" introType="about"></Intro>;
   return (
     <Layout>
       <div className="section">
@@ -16,24 +16,37 @@ export default function AboutPage() {
         </p>
       </div>
 
-      <div className="section">
+      <div className="section" id="what-got-me-into">
         <h3>What got me into Informatics</h3>
-        <p>
-          Ever since I was young, I was interested in computers just because
-          they were fun.
-        </p>
-        <p>
-          The first interaction I can remember, was when my mother said to log
-          into her laptop when I was around 6 or 7.
-          <br />
-          She told me to type in her password and {'"'}Enter{'"'} and I did not
-          understand that there was an actual Enter key.
-          <br />
-          So I basically typed in {'"'}Enter{'"'} key by key and was confused to
-          no end. Somehow that first experience got me thinking about computers and
-          getting into Minecraft.
-          <br />
-        </p>
+        <div className={styles.content}>
+          <p>
+            Ever since I was young, I was interested in computers just because
+            they were fun.
+          </p>
+          <p>
+            The first interaction I can remember, was when my mother said to log
+            into her laptop when I was around 6 or 7.
+            <br />
+            She told me to type in her password and {'"'}Enter{'"'} and I did
+            not understand that there was an actual Enter key.
+            <br />
+            So I basically typed in {'"'}Enter{'"'} key by key and was confused
+            to no end. Somehow that first experience got me thinking about
+            computers and getting into Minecraft.
+            <br />
+          </p>
+          <p>
+            If you would like to find out more about my adventures of getting
+            into informatics click on this link
+          </p>
+        </div>
+        <Link href="/about/whatgotmeinto">
+          <a>find out more!</a>
+        </Link>
+      </div>
+
+      <div className="section">
+        <h3></h3>
       </div>
     </Layout>
   );

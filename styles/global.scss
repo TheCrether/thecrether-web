@@ -29,6 +29,7 @@ a,
   text-decoration: none;
   cursor: pointer;
   transition: text-decoration $duration;
+  background: transparent;
 }
 
 a:hover,
@@ -60,7 +61,7 @@ header {
   width: 100%;
   margin: $spacing 0 $spacing * 2 0;
   position: relative;
-  padding: 0;
+  padding: 0 50px;
 
   & > p {
     width: 90%;
@@ -72,19 +73,6 @@ header {
 
   &:nth-child(2n + 1) {
     text-align: left;
-  }
-
-  &:not(:last-child)::after {
-    width: 90%;
-    height: 4px;
-    background-color: transparentize($color: $color, $amount: 0.5);
-    border-radius: 2px;
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: -$spacing;
-    left: 50%;
-    transform: translateX(-50%);
   }
 }
 .section:last-child::after {
@@ -104,4 +92,32 @@ ul {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.alternating {
+  p {
+    min-width: 800px;
+    width: 80%;
+    transition: width $duration;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .alternating {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    p {
+      width: 90%;
+
+      &:nth-child(2n) {
+        text-align: left;
+      }
+
+      &:nth-child(2n + 1) {
+        text-align: right;
+      }
+    }
+  }
 }
