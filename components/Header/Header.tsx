@@ -84,7 +84,7 @@ export function Header({ home, projectPost, scrolled }: Props) {
         </div>
       </div>
 
-      <Container className={styles.container}>
+      <Container className="container">
         <Link href="/">
           <a id={styles.left} className="flex">
             <Image path="profile.jpg" alt="Profile Picture"></Image>

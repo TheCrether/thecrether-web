@@ -27,11 +27,21 @@ export default function Page() {
           After that, I just used my old Acer laptop alot and I still own it to
           this day.
           <br />
-          I did all kinds of stuff
+          I did all kinds of stuff on it and just had my fun.
           <br />
-          When I first wanted to start programming, I wanted to use Java, but I
+          When I first wanted to start programming, I tried to use Java, but I
           just could not figure out that the print line function had an {'"'}L
-          {'"'} in it and instead typed an {'"'}I{'"'} into it.
+          {'"'} in it and instead typed an {'"'}I{'"'} into it. <br /> I
+          literally gave up and then tried again one year later with Python,
+          where I had a lot of fun. <br />
+        </p>
+        <h2>School</h2>
+        <p>
+          Then, I got into HTBLA Kaindorf and started with C in my first year.{" "}
+          <br />
+          Since this first year, we are now programming{" "}
+          <a href="https://github.com/TheCrether/POS">various stuff</a> with
+          Java.
         </p>
       </div>
     </Layout>

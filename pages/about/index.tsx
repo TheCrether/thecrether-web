@@ -1,4 +1,4 @@
-import { Intro, Layout } from "@components";
+import { Intro, Layout, BackLink } from "@components";
 import styles from "./about.module.scss";
 import Link from "next/link";
 
@@ -48,6 +48,8 @@ export default function AboutPage() {
       <div className="section">
         <h3></h3>
       </div>
+
+      <BackLink></BackLink>
     </Layout>
   );
 }

@@ -46,15 +46,6 @@ export function Layout({
       >
         <Container maxWidth={maxWidth}>{children}</Container>
       </main>
-      {!home && (
-        <Container>
-          <div>
-            <Link href="/">
-              <a>← Back to home</a>
-            </Link>
-          </div>
-        </Container>
-      )}
       {!noFooter && <Footer></Footer>}
     </div>
   );

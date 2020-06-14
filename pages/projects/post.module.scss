@@ -32,7 +32,6 @@ $skewDeg: -3deg;
     width: 102%;
     height: 20vh;
     background: inherit;
-    transition: transform $duration;
     z-index: 1;
     flex-direction: column;
 
@@ -74,6 +73,10 @@ $skewDeg: -3deg;
   composes: topPart;
 
   .info {
+    transform: none;
+    & > div {
+      transform: none;
+    }
   }
 }
 

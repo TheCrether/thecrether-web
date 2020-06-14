@@ -1,4 +1,4 @@
-import { Layout, Header, Image, Container, Date } from "@components";
+import { Layout, Header, Image, Container, Date, BackLink } from "@components";
 import { getAllProjectIds, ProjectPost, getProjectData } from "@lib/projects";
 import { layout } from "@styles";
 import styles from "./post.module.scss";
@@ -32,9 +32,10 @@ export default function ProjectPage({ projectData }: Props) {
       </div>
       <div
         dangerouslySetInnerHTML={{ __html: content }}
-        className={layout.container}
+        className="container"
         id={styles.post}
       ></div>
+      <BackLink msg="Back to Projects" href="/projects"></BackLink>
     </Layout>
   );
 }

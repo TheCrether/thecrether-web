@@ -46,7 +46,7 @@
     }
   }
 
-  .container {
+  :global .container {
     transition: transform $duration;
     transform: translateY(-$scrolledHeight);
   }
@@ -103,7 +103,7 @@
     top: -$notScrolled;
   }
 
-  .container {
+  :global .container {
     transform: translateY(0);
   }
 }

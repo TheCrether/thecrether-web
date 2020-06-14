@@ -12,9 +12,7 @@ export function Container({ children, id, className, maxWidth }: Props) {
   return (
     <div
       className={flex(
-        `${maxWidth ? styles.maxWidth : styles.container} ${
-          className || ""
-        } container`
+        `${maxWidth ? styles.maxWidth : ""} ${className || ""} container`
       )}
       id={id}
     >

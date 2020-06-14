@@ -1,4 +1,4 @@
-import { Layout, Intro, Image, Project } from "@components";
+import { Layout, Intro, Image, Project, BackLink } from "@components";
 import Head from "next/head";
 import styles from "./projects.module.scss";
 import { layout } from "@styles";
@@ -64,7 +64,7 @@ export default function Projects({ posts }: Props) {
           </div>
         ))}
       </nav>
-      <div className={`${layout.container} ${styles.projects}`}>
+      <div className={`container ${styles.projects}`}>
         {languages.map((lang) => {
           let projects = posts[lang.name.toLowerCase()];
           return (
@@ -87,6 +87,7 @@ export default function Projects({ posts }: Props) {
           );
         })}
       </div>
+      <BackLink></BackLink>
     </Layout>
   );
 }
