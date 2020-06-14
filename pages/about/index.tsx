@@ -1,23 +1,25 @@
-import { Intro, Layout, BackLink } from "@components";
+import { Layout, BackLink } from "@components";
 import styles from "./about.module.scss";
 import Link from "next/link";
+import { useEffect } from "react";
+import { sectionAnimator } from "@lib/utils";
 
 export default function AboutPage() {
+  useEffect(() => {
+    sectionAnimator();
+  });
+
   return (
     <Layout>
-      <div className="section">
-        <h3>About Me</h3>
-        <p>Thank you for trying to find out more about me!</p>
-        <p>
-          I am a 17-year old student from Austria studying Informatics at HTBLA
-          Kaindorf
-          <br />
-          Below you{"'"}ll find a lot of stuff about me
-        </p>
-      </div>
+      <h1>About Me</h1>
+      <p>Thank you for trying to find out more about me!</p>
+      <p>
+        I am a 17-year old student from Austria studying Informatics at HTBLA
+        Kaindorf and below you{"'"}ll find out a lot of stuff about me
+      </p>
 
       <div className="section" id="what-got-me-into">
-        <h3>What got me into Informatics</h3>
+        <h2>What got me into Informatics</h2>
         <div className={styles.content}>
           <p>
             Ever since I was young, I was interested in computers just because
@@ -35,18 +37,44 @@ export default function AboutPage() {
             computers and getting into Minecraft.
             <br />
           </p>
-          <p>
-            If you would like to find out more about my adventures of getting
-            into informatics click on this link
-          </p>
         </div>
         <Link href="/about/whatgotmeinto">
-          <a>find out more!</a>
+          <a>find out more about my adventure!</a>
         </Link>
       </div>
 
       <div className="section">
-        <h3></h3>
+        <h2>Hobbies</h2>
+        <p>
+          I am a pretty diverse person when it comes to hobbies/areas of
+          interest. <br /> I read, watch or listen to a lot of stuff. The topics
+          range from philosophical questions to the latest news about
+          technology.
+        </p>
+        <h3>Sports</h3>
+        <p>
+          I like playing soccer, ultimate frisbee or the casual volleyball game.
+          <br />
+          In terms of workouts, I sometimes do them, but in the last few years,
+          I was not really motivated to do so. <br />
+          Another {'"'}sporty{'"'} thing I like to do, is driving my longboard.
+          I really love it and it is most fun when I ride with my friends.
+        </p>
+        <h3>Gaming</h3>
+        <p>
+          Of course, I like playing video games too. <br />
+          Some of my favorite games are the Fallout games, CS:GO, Rocket League
+          and some Indie games like Hacknet or Orwell
+        </p>
+      </div>
+
+      <div className="section">
+        <h2>Recommendations</h2>
+        <Link href="/about/recommendations">
+          <a>
+            click here to find out what content creators and artists I recommend
+          </a>
+        </Link>
       </div>
 
       <BackLink></BackLink>

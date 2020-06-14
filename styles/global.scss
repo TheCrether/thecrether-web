@@ -79,36 +79,52 @@ header {
   margin: $spacing 0 $spacing * 2 0;
   position: relative;
   padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+
+  h2 {
+    width: 100%;
+    text-align: center;
+  }
 
   & > p {
-    width: 90%;
+    width: 75%;
+    transition: width $duration;
   }
 
   &:nth-child(2n) {
     text-align: right;
+    align-items: flex-end;
   }
 
   &:nth-child(2n + 1) {
     text-align: left;
+    align-items: flex-start;
   }
 }
-.section:last-child::after {
-  content: none;
+
+.animated-section {
+  opacity: 1;
+  animation: 1.5s ease-in-out animatesection;
 }
 
+@keyframes animatesection {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
 ul {
   list-style: none;
 
   li {
     margin: 5px;
-  }
-}
-
-.alternating {
-  p {
-    min-width: 800px;
-    width: 80%;
-    transition: width $duration;
   }
 }
 
@@ -119,7 +135,7 @@ ul {
     justify-content: center;
 
     p {
-      width: 90%;
+      width: 85%;
 
       &:nth-child(2n) {
         text-align: left;
@@ -128,6 +144,14 @@ ul {
       &:nth-child(2n + 1) {
         text-align: right;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .section {
+    p {
+      width: 95%;
     }
   }
 }

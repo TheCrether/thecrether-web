@@ -14,7 +14,6 @@ type Urls = {
   [type in IntroType]: string;
 };
 
-// TODO make webp checking
 const backgroundNames: Urls = {
   home: "intro.jpg",
   projects: "projects.jpg",
@@ -46,12 +45,7 @@ export function Intro({ introType, title, height }: Props) {
   });
 
   return (
-    <div
-      className={`${styles.intro} ${
-        introType ? styles[introType] : styles.default
-      }`}
-      style={style}
-    >
+    <div className={styles.intro} style={style}>
       <div className="flex">
         {image}
         <h1 id="introTitle">{title}</h1>

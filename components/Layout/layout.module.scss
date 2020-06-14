@@ -5,9 +5,8 @@
 }
 
 .main {
-  margin-top: -$homeMargin * 5;
   z-index: 2;
-  padding-top: $homeMargin * 6;
+  padding-top: $homeMargin * 3;
   background: linear-gradient(
     rgba(0, 0, 0, 0),
     transparentize($bg2, 0.1) $homeMargin * 5,
