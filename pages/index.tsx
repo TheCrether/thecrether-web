@@ -23,7 +23,7 @@ export default function Home() {
 
       <ul className="section">
         <h3>About</h3>
-        <p>I am an 17-year old student</p>
+        <p>I am a 17-year old student</p>
         <p>
           I am from Austria and go to{" "}
           <a href="https://www.htl-kaindorf.at/">HTBLA Kaindorf</a>
