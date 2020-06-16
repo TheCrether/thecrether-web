@@ -22,7 +22,7 @@ export default function Home() {
       </h2>
 
       <ul className="section">
-        <h3>About</h3>
+        <h2>About</h2>
         <p>I am a 17-year old student</p>
         <p>
           I am from Austria and go to{" "}
@@ -48,37 +48,10 @@ export default function Home() {
         <p>dd</p>
       </ul>
       <section className="section">
-        <h3>Projects</h3>
+        <h2>Projects</h2>
         <p>sa</p>
         <p>sa</p>
         <p>sa</p>
-      </section>
-      <section className="section">
-        <p>dd</p>
-        <p>dd</p>
-        <p>dd</p>
-        <p>dd</p>
-        <p>dd</p>
-        <p>dd</p>
-        <p>dd</p>
-        <p>dd</p>
-        <p>dd</p>
-        <p>dd</p>
-        <p>dd</p>
-        <p>dd</p>
-        <p>dd</p>
-        <p>dd</p>
-        <p>dd</p>
-        <p>dd</p>
-        <p>dd</p>
-        <p>dd</p>
-        <p>dd</p>
-        <p>dd</p>
-        <p>dd</p>
-        <p>dd</p>
-        <p>dd</p>
-        <p>dd</p>
-        <p>dd</p>
       </section>
     </Layout>
   );

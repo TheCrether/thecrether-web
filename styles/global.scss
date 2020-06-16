@@ -106,20 +106,48 @@ header {
 
 .animated-section {
   opacity: 1;
-  animation: 1.5s ease-in-out animatesection;
+
+  &:nth-child(2n) {
+    animation: 1.2s cubic-bezier(0.62, 0.26, 0.59, 0.98) animatesection-right;
+  }
+
+  &:nth-child(2n + 1) {
+    animation: 1.2s cubic-bezier(0.62, 0.26, 0.59, 0.98) animatesection-left;
+  }
 }
 
-@keyframes animatesection {
-  from {
-    transform: translateY(100px);
+@keyframes animatesection-right {
+  0% {
+    transform: translateX(50%);
     opacity: 0;
   }
 
-  to {
+  75% {
+    transform: translateX(-50px);
+  }
+
+  100% {
     opacity: 1;
     transform: none;
   }
 }
+
+@keyframes animatesection-left {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+
+  75% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 ul {
   list-style: none;
 

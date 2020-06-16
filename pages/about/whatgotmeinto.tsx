@@ -55,7 +55,8 @@ export default function Page() {
         <p>
           My interest in informatics was just there and I don{"'"}t think that
           there was any changing moment. <br />I just tried a out a lot of stuff
-          and kinda rolled along with it.
+          and kinda rolled along with it. I do a lot of web dev and sometimes
+          try out other stuff like Golang.
         </p>
       </div>
     </Layout>
