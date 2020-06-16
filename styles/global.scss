@@ -148,6 +148,26 @@ header {
   }
 }
 
+.animatedPosts {
+  & > a {
+    animation: postAnim 0.75s cubic-bezier(0.62, 0.26, 0.59, 0.98);
+    opacity: 1;
+  }
+}
+
+@keyframes postAnim {
+  0% {
+    opacity: 0.2;
+    transform: translateY(-50px);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
 ul {
   list-style: none;
 

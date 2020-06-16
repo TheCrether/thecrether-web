@@ -2,14 +2,14 @@ export function flex(className: string) {
   return `${className} flex`;
 }
 
-export function sectionAnimator() {
-  const sections = document.getElementsByClassName("section");
+export function sectionAnimator(selector = ".section", animatedClass = "animated-section") {
+  const sections = document.querySelectorAll(selector);
 
   if ("IntersectionObserver" in window) {
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.intersectionRatio > 0) {
-          entry.target.classList.add("animated-section");
+          entry.target.classList.add(animatedClass);
           observer.unobserve(entry.target);
         }
       });
@@ -20,7 +20,7 @@ export function sectionAnimator() {
     }
   } else {
     for (const section of sections) {
-      section.classList.add("animated-section");
+      section.classList.add(animatedClass);
     }
   }
 }

@@ -1,6 +1,10 @@
 @import "variables";
 @import "mixins";
 
+.wrapper {
+  opacity: 0;
+}
+
 .wrapper:hover {
   text-decoration: none;
 }

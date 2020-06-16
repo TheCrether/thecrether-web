@@ -1,24 +1,24 @@
 import { Layout, Intro, Image, Project, BackLink } from "@components";
 import Head from "next/head";
 import styles from "./projects.module.scss";
-import { layout } from "@styles";
 import { getProjectsByCategory, ProjectPosts } from "@lib/projects";
-import { flex } from "@lib/utils";
+import { flex, sectionAnimator } from "@lib/utils";
+import { useEffect } from "react";
 
 const languages = [
   {
     name: "TypeScript",
-    amount: 8,
+    amount: 5,
     margin: "0 10px 0 0",
   },
   {
     name: "Java",
-    amount: 8,
+    amount: 10,
     margin: "0 50px 0 0",
   },
   {
     name: "Go",
-    amount: 14,
+    amount: 13,
     margin: "0 80px 0 0",
   },
 ];
@@ -36,6 +36,8 @@ export default function Projects({ posts }: Props) {
       el.scrollIntoView({ behavior: "smooth" });
     }
   }
+
+  useEffect(() => sectionAnimator(`.${styles.language}`, "animatedPosts"));
 
   return (
     <Layout intro={intro} maxWidth>
@@ -72,13 +74,14 @@ export default function Projects({ posts }: Props) {
               <h1 id={lang.name.toLowerCase()}>{lang.name}</h1>
               <div className={flex(styles.language)}>
                 {projects &&
-                  projects.map((project) => (
+                  projects.map((project, index) => (
                     <Project
                       id={project.id}
                       imgPath={project.imgPath}
                       title={project.title}
                       key={project.id}
                       desc={project.desc}
+                      index={index}
                     ></Project>
                   ))}
                 {!projects && <p>Coming soon!</p>}
