@@ -1,9 +1,9 @@
 import { Layout } from "@components";
 import { useEffect } from "react";
-import { sectionAnimator } from "@lib/utils";
+import { intersectionAnimator } from "@lib/utils";
 
 export default function Page() {
-  useEffect(() => sectionAnimator());
+  useEffect(() => intersectionAnimator());
   return (
     <Layout>
       <h1>What got me into Programming</h1>

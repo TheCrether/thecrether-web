@@ -3,14 +3,14 @@ import { Layout, Intro, siteTitle } from "@components";
 import Link from "next/link";
 import styles from "./index.module.scss";
 import { useEffect } from "react";
-import { sectionAnimator } from "@lib/utils";
+import { intersectionAnimator } from "@lib/utils";
 
 export default function Home() {
   const intro = (
     <Intro title="TheCrether" introType="home" height="50vh"></Intro>
   );
   useEffect(() => {
-    sectionAnimator();
+    intersectionAnimator();
   });
   return (
     <Layout home intro={intro} className={styles.intro}>

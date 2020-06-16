@@ -2,7 +2,7 @@ import { Layout, Intro, Image, Project, BackLink } from "@components";
 import Head from "next/head";
 import styles from "./projects.module.scss";
 import { getProjectsByCategory, ProjectPosts } from "@lib/projects";
-import { flex, sectionAnimator } from "@lib/utils";
+import { flex, intersectionAnimator } from "@lib/utils";
 import { useEffect } from "react";
 
 const languages = [
@@ -37,7 +37,7 @@ export default function Projects({ posts }: Props) {
     }
   }
 
-  useEffect(() => sectionAnimator(`.${styles.language}`, "animatedPosts"));
+  useEffect(() => intersectionAnimator(`.${styles.language}`, "animatedPosts"));
 
   return (
     <Layout intro={intro} maxWidth>

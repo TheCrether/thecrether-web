@@ -2,11 +2,11 @@ import { Layout, BackLink } from "@components";
 import styles from "./about.module.scss";
 import Link from "next/link";
 import { useEffect } from "react";
-import { sectionAnimator } from "@lib/utils";
+import { intersectionAnimator } from "@lib/utils";
 
 export default function AboutPage() {
   useEffect(() => {
-    sectionAnimator();
+    intersectionAnimator();
   });
 
   return (
