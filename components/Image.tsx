@@ -14,7 +14,7 @@ export function Image({ path, className, id, alt }: Props) {
   );
 }
 
-export function getBackground(path: string, webp: boolean) {
+export function getBackground(path: string, webp = false) {
   if (webp) return "url(" + require(`images/bg/${path}?webp`) + ")";
   else return "url(" + require(`images/bg/${path}`) + ")";
 }
