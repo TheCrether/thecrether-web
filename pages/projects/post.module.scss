@@ -30,14 +30,15 @@ $skewDeg: -3deg;
     transition: transform $duration;
     z-index: 5;
     width: 102%;
-    height: 20vh;
+    height: 16vh;
     background: inherit;
     z-index: 1;
-    flex-direction: column;
+    align-items: flex-start;
 
     & > div {
       transform: skewY(-$skewDeg) rotate($skewDeg);
-      padding: 0;
+      padding: 10px 0;
+      height: auto;
     }
 
     .properties {
@@ -69,13 +70,13 @@ $skewDeg: -3deg;
     }
   }
 }
-.noImg {
-  composes: topPart;
 
+@media screen and (min-width: 1450px) {
   .info {
-    transform: none;
+    transform: rotate($skewDeg * 0.85) skewY($skewDeg * 0.85) !important;
+
     & > div {
-      transform: none;
+      transform: rotate($skewDeg * 0.85) skewY(-($skewDeg * 0.85)) !important;
     }
   }
 }
@@ -101,6 +102,17 @@ $skewDeg: -3deg;
 
     picture {
       height: auto;
+    }
+  }
+}
+
+.noImg {
+  composes: topPart;
+
+  .info {
+    transform: none !important;
+    & > div {
+      transform: none !important;
     }
   }
 }
