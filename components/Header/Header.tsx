@@ -39,8 +39,8 @@ export function Header({ home, projectPost, scrolled }: Props) {
           if (introTitle) {
             newScrolled = introTitle.offsetTop - 50 < window.scrollY;
           } else {
-            // check if 50% of window height scrolled if no intro is found
-            newScrolled = window.innerHeight / 2 < window.scrollY;
+            // check if 30% of window height scrolled if no intro is found
+            newScrolled = window.innerHeight * 0.3 < window.scrollY;
           }
           changeScrolled(newScrolled);
         });

@@ -3,11 +3,12 @@
 
 .header {
   height: $notScrolled;
-  transition: height $duration, padding $duration;
+  transition: height $duration, padding $duration, border $duration;
   position: fixed;
   top: 0;
   padding: 10px;
   z-index: 20;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
 
   img {
     border-radius: 50%;
@@ -98,6 +99,7 @@
 .scrolled {
   composes: header;
   height: $scrolledHeight;
+  border-bottom: 2px solid transparentize($color: $color, $amount: 0.2);
 
   #notScrolled {
     top: -$notScrolled;

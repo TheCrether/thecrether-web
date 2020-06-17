@@ -74,45 +74,46 @@ header {
   flex-direction: column;
 }
 
-.section {
+.section,
+section {
   width: 100%;
   margin: $spacing 0 $spacing * 2 0;
   position: relative;
-  padding: 0 50px;
+  // padding: 0 50px;
   display: flex;
   flex-direction: column;
   opacity: 0;
 
   h2 {
-    width: 100%;
-    text-align: center;
+    width: 70%;
+    // text-align: center;
   }
 
   & > p {
-    width: 75%;
+    width: 70%;
     transition: width $duration;
   }
 
   &:nth-child(2n) {
-    text-align: right;
-    align-items: flex-end;
+    text-align: left;
+    align-items: flex-start;
   }
 
   &:nth-child(2n + 1) {
-    text-align: left;
-    align-items: flex-start;
+    text-align: right;
+    align-items: flex-end;
   }
 }
 
 .animated-section {
-  opacity: 1;
-
-  &:nth-child(2n) {
-    animation: 1.2s cubic-bezier(0.62, 0.26, 0.59, 0.98) animatesection-right;
+  &:nth-child(2n + 1) {
+    animation: 1.2s cubic-bezier(0.62, 0.26, 0.59, 0.98) animatesection-right
+      forwards;
   }
 
-  &:nth-child(2n + 1) {
-    animation: 1.2s cubic-bezier(0.62, 0.26, 0.59, 0.98) animatesection-left;
+  &:nth-child(2n) {
+    animation: 1.2s cubic-bezier(0.62, 0.26, 0.59, 0.98) animatesection-left
+      forwards;
   }
 }
 
@@ -150,18 +151,20 @@ header {
 
 .animatedPosts {
   & > a {
-    animation: postAnim 0.75s cubic-bezier(0.62, 0.26, 0.59, 0.98);
-    opacity: 1;
+    animation: postAnim 700ms cubic-bezier(0.62, 0.26, 0.59, 0.98) forwards;
   }
 }
 
 @keyframes postAnim {
   0% {
     opacity: 0.2;
-    transform: translateY(-50px);
+    transform: translateY(-40px);
   }
   75% {
     transform: translateY(10px);
+  }
+  95% {
+    opacity: 1;
   }
   100% {
     opacity: 1;
@@ -172,7 +175,7 @@ ul {
   list-style: none;
 
   li {
-    margin: 5px;
+    margin: 5px 0;
   }
 }
 

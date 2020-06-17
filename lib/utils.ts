@@ -2,7 +2,7 @@ export function flex(className: string) {
   return `${className} flex`;
 }
 
-export function intersectionAnimator(selector = ".section", animatedClass = "animated-section") {
+export function intersectionAnimator(selector = ".section, section", animatedClass = "animated-section") {
   const sections = document.querySelectorAll(selector);
 
   if ("IntersectionObserver" in window) {

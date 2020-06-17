@@ -7,11 +7,7 @@
 .main {
   z-index: 2;
   padding-top: $homeMargin * 3;
-  background: linear-gradient(
-    rgba(0, 0, 0, 0),
-    transparentize($bg2, 0.1) $homeMargin * 5,
-    $bg
-  );
+  background: linear-gradient(transparentize($bg2, 0), $bg);
   transition: padding $duration;
 }
 

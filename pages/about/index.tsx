@@ -18,26 +18,44 @@ export default function AboutPage() {
         Kaindorf and below you{"'"}ll find out a lot of stuff about me
       </p>
 
-      <div className="section" id="what-got-me-into">
+      <div className="section">
+        <h2>Skills</h2>
+        <p>
+          I like to think that I have got some good skills under my belt. Here
+          are some of them!
+        </p>
+        I have..
+        <ul className={styles.list}>
+          <li>
+            programmed in various languages like TypeScript, C, Java and more!
+          </li>
+          <li>a love for making my code efficient and documenting it</li>
+          <li>good communication skills when working in a team</li>
+          <li>a love for designing stuff</li>
+          <li>the ability to adapt to situations</li>
+        </ul>
+      </div>
+
+      <div className="section">
         <h2>What got me into Informatics</h2>
-        <div className={styles.content}>
-          <p>
-            Ever since I was young, I was interested in computers just because
-            they were fun.
-          </p>
-          <p>
-            The first interaction I can remember, was when my mother said to log
-            into her laptop when I was around 6 or 7.
-            <br />
-            She told me to type in her password and {'"'}Enter{'"'} and I did
-            not understand that there was an actual Enter key.
-            <br />
-            So I basically typed in {'"'}Enter{'"'} key by key and was confused
-            to no end. Somehow that first experience got me thinking about
-            computers and getting into Minecraft.
-            <br />
-          </p>
-        </div>
+        {/* <div className={styles.content}> */}
+        <p>
+          Ever since I was young, I was interested in computers just because
+          they were fun.
+        </p>
+        <p>
+          The first interaction I can remember, was when my mother said to log
+          into her laptop when I was around 6 or 7.
+          <br />
+          She told me to type in her password and {'"'}Enter{'"'} and I did not
+          understand that there was an actual Enter key.
+          <br />
+          So I basically typed in {'"'}Enter{'"'} key by key and was confused to
+          no end. Somehow that first experience got me thinking about computers
+          and getting into Minecraft.
+          <br />
+        </p>
+        {/* </div> */}
         <Link href="/about/whatgotmeinto">
           <a>find out more about my adventure!</a>
         </Link>
@@ -55,7 +73,7 @@ export default function AboutPage() {
         <p>
           I like playing soccer, ultimate frisbee or the casual volleyball game.
           <br />
-          In terms of workouts, I sometimes do them, but in the last few years,
+          In terms of workouts, I sometimes do them, but in the last few months,
           I was not really motivated to do so. <br />
           Another {'"'}sporty{'"'} thing I like to do, is driving my longboard.
           I really love it and it is most fun when I ride with my friends.

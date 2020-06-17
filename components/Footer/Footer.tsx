@@ -18,8 +18,8 @@ export function Footer() {
             <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>Twitter
           </a>
         </div>
-        <Link href="/legalnotice">
-          <a>Legal Notice</a>
+        <Link href="/contact">
+          <a>Contact</a>
         </Link>
       </Container>
     </footer>

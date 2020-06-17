@@ -1,3 +1,9 @@
 .list {
   list-style-type: "-";
+  list-style-position: outside;
+  padding-left: 20px;
+  margin-top: 5px;
+  li {
+    padding-left: 10px;
+  }
 }

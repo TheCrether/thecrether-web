@@ -23,7 +23,7 @@
   overflow: hidden;
   flex-direction: column;
   align-items: flex-start;
-  transition: margin $duration;
+  transition: margin $duration, transform $duration;
 
   .topImg {
     width: 100%;
@@ -60,6 +60,8 @@
   }
 
   &:hover {
+    transform: scale(1.1);
+
     .more {
       transform: translateX(0);
       opacity: 1;
