@@ -3,6 +3,7 @@ import { getAllProjectIds, ProjectPost, getProjectData } from "@lib/projects";
 import { layout } from "@styles";
 import styles from "./post.module.scss";
 import { flex } from "@lib/utils";
+import Head from "next/head";
 
 interface Props {
   projectData: ProjectPost;
@@ -13,6 +14,9 @@ export default function ProjectPage({ projectData }: Props) {
 
   return (
     <Layout customHeader maxWidth mainClassName={styles.main}>
+      <Head>
+        <link rel="stylesheet" href="/ash.css" />
+      </Head>
       <Header projectPost></Header>
       <div
         className={flex(imgPath ? styles.topPart : styles.noImg)}
@@ -33,7 +37,7 @@ export default function ProjectPage({ projectData }: Props) {
       <div
         dangerouslySetInnerHTML={{ __html: content }}
         className="container"
-        id={styles.post}
+        id="post"
       ></div>
       <BackLink msg="Back to Projects" href="/projects"></BackLink>
     </Layout>

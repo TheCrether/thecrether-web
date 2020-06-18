@@ -30,7 +30,6 @@ export function Header({ home, projectPost, scrolled }: Props) {
             // check if 50% of window height scrolled if no intro is found
             newScrolled = window.innerHeight / 2 < window.scrollY;
           }
-          console.log("ds" + newScrolled);
           changeScrolled(newScrolled);
         });
       } else {
