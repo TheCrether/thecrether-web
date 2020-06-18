@@ -15,7 +15,7 @@ export default function ProjectPage({ projectData }: Props) {
   return (
     <Layout customHeader maxWidth mainClassName={styles.main}>
       <Head>
-        <link rel="stylesheet" href="/ash.css" />
+        <link rel="stylesheet" href="/ash-min.css" />
       </Head>
       <Header projectPost></Header>
       <div
