@@ -25,7 +25,7 @@ It's a petty excuse to procrastinate, but while programming it I got really mad.
 I am pretty sure that you can guess when I got heated in the commit history haha.
 After that I just was not motivated and even tried to fix it once but gave up really quickly.
 
-In the end, I know use [Ulauncher][2] on Linux and the new [PowerToys Run][3] from Microsoft on Windows.
+In the end, I now use [Ulauncher][2] on Linux and the new [PowerToys Run][3] from Microsoft on Windows.
 
 ## How
 
