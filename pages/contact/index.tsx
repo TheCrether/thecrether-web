@@ -7,6 +7,7 @@ import {
   faInstagram,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
+import { Blank } from "@components/Blank";
 
 export default function ContactPage() {
   return (
@@ -26,18 +27,18 @@ export default function ContactPage() {
       </div>
       <div className={styles.content}>
         <div className={flex(styles.socials)}>
-          <a href="https://twitter.com/thecrether" className="flex">
+          <Blank href="https://twitter.com/thecrether" className="flex">
             <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
             @TheCrether
-          </a>
-          <a href="https://github.com/TheCrether" className="flex">
+          </Blank>
+          <Blank href="https://github.com/TheCrether" className="flex">
             <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
             TheCrether
-          </a>
-          <a href="https://instagram.com/thecrether" className="flex">
+          </Blank>
+          <Blank href="https://instagram.com/thecrether" className="flex">
             <FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
             @TheCrether
-          </a>
+          </Blank>
         </div>
       </div>
     </Layout>

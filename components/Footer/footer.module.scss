@@ -2,23 +2,25 @@
 
 .footer {
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
 
   & > * {
-    margin: 0 50px 0 0;
+    flex: 1 0 0;
+
+    &:nth-child(1) {
+      text-align: right;
+    }
   }
 }
 
 .socials {
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
 
   a {
     color: $color;
     height: 1.5em;
-    align-items: flex-start;
+    align-items: center;
     margin: 4px 0;
 
     svg {

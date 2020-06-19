@@ -38,10 +38,10 @@
 
 html,
 body {
-  background-color: #666 !important;
-  color: #fff !important;
-  background-color: var(--bg-color) !important;
-  color: var(--text-color) !important;
+  background-color: #666;
+  color: #fff;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 h1 {

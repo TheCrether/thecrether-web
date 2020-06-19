@@ -19,6 +19,7 @@
 
   a {
     font-weight: bold;
+    color: $color;
 
     picture {
       display: flex;
@@ -59,7 +60,6 @@
 
     a {
       padding: 10px 25px;
-      color: $color;
       text-decoration: underline;
     }
   }
