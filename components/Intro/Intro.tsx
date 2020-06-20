@@ -39,7 +39,7 @@ export function Intro({ introType, title, height }: Props) {
   useEffect(() => {
     if (!style.background) {
       setStyle({
-        background: `${getBackground(backgroundNames[introType])}`,
+        backgroundImage: `${getBackground(backgroundNames[introType])}`,
       });
     }
   });
