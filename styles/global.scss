@@ -37,6 +37,12 @@ a:hover,
   text-decoration: underline;
 }
 
+a:focus {
+  outline: 1px solid blue;
+  outline-offset: 1px;
+  margin: 2px;
+}
+
 .flex {
   display: flex;
   flex-direction: row;
@@ -72,6 +78,7 @@ header {
   flex-direction: column;
   transition: max-width $duration;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .section,
