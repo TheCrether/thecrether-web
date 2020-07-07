@@ -9,7 +9,7 @@ imgPath: "projects/cross-search.png"
 
 # Cross Search
 
-This is my *temporarily* failed attempt at making something like the Finder from MacOS or [Ulauncher][1], but actually cross platform.
+This is my _temporarily_ failed attempt at making something like the Finder from MacOS or [Ulauncher][1], but actually cross platform.
 
 The screenshot you see above is one of the first designs that I had in mind for the launcher.
 
@@ -30,7 +30,6 @@ In the end, I now use [Ulauncher][2] on Linux and the new [PowerToys Run][3] fro
 ## How
 
 At first I wanted to make it with Electron/React and TypeScript, but after I realized that I did not like how I had to get GTK icons in TypeScript, I switched to Golang.
-
 The switch to Go had two reasons. Firstly, I wanted to learn Go and secondly, I really wanted to try out GTK.
 
 Learning Go was a really pleasant experience and I really love the language now, but sadly I don't have that many use cases at the moment for it.<br />
@@ -39,8 +38,7 @@ GTK on the other hand, was a bit of a roller coaster for me. At first did not re
 ## Conclusion
 
 I really want to continure this project, but at the moment I just have some higher priority stuff to work on.
-
-It was a really fun experience learning Go and getting to know GTK a little bit. <br />
+It was a really fun experience learning Go and getting to know GTK a little bit.
 I really liked the combination of both, since I liked how Go was structured and how GTK worked.
 
 [1]: https://github.com/TheCrether/cross-search
