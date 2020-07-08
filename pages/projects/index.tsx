@@ -30,10 +30,14 @@ interface Props {
 export default function Projects({ posts }: Props) {
   const intro = <Intro introType="projects" title="Projects"></Intro>;
 
+  const scrollOffset = -90;
+
   function onClick(id: string) {
     const el = document.getElementById(id);
     if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
+      const y =
+        el.getBoundingClientRect().top + window.pageYOffset + scrollOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
     }
   }
 
