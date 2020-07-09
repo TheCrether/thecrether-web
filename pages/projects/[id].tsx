@@ -27,7 +27,7 @@ export default function ProjectPage({ projectData }: Props) {
           <Container>
             <h1>{title}</h1>
             <div className={flex(styles.properties)}>
-              {date && <Date dateString={date.toString()}></Date>}
+              Written on {date && <Date dateString={date.toString()}></Date>}
               <p>Language: {language}</p>
               {website && <a href={website}>Website</a>}
             </div>
