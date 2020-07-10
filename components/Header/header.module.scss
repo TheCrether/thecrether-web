@@ -13,8 +13,8 @@
   img {
     border-radius: 50%;
     transition: width $duration, height $duration, padding $duration;
-    height: $scrolledHeight - 10 * 2;
-    width: $scrolledHeight - 10 * 2;
+    height: calc(#{$scrolledHeight} - 10px);
+    width: calc(#{$scrolledHeight} - 10px);
   }
 
   a {
@@ -110,7 +110,9 @@
   }
 }
 
-$burgerContainer: 150px;
+$burgerContainer: 8.3rem;
+$linkMargin: 0.2;
+$burgerSize: 2.1rem;
 
 .burger {
   position: fixed;
@@ -124,8 +126,6 @@ $burgerContainer: 150px;
   // transition: align-items $duration;
 }
 
-$burgerSize: 40px;
-
 .burgerWrapper {
   width: $scrolledHeight;
   height: $scrolledHeight;
@@ -136,8 +136,6 @@ $burgerSize: 40px;
   cursor: pointer;
   z-index: 5;
 }
-
-$linkMargin: 4px;
 
 .burgerIcon {
   position: relative;
@@ -189,6 +187,7 @@ $linkMargin: 4px;
 }
 
 $linkAmount: 3;
+
 .burgerLinks {
   flex-direction: column;
   padding: 10px 30px;
@@ -217,9 +216,9 @@ $linkAmount: 3;
   }
 
   .burgerLinks {
-    padding: $scrolledHeight - 10px 20px 30px 20px;
-    height: $scrolledHeight + ($scrolledHeight / 4) * $linkAmount + 30px +
-      $linkMargin * 2 * $linkAmount;
+    padding: calc(#{$scrolledHeight} - 10px) 20px 30px 20px;
+    height: $scrolledHeight + ($scrolledHeight / 4) * $linkAmount + $linkMargin *
+      2 * $linkAmount;
   }
 
   .firstLine {
