@@ -21,6 +21,11 @@ const languages = [
     amount: 13,
     margin: "0 80px 0 0",
   },
+  {
+    name: "AutoHotkey",
+    amount: 5,
+    margin: "0 10px 0 0",
+  },
 ];
 
 interface Props {
