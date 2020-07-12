@@ -13,8 +13,8 @@
   img {
     border-radius: 50%;
     transition: width $duration, height $duration, padding $duration;
-    height: calc(#{$scrolledHeight} - 10px);
-    width: calc(#{$scrolledHeight} - 10px);
+    height: $scrolledHeight - 1.2em;
+    width: $scrolledHeight - 1.2em;
   }
 
   a {
@@ -59,7 +59,7 @@
     transition: transform 500ms;
 
     a {
-      padding: 10px 25px;
+      padding: 1em 2em;
       text-decoration: underline;
     }
   }
@@ -67,7 +67,7 @@
   #notScrolledLinks a,
   #right a {
     transition: background-color 300ms;
-    padding: 5px 10px;
+    padding: 0.5em 1em;
 
     &:hover {
       background-color: rgba(255, 255, 255, 0.1);
@@ -76,7 +76,7 @@
 
   p {
     padding-left: $homeMargin;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     margin: 0;
     color: white;
     transition: padding $duration;
@@ -110,9 +110,9 @@
   }
 }
 
-$burgerContainer: 8.3rem;
+$burgerContainer: 8.3em;
 $linkMargin: 0.2;
-$burgerSize: 2.1rem;
+$burgerSize: 2.1em;
 
 .burger {
   position: fixed;
@@ -123,7 +123,6 @@ $burgerSize: 2.1rem;
   align-items: flex-end;
   flex-direction: column;
   width: $burgerContainer;
-  // transition: align-items $duration;
 }
 
 .burgerWrapper {
@@ -142,12 +141,11 @@ $burgerSize: 2.1rem;
   background-color: transparent;
   width: $burgerSize;
   height: $burgerSize;
-  // justify-content: center;
 
   & > div {
     position: absolute;
     height: 2px;
-    right: 10px;
+    right: 0.8em;
     width: 50%;
     display: block;
 
@@ -165,7 +163,8 @@ $burgerSize: 2.1rem;
     }
   }
   .firstLine {
-    top: 14px;
+    top: 0.75em;
+    left: 0.5em;
     transition: top 0.1s ease-in 0.25s, opacity 0.1s ease-in 0.14s,
       transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19),
       -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -173,13 +172,14 @@ $burgerSize: 2.1rem;
 
   .secondLine {
     top: 50%;
+    left: 0.5em;
     margin-top: -1px;
-    transition: 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19),
-      -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition: 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
 
   .thirdLine {
-    bottom: 14px;
+    bottom: 0.75em;
+    left: 0.5em;
     transition: bottom 0.1s ease-in 0.25s,
       transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19),
       -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -190,7 +190,7 @@ $linkAmount: 3;
 
 .burgerLinks {
   flex-direction: column;
-  padding: 10px 30px;
+  padding: 0.8em 2em;
   background: $bg3;
   justify-content: flex-start;
   overflow: hidden;
@@ -216,14 +216,14 @@ $linkAmount: 3;
   }
 
   .burgerLinks {
-    padding: calc(#{$scrolledHeight} - 10px) 20px 30px 20px;
+    padding: $scrolledHeight 20px 0 20px;
     height: $scrolledHeight + ($scrolledHeight / 4) * $linkAmount + $linkMargin *
-      2 * $linkAmount;
+      2 * $linkAmount + 1em;
   }
 
   .firstLine {
     opacity: 0;
-    top: 19px;
+    top: 1em;
     transition: top 0.1s ease-out, opacity 0.1s ease-out 0.1s;
   }
 
@@ -234,7 +234,7 @@ $linkAmount: 3;
   }
 
   .thirdLine {
-    bottom: 19px;
+    bottom: 1em;
     transform: rotate(135deg);
     transition: bottom 0.1s ease-out,
       transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s,

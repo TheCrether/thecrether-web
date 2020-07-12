@@ -2,9 +2,31 @@ $bg: #4b4644;
 $bg2: #262322;
 $bg3: #1c1b1a;
 $color: #fff;
-$scrolledHeight: 5rem;
-$notScrolled: 3.3rem;
+$scrolledHeight: 5em;
+$notScrolled: 3em;
 $duration: 500ms;
-$homeMargin: 0.9rem;
-$spacing: 2rem;
+$homeMargin: 0.9em;
+$spacing: 2em;
 $link: #0070f3;
+
+// Breakpoints
+$bp-small: 48em; // 768px
+$bp-medium: 64em; // 1024px
+$bp-large: 85.375em; // 1366px
+$bp-xlarge: 120em; // 1920px
+$bp-xxlarge: 160em; // 2560px
+
+// Media Queries
+$mq-small: "(min-width: #{$bp-small})";
+$mq-medium: "(min-width: #{$bp-medium})";
+$mq-large: "(min-width: #{$bp-large})";
+$mq-xlarge: "(min-width: #{$bp-xlarge})";
+$mq-xxlarge: "(min-width: #{$bp-xxlarge})";
+$mq-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
+
+// Font-Size
+$base-font-size: 1em;
+
+// Line-Height
+$base-line-height: 1.5;
+$header-line-height: 1.25;

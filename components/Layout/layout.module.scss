@@ -13,13 +13,14 @@
 
 .main,
 .maxWidth {
-  flex-direction: column;
+  // flex-direction: column;
   width: 100%;
 }
 
 .maxWidth {
   max-width: none !important;
   z-index: 4;
+  padding: 0;
 }
 
 @media screen and (max-width: 900px) {

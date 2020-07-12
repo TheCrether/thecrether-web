@@ -13,6 +13,9 @@
   padding: 0;
   height: 100%;
   height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   & > div {
     flex-direction: column;

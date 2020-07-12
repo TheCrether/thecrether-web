@@ -41,7 +41,8 @@ export function Layout({
       {!customHeader && <Header home={home}></Header>}
       {intro && intro}
       <main
-        className={flex(`${styles.main} ${mainClassName ? mainClassName : ""}`)}
+        // className={flex(`${styles.main} ${mainClassName ? mainClassName : ""}`)}
+        className={`${styles.main} ${mainClassName ? mainClassName : ""}`}
         id="main"
       >
         <Container maxWidth={maxWidth}>{children}</Container>

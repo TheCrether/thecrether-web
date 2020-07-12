@@ -49,7 +49,7 @@ export default function Projects({ posts }: Props) {
   useEffect(() => intersectionAnimator(`.${styles.language}`, "animatedPosts"));
 
   return (
-    <Layout intro={intro} maxWidth>
+    <Layout mainClassName={styles.main} intro={intro} maxWidth>
       <Head>
         <title>Projects</title>
       </Head>

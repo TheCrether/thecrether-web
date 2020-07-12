@@ -14,6 +14,12 @@
   flex-wrap: wrap;
 }
 
+.main {
+  & > div {
+    overflow: visible;
+  }
+}
+
 // https://tympanus.net/codrops/2020/03/31/css-only-marquee-effect/
 // effect taken from here and modified some variables
 
