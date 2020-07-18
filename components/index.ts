@@ -8,3 +8,4 @@ export * from "./Date";
 export * from "./Image";
 export * from "./BackLink";
 export * from "./Blank";
+export * from "./Ring/Ring";

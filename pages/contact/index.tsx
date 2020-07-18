@@ -1,4 +1,4 @@
-import { Layout, Header, Blank } from "@components";
+import { Layout, Header, Blank, Ring } from "@components";
 import styles from "./contact.module.scss";
 import { flex } from "@lib/utils";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,8 +7,15 @@ import {
   faInstagram,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
+import { useState } from "react";
 
 export default function ContactPage() {
+  const [hovered, setHovered] = useState(-1);
+
+  function onHover(index: number) {
+    setHovered(index);
+  }
+
   return (
     <Layout
       className={styles.contact}
@@ -27,18 +34,28 @@ export default function ContactPage() {
       <div className={styles.content}>
         <div className={flex(styles.socials)}>
           <Blank href="https://twitter.com/thecrether" className="flex">
-            <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
-            @TheCrether
+            <Ring className={styles.ring}></Ring>
+            <FontAwesomeIcon
+              className={styles.icon}
+              icon={faTwitter}
+            ></FontAwesomeIcon>
           </Blank>
           <Blank href="https://github.com/TheCrether" className="flex">
-            <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
-            TheCrether
+            <Ring className={styles.ring}></Ring>
+            <FontAwesomeIcon
+              className={styles.icon}
+              icon={faGithub}
+            ></FontAwesomeIcon>
           </Blank>
           <Blank href="https://instagram.com/thecrether" className="flex">
-            <FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
-            @TheCrether
+            <Ring className={styles.ring}></Ring>
+            <FontAwesomeIcon
+              className={styles.icon}
+              icon={faInstagram}
+            ></FontAwesomeIcon>
           </Blank>
         </div>
+        <p className={styles.at}>@TheCrether</p>
       </div>
     </Layout>
   );
