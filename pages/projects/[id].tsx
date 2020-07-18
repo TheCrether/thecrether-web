@@ -1,4 +1,12 @@
-import { Layout, Header, Image, Container, Date, BackLink } from "@components";
+import {
+  Layout,
+  Header,
+  Image,
+  Container,
+  Date,
+  BackLink,
+  Blank,
+} from "@components";
 import { getAllProjectIds, ProjectPost, getProjectData } from "@lib/projects";
 import { layout } from "@styles";
 import styles from "./post.module.scss";
@@ -31,7 +39,7 @@ export default function ProjectPage({ projectData }: Props) {
                 Written on {date && <Date dateString={date.toString()}></Date>}
               </div>
               <p>Language: {language}</p>
-              {website && <a href={website}>Website</a>}
+              {website && <Blank href={website}>Website</Blank>}
             </div>
           </Container>
         </div>

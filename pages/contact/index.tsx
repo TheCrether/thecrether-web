@@ -1,4 +1,4 @@
-import { Layout, Header } from "@components";
+import { Layout, Header, Blank } from "@components";
 import styles from "./contact.module.scss";
 import { flex } from "@lib/utils";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,7 +7,6 @@ import {
   faInstagram,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
-import { Blank } from "@components/Blank";
 
 export default function ContactPage() {
   return (

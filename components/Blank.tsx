@@ -16,3 +16,5 @@ export function Blank({ href, children, className }: Props) {
     </a>
   );
 }
+
+export default Blank;

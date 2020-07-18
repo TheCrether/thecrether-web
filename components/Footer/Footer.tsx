@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 import { flex } from "@lib/utils";
-import { Blank } from "@components/Blank";
+import { Blank } from "@components";
 
 export function Footer() {
   return (
