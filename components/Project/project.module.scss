@@ -10,7 +10,7 @@
 }
 
 .project {
-  margin: 40px;
+  margin: 20px;
   border-radius: 5px;
   background-color: $bg2;
   width: 17em;
@@ -94,7 +94,17 @@
 @media screen and (max-width: 400px) {
   .project {
     font-size: 0.9em;
-    min-width: 280px;
     margin: 20px 10px;
+  }
+}
+
+@media (max-width: 18em) {
+  .wrapper {
+    width: 100%;
+
+    .project {
+      width: 100%;
+      margin: 10px 0;
+    }
   }
 }

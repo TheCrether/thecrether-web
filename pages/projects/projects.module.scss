@@ -12,6 +12,7 @@
 
 .language {
   flex-wrap: wrap;
+  padding-top: 20px;
 }
 
 .main {
@@ -45,6 +46,7 @@
 }
 
 .menuItemLink {
+  width: 100%;
   display: inline-block;
   cursor: pointer;
   position: relative;
@@ -140,5 +142,11 @@
 
   100% {
     transform: translate3d(var(--move-final), 0, 0);
+  }
+}
+
+@media screen and (max-width: 64em) {
+  .menu {
+    --item-font-size: 6.5vw;
   }
 }

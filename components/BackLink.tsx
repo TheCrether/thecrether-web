@@ -7,7 +7,7 @@ interface Props {
 
 export function BackLink({ href, msg }: Props) {
   return (
-    <div>
+    <div style={{ margin: "15px 0" }}>
       <Link href={href ? href : "/"}>
         <a>← {msg ? msg : "Back to home"}</a>
       </Link>

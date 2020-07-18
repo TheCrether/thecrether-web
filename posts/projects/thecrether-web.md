@@ -18,7 +18,7 @@ Then at the beginning of this year, I decided that I want to/at least try to red
 
 ## How
 
-![Figma Design][/images/projects/thecrether-web-figma.png]
+![Figma Design](/images/projects/thecrether-web-figma.png)
 
 For this year's website (2020), I started with a simple Figma sketch and figuring out the fonts to use. In the end I did not use the fonts that I selected because I found the fonts that were used in the [Next.js tutorial][3]. That brings me to the technologies used. This project is pretty much only Next.js with a modified config for optimizing images, using autoprefixer and using ts-paths (stuff like `@components` when importing).
 
