@@ -61,9 +61,8 @@ a:hover,
 }
 
 a:focus {
-  outline: 1px solid blue;
-  outline-offset: 1px;
-  margin: 2px;
+  border: 1px solid lightblue;
+  margin: -1px;
 }
 
 .flex {

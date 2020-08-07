@@ -29,7 +29,7 @@ $skewDeg: -3deg;
     transform: rotate($skewDeg) skewY($skewDeg);
     transition: transform $duration;
     z-index: 5;
-    width: 102%;
+    width: 104%;
     height: 16vh;
     background: inherit;
     z-index: 1;
@@ -63,7 +63,7 @@ $skewDeg: -3deg;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 40vh;
+    // height: 40vh;
     overflow: hidden;
 
     img {
