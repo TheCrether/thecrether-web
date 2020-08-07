@@ -20,7 +20,7 @@ export function Footer() {
           </Blank>
         </div>
         <Link href="/contact">
-          <a>Contact</a>
+          <a style={{ fontWeight: "bold" }}>Contact</a>
         </Link>
       </Container>
     </footer>
