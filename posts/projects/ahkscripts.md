@@ -3,7 +3,7 @@ title: "ahkscripts"
 date: "2020-07-10"
 language: "AutoHotkey"
 website: "https://github.com/TheCrether/ahkscripts"
-desc: "My AutoHotkey scripts for when I'm using windows"
+desc: "My AutoHotkey scripts for when I'm using Windows"
 imgPath: "projects/autohotkey.png"
 ---
 
