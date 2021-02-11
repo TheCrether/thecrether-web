@@ -3,7 +3,7 @@ title: "Cross Search"
 date: "2020-06-17"
 language: "Go"
 website: "https://github.com/TheCrether/cross-search"
-desc: "An cross-platform tool for searching desktop apps and more"
+desc: "A cross-platform tool for searching desktop apps and more"
 imgPath: "projects/cross-search.png"
 ---
 
