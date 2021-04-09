@@ -18,7 +18,7 @@
 
   a {
     font-weight: bold;
-    color: $color;
+    color: $color !important;
 
     picture {
       display: flex;
@@ -191,7 +191,7 @@ $linkAmount: 3;
 .burgerLinks {
   flex-direction: column;
   padding: 0.8em 2em;
-  background: $bg3;
+  background: $bg2;
   justify-content: flex-start;
   overflow: hidden;
   text-overflow: clip;

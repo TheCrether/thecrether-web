@@ -6,7 +6,7 @@
 }
 
 .main {
-  background: $bg2;
+  background: $bg3;
   flex-grow: 1;
   // flex-basis: 0;
   margin-top: $notScrolled;
@@ -14,19 +14,22 @@
   height: 100%;
   height: auto;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  flex-direction: column;
 
   & > div {
     flex-direction: column;
+    padding: 0 1em;
   }
 }
 
 .content {
-  margin-top: 1em;
+  flex-direction: column;
+  gap: 1em;
 }
 
-$socialWidth: 10em;
+$socialWidth: 9em;
 
 .socials {
   justify-content: center;
@@ -38,7 +41,7 @@ $socialWidth: 10em;
     width: $socialWidth;
     height: $socialWidth;
     margin: 15px;
-    color: $color;
+    color: $color !important;
     border-radius: 50%;
     transition: background-color 500ms;
     position: relative;
@@ -70,7 +73,7 @@ $socialWidth: 10em;
 
 .at {
   font-weight: bold;
-  font-size: 2.5em;
+  font-size: 2em;
   width: 100%;
   text-align: center;
   margin: 0;

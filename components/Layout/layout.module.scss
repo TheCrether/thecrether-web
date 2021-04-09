@@ -2,13 +2,13 @@
 
 .layout {
   flex-direction: column;
-  background: $bg2;
+  background: $bg3;
 }
 
 .main {
   z-index: 2;
-  padding-top: $homeMargin * 3;
-  background: linear-gradient(transparentize($bg2, 0), $bg);
+  padding-top: $notScrolled;
+  // background: linear-gradient(transparentize($bg2, 0), $bg);
   transition: padding $duration;
 }
 

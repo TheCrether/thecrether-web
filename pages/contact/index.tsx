@@ -25,13 +25,19 @@ export default function ContactPage() {
       home
       noFooter
     >
+      <script
+        type="text/javascript"
+        src="https://platform.linkedin.com/badges/js/profile.js"
+        async
+        defer
+      ></script>
       <Header scrolled></Header>
       <div>
         <h2>Contact me!</h2>
         Because I do not want to put my email into the wild, here are my socials
         where I am pretty active
       </div>
-      <div className={styles.content}>
+      <div className={`${styles.content} flex`}>
         <div className={flex(styles.socials)}>
           <Blank href="https://twitter.com/thecrether" className="flex">
             <Ring className={styles.ring}></Ring>
@@ -56,6 +62,22 @@ export default function ContactPage() {
           </Blank>
         </div>
         <p className={styles.at}>@TheCrether</p>
+        <div
+          className="LI-profile-badge"
+          data-version="v1"
+          data-size="medium"
+          data-locale="en_US"
+          data-type="horizontal"
+          data-theme="dark"
+          data-vanity="denis-imeri"
+        >
+          <a
+            className="LI-simple-link"
+            href="https://at.linkedin.com/in/denis-imeri?trk=profile-badge"
+          >
+            Denis Imeri
+          </a>
+        </div>
       </div>
     </Layout>
   );
