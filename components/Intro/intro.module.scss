@@ -34,12 +34,6 @@
   margin: 10px;
 }
 
-@media screen and (max-width: 1000px) {
-  .intro > div {
-    padding: 15px;
-  }
-}
-
 @media screen and (max-width: 48em) {
   .intro > div {
     flex-direction: column;
