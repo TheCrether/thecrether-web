@@ -6,6 +6,7 @@ import {
   faTwitter,
   faInstagram,
   faGithub,
+  faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { useState } from "react";
 
@@ -60,24 +61,18 @@ export default function ContactPage() {
               icon={faInstagram}
             ></FontAwesomeIcon>
           </Blank>
+          <Blank
+            href="https://www.linkedin.com/in/denis-imeri"
+            className="flex"
+          >
+            <Ring className={styles.ring}></Ring>
+            <FontAwesomeIcon
+              className={styles.icon}
+              icon={faLinkedin}
+            ></FontAwesomeIcon>
+          </Blank>
         </div>
         <p className={styles.at}>@TheCrether</p>
-        <div
-          className="LI-profile-badge"
-          data-version="v1"
-          data-size="medium"
-          data-locale="en_US"
-          data-type="horizontal"
-          data-theme="dark"
-          data-vanity="denis-imeri"
-        >
-          <a
-            className="LI-simple-link"
-            href="https://at.linkedin.com/in/denis-imeri?trk=profile-badge"
-          >
-            Denis Imeri
-          </a>
-        </div>
       </div>
     </Layout>
   );
