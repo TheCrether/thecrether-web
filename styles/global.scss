@@ -65,8 +65,10 @@ a:hover,
 }
 
 a:focus {
-  border: 1px solid lightblue;
-  margin: -1px;
+  box-shadow: -1px -1px 0 lightblue, 0 -1px 0 lightblue, -1px 0px 0 lightblue,
+    -1px 1px 0 lightblue, 1px -1px 0 lightblue, 1px 1px 0 lightblue,
+    0 1px lightblue, 1px 0 lightblue, 0 0 lightblue;
+  // margin: -1px;
 }
 
 .flex {
@@ -232,7 +234,9 @@ ul {
     justify-content: center;
 
     p {
-      width: 85%;
+      width: 90%;
+      margin-right: auto;
+      margin-left: auto;
 
       &:nth-child(2n) {
         text-align: left;

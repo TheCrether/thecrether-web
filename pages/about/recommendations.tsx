@@ -42,14 +42,17 @@ export default function Recommendations() {
         <p>
           In terms of listening to music, I like a lot of different
           artists/genres whatever, so here is my current Spotify playlist
-          <iframe
-            src="https://open.spotify.com/embed/playlist/7ANbFhdHN3uuekgUVsInzx"
-            width="300"
-            height="380"
-            frameBorder="0"
-            allowTransparency
-            allow="encrypted-media"
-          ></iframe>
+          <br />
+          <div className={styles.spotify}>
+            <iframe
+              src="https://open.spotify.com/embed/playlist/0eZah9iH4ml2GCsjL0nwzw"
+              width="300"
+              height="380"
+              frameBorder="0"
+              // allowTransparency={true}
+              allow="encrypted-media"
+            ></iframe>
+          </div>
         </p>
       </div>
     </Layout>
