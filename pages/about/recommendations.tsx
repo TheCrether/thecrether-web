@@ -1,15 +1,73 @@
 import { Layout } from "@components";
+import { CurrentlyReading, ReadBooks, WantToRead } from "@lib/book-widgets";
+import { flex, intersectionAnimator } from "@lib/utils";
+import { NextSeo } from "next-seo";
+import Head from "next/head";
+import { useEffect } from "react";
 import styles from "./about.module.scss";
 
 export default function Recommendations() {
+  useEffect(() => intersectionAnimator());
   return (
     <Layout>
-      <h1>Watching/Listening Recommendations</h1>
-      <div className="alternating">
+      <NextSeo
+        title="My Recommendations"
+        description="Find out what kind of books, youtubers and music I like"
+        openGraph={{
+          title: "My Recommendations",
+          description:
+            "Find out what kind of books, youtubers and music I like",
+        }}
+      ></NextSeo>
+      <Head>
+        <title>My Recommendations</title>
+      </Head>
+      <h1>My Recommendations</h1>
+      <div className="section">
+        <h2>Books</h2>
+        <p>
+          You can check out my{" "}
+          <a href="https://www.goodreads.com/thecrether">
+            goodreads.com profile
+          </a>{" "}
+          if you want to know more about what books I like and would books I
+          would like to read.
+        </p>
+        <p className={flex(styles.booklist)}>
+          {ReadBooks}
+          {WantToRead}
+          {CurrentlyReading}
+        </p>
+      </div>
+      <div className="section">
+        <h2>Music</h2>
+        <p>
+          In terms of listening to music, I like a lot of different
+          artists/genres whatever, so here my current Spotify playlist! I
+          generally listen to the last few songs on repeat, which means that I
+          always rack up listening time for specific songs.
+        </p>
+        <p style={{ width: "100%" }}>
+          <div className={styles.spotify}>
+            <iframe
+              src="https://open.spotify.com/embed/playlist/0eZah9iH4ml2GCsjL0nwzw"
+              width="500"
+              height="380"
+              frameBorder="0"
+              allowtransparency="true" // even if this shows an error, it is correct
+              allow="encrypted-media"
+            ></iframe>
+          </div>
+        </p>
+      </div>
+      <div className="section">
         <h2>Youtubers</h2>
         <p>
           Some of my favorite youtubers at the moment are:
           <ul className={styles.list}>
+            <li>
+              <a href="https://www.youtube.com/user/MrFish235">John Fish</a>
+            </li>
             <li>
               <a href="https://www.youtube.com/user/LinusTechTips">
                 Linus Tech Tips
@@ -26,33 +84,12 @@ export default function Recommendations() {
               </a>
             </li>
             <li>
-              <a href="https://www.youtube.com/channel/UCIabPXjvT5BVTxRDPCBBOOQ">
-                Dani
-              </a>
-            </li>
-            <li>
               <a href="https://www.youtube.com/channel/UCBa659QWEk1AI4Tg--mrJ2A">
                 Tom Scott
               </a>
             </li>
           </ul>
-          <p>... and many more</p>
-        </p>
-        <h2>Music</h2>
-        <p>
-          In terms of listening to music, I like a lot of different
-          artists/genres whatever, so here is my current Spotify playlist
-          <br />
-          <div className={styles.spotify}>
-            <iframe
-              src="https://open.spotify.com/embed/playlist/0eZah9iH4ml2GCsjL0nwzw"
-              width="300"
-              height="380"
-              frameBorder="0"
-              // allowTransparency={true}
-              allow="encrypted-media"
-            ></iframe>
-          </div>
+          <p>... and more</p>
         </p>
       </div>
     </Layout>

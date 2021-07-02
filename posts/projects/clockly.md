@@ -11,7 +11,7 @@ imgPath: "projects/clockly.png"
 This project rose in the adventures of "corona-time" where we had to track how much work we put in during a week of school.
 The screenshot you see above is the design of the dashboard at the time of writing this. This project is not online at the moment and we do not plan on putting it online.
 
-There were 3 contributors to this project (including me): [@realSuffix][1] (fackend), [@elitru][2] (frontend) and I (also frontend).
+There were 3 contributors to this project (including me): [@realSuffix][1] (backend), [@elitru][2] (frontend) and I (also frontend).
 The backend was made with [actix][3] (Rust) and the frontend was made with [Angular][4].
 
 ## Why did we make Clockly

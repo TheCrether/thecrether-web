@@ -22,6 +22,9 @@
   align-items: flex-start;
   justify-content: flex-start;
   transition: margin $duration, transform $duration;
+  // will-change: transform;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
 
   .topImg {
     width: 100%;
@@ -34,6 +37,9 @@
       position: absolute;
       width: 100%;
       transition: transform $duration;
+      // will-change: transform;
+      transform-style: preserve-3d;
+      backface-visibility: hidden;
     }
   }
 

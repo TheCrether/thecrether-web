@@ -24,3 +24,22 @@
     margin: 0 auto;
   }
 }
+
+.booklist {
+  width: 100% !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+
+  * {
+    color: inherit !important;
+    font-size: inherit;
+    // margin: inherit;
+  }
+
+  h2 {
+    width: 100%;
+    margin-top: 2px;
+  }
+}

@@ -4,6 +4,7 @@ interface Props {
   id?: string;
   alt?: string;
 }
+
 export function Image({ path, className, id, alt }: Props) {
   return (
     <picture className={`${className || ""}`}>

@@ -8,22 +8,41 @@ import {
   Blank,
 } from "@components";
 import { getAllProjectIds, ProjectPost, getProjectData } from "@lib/projects";
-import { layout } from "@styles";
 import styles from "./post.module.scss";
 import { flex } from "@lib/utils";
 import Head from "next/head";
+import { NextSeo } from "next-seo";
 
 interface Props {
   projectData: ProjectPost;
 }
 
 export default function ProjectPage({ projectData }: Props) {
-  const { imgPath, date, language, title, website, content } = projectData;
+  const { imgPath, date, language, title, website, content, desc } =
+    projectData;
 
   return (
     <Layout customHeader maxWidth mainClassName={styles.main}>
+      <NextSeo
+        title={`${title} | Project`}
+        description={desc}
+        openGraph={{
+          images: [
+            {
+              url: `https://thecrether.at/${imgPath}`,
+              alt: `Image for project "${title}"`,
+            },
+          ],
+          description: desc,
+          title: `${title} | Project`,
+        }}
+        twitter={{
+          handle: "@TheCrether",
+        }}
+      ></NextSeo>
       <Head>
         <link rel="stylesheet" href="/ash-min.css" />
+        <title>{title} | Project</title>
       </Head>
       <Header projectPost></Header>
       <div

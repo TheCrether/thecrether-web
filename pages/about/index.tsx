@@ -3,6 +3,8 @@ import styles from "./about.module.scss";
 import Link from "next/link";
 import { useEffect } from "react";
 import { intersectionAnimator } from "@lib/utils";
+import { NextSeo } from "next-seo";
+import Head from "next/head";
 
 export default function AboutPage() {
   useEffect(() => {
@@ -11,6 +13,17 @@ export default function AboutPage() {
 
   return (
     <Layout>
+      <NextSeo
+        title="About me"
+        description="Some interesting bits about me!"
+        openGraph={{
+          title: "About me",
+          description: "Some interesting bits about me!",
+        }}
+      ></NextSeo>
+      <Head>
+        <title>About me</title>
+      </Head>
       <h1>About Me</h1>
       <p>Thank you for trying to find out more about me!</p>
       <p>

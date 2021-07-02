@@ -4,6 +4,7 @@ import styles from "./projects.module.scss";
 import { getProjectsByCategory, ProjectPosts } from "@lib/projects";
 import { flex, intersectionAnimator } from "@lib/utils";
 import { useEffect } from "react";
+import { NextSeo } from "next-seo";
 
 const languages = [
   {
@@ -50,6 +51,14 @@ export default function Projects({ posts }: Props) {
 
   return (
     <Layout mainClassName={styles.main} intro={intro} maxWidth>
+      <NextSeo
+        title="My Projects"
+        description="You can find some of my greatest projects here!"
+        openGraph={{
+          title: "My Projects",
+          description: "You can find some of my greatest projects here!",
+        }}
+      ></NextSeo>
       <Head>
         <title>Projects</title>
       </Head>

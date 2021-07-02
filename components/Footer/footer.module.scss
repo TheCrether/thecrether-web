@@ -10,6 +10,10 @@
       text-align: right;
     }
   }
+
+  a {
+    color: $color !important;
+  }
 }
 
 .socials {
@@ -18,7 +22,7 @@
   align-items: center;
 
   a {
-    color: $color;
+    color: $color !important;
     line-height: $base-line-height;
     align-items: center;
     margin: 4px 0;

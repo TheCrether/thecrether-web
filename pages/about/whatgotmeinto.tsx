@@ -1,15 +1,29 @@
 import { Layout } from "@components";
 import { useEffect } from "react";
 import { intersectionAnimator } from "@lib/utils";
+import { NextSeo } from "next-seo";
+import Head from "next/head";
 
 export default function Page() {
   useEffect(() => intersectionAnimator());
   return (
     <Layout>
+      <NextSeo
+        title="What got me into programming?"
+        description="Read about how I got into computers and programming and how I sometimes failed at the beginning :)"
+        openGraph={{
+          title: "What got me into programming?",
+          description:
+            "Read about how I got into computers and programming and how I sometimes failed at the beginning :)",
+        }}
+      ></NextSeo>
+      <Head>
+        <title>What got me into Programming?</title>
+      </Head>
       <h1>What got me into Programming</h1>
       <p>
         Ever since I was young, I was interested in computers just because they
-        were fun.
+        were fun and interesting.
       </p>
       <div className="section">
         <h2>How it began</h2>
@@ -46,8 +60,8 @@ export default function Page() {
           Then, I got into HTBLA Kaindorf and started with C in my first year.{" "}
           <br />
           After this first year, we are now programming{" "}
-          <a href="https://github.com/TheCrether/POS">various stuff</a> with
-          Java.
+          <a href="https://github.com/TheCrether/POS">various things</a>{" "}
+          (private repository at the moment :( ) with Java.
         </p>
       </div>
       <div className="section">

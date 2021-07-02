@@ -31,10 +31,7 @@ export function Layout({
     <div className={flex(`${styles.layout} ${className ? className : ""}`)}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content="Website of TheCrether" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta property="og:image" content="/images/profile.jpg" />
-        <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
         <title>{siteTitle}</title>
       </Head>

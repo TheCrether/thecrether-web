@@ -9,6 +9,8 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { useState } from "react";
+import { NextSeo } from "next-seo";
+import Head from "next/head";
 
 export default function ContactPage() {
   const [hovered, setHovered] = useState(-1);
@@ -26,12 +28,18 @@ export default function ContactPage() {
       home
       noFooter
     >
-      <script
-        type="text/javascript"
-        src="https://platform.linkedin.com/badges/js/profile.js"
-        async
-        defer
-      ></script>
+      <NextSeo
+        title="Contact me"
+        description="My handles on different social media platforms can be found here"
+        openGraph={{
+          title: "Contact me",
+          description:
+            "My handles on different social media platforms can be found here",
+        }}
+      ></NextSeo>
+      <Head>
+        <title>Contact me!</title>
+      </Head>
       <Header scrolled></Header>
       <div>
         <h2>Contact me!</h2>
