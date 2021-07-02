@@ -31,7 +31,7 @@ The backend team consisted of [@realSuffix][1] & [@eliaswil][6]. After some talk
 
 The ERD for the database ended up being very much simplified because we did not have as much time as we anticipated because of corona and just did not put as much work into it as we wanted at the beginning. They split up their work pretty good.
 
-We all did our part as a team and prettym much all talked about every decision together. I was the project lead and handled all the organisational stuff, like updating & sending our project manual to our professor and I also kept our professor updated through monthly project status reports.
+We all did our part as a team and pretty much all talked about every decision together. I was the project lead and handled all the organisational stuff, like updating & sending our project manual to our professor and I also kept our professor updated through monthly project status reports.
 
 ## Conclusion
 
