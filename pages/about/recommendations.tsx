@@ -54,7 +54,6 @@ export default function Recommendations() {
               width="500"
               height="380"
               frameBorder="0"
-              allowtransparency="true" // even if this shows an error, it is correct
               allow="encrypted-media"
             ></iframe>
           </div>
