@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "postbuild": "next-sitemap"
   },
   "repository": {
     "type": "git",
@@ -53,6 +54,7 @@
     "@typescript-eslint/parser": "^2.34.0",
     "eslint": "^7.30.0",
     "eslint-plugin-react": "^7.24.0",
+    "next-sitemap": "^1.6.124",
     "typescript": "^3.9.10"
   },
   "browserslist": [
