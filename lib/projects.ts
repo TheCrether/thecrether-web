@@ -19,7 +19,7 @@ export interface ProjectPost {
 	content: string;
 }
 
-const projectPostDir = path.join(process.cwd(), "posts", "projects");
+export const projectPostDir = path.join(process.cwd(), "posts", "projects");
 
 export function getProjectsByCategory(): ProjectPosts {
 	// Get file names under /posts
