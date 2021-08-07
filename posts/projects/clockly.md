@@ -6,8 +6,6 @@ desc: "A time management tool"
 imgPath: "projects/clockly.png"
 ---
 
-# Clockly
-
 This project rose in the adventures of "corona-time" where we had to track how much work we put in during a week of school.
 The screenshot you see above is the design of the dashboard at the time of writing this. This project is not online at the moment and we do not plan on putting it online.
 
@@ -20,7 +18,9 @@ At the time, we had to write down the time we worked on school stuff. That made 
 
 ## How
 
-![Clockly ERD](/images/projects/clockly-erd.png)
+<div class="image">
+<img src="/images/projects/clockly-erd.png" alt="Clockly ERD">
+</div>
 
 Normally this is the final version of the ERD diagram for the database structure, but I'm not so sure about the properties for the different tables.
 During the development of this project, we had the fun of working with time zones and had to think about how to send & receive dates. I learnt about a new way of managing data in an Angular application.

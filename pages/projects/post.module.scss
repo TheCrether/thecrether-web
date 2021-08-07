@@ -26,7 +26,6 @@ $skewDeg: -3deg;
   // height: 60vh;
   height: fit-content;
   min-height: 300px;
-  background: $bg2;
   position: relative;
   max-width: 1500px;
   overflow: hidden;
@@ -38,10 +37,10 @@ $skewDeg: -3deg;
     z-index: 5;
     width: 104%;
     height: 16vh;
-    background: inherit;
+    background: $bg2;
     z-index: 1;
     align-items: flex-start;
-    border: 1px solid transparentize($color: $color, $amount: 0.5);
+    // border: 1px solid transparentize($color: $color, $amount: 0.5);
 
     & > div {
       transform: skewY(-$skewDeg) rotate($skewDeg);
@@ -123,4 +122,8 @@ $skewDeg: -3deg;
       transform: none !important;
     }
   }
+}
+
+.main :global .image {
+  text-align: center;
 }

@@ -127,12 +127,12 @@
 
 .menuItemLink,
 .marquee span {
-  overflow: hidden;
+  // overflow: hidden;
   white-space: nowrap;
   font-size: var(--item-font-size);
   padding: 0 1vw;
   font-weight: 900;
-  line-height: 1.2;
+  line-height: 1.4;
 }
 
 @keyframes marquee {

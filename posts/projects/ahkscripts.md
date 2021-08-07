@@ -7,13 +7,11 @@ desc: "My AutoHotkey scripts for when I'm using Windows"
 imgPath: "projects/autohotkey.png"
 ---
 
-# ahkscripts
-
 This is my repository where my AutoHotkey scripts are.
 
 ## Why do I have them?
 
-My main reason of having such scripts is, that I want to be more productive when I'm using Windows. The other one is that I now need the shortcuts for the German umlaute (ü, ä, ö), since I bought a new keyboard ([Keychron K2 RGB][1]) which is has the US layout, that I personally more like because of easier key placements for programming.
+My main reason of having such scripts is, that I want to be more productive when I'm using Windows. The other one is that I need shortcuts for the German umlaute (ü, ä, ö), since I bought a new keyboard ([Keychron K2 RGB][1]) which has the US layout. I personally like it more because of easier key placements for programming.
 
 The other thing is, that AutoHotkey is very useful in general because you can do pretty much anything as long as you have a keyboard shortcut free.
 

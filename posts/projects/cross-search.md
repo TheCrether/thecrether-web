@@ -7,8 +7,6 @@ desc: "A cross-platform tool for searching desktop apps and more"
 imgPath: "projects/cross-search.png"
 ---
 
-# Cross Search
-
 This is my _temporarily_ failed attempt at making something like Finder/Spotlight from MacOS or [Ulauncher][1], but actually cross platform.
 
 The screenshot you see above is one of the first designs that I had in mind for the launcher.

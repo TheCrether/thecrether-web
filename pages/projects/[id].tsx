@@ -52,7 +52,6 @@ export default function ProjectPage({ projectData }: Props) {
         {imgPath && <Image id="topImg" path={projectData.imgPath}></Image>}
         <div className={flex(styles.info)}>
           <Container>
-            <h1>{title}</h1>
             <div className={flex(styles.properties)}>
               <div>
                 Written on {date && <Date dateString={date.toString()}></Date>}
@@ -60,6 +59,7 @@ export default function ProjectPage({ projectData }: Props) {
               <p>Language: {language}</p>
               {website && <Blank href={website}>Website</Blank>}
             </div>
+            <h1>{title}</h1>
           </Container>
         </div>
       </div>
