@@ -11,7 +11,7 @@ export default function Custom404() {
       <Head>
         <title>404 - Page Not Found</title>
       </Head>
-      <h1>404 - Page Not Found</h1>
+      <h1 style={{ textAlign: "center" }}>404 - Page Not Found</h1>
     </>
   );
 }

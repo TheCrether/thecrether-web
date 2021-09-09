@@ -64,7 +64,7 @@ export function Header({ home, projectPost, scrolled }: Props) {
 
   const links = routes.map((route) => (
     <Link key={route} href={`/${route.toLowerCase()}`}>
-      <a>{route}</a>
+      <a className="flex">{route}</a>
     </Link>
   ));
 

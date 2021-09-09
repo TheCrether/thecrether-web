@@ -22,13 +22,25 @@ $skewDeg: -3deg;
 .topPart {
   flex-direction: column;
   justify-content: flex-start;
-  width: 100%;
+  // width: 100%;
   // height: 60vh;
   height: fit-content;
   min-height: 300px;
   position: relative;
-  max-width: 1500px;
+  // max-width: 1500px;
   overflow: hidden;
+
+  @media #{$mq-medium} {
+    margin: 0 7.5%;
+  }
+
+  @media #{$mq-large} {
+    margin: 0 11%;
+  }
+
+  @media #{$mq-xlarge} {
+    margin: 0 16%;
+  }
 
   .info {
     transform-origin: top left;

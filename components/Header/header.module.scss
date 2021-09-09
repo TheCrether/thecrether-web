@@ -1,3 +1,4 @@
+@use "sass:math";
 @import "variables";
 @import "mixins";
 
@@ -19,6 +20,7 @@
   a {
     font-weight: bold;
     color: $color !important;
+    height: 100%;
 
     picture {
       display: flex;
@@ -109,7 +111,7 @@
   }
 }
 
-$burgerContainer: 8.3em;
+$burgerContainer: 10em;
 $linkMargin: 0.4em;
 $burgerSize: 2.1em;
 
@@ -126,9 +128,10 @@ $burgerSize: 2.1em;
 
 .burgerWrapper {
   width: $scrolledHeight;
-  height: $scrolledHeight;
+  height: calc(#{$scrolledHeight} - 1px);
   position: absolute;
-  transition: right $duration;
+  transition: width $duration ease $duration, border-bottom ease;
+  // transition-delay: $duration;
   right: 0;
   top: 0;
   cursor: pointer;
@@ -192,18 +195,21 @@ $linkAmount: 3;
   flex-direction: column;
   padding: 0.8em 2em;
   background: $bg2;
-  justify-content: flex-start;
+  justify-content: center;
   overflow: hidden;
   text-overflow: clip;
   height: 0;
   padding: 0 20px;
-  transition: padding $duration, height $duration;
+  transition: padding $duration ease, height $duration ease,
+    opacity $duration ease;
   position: absolute;
   top: 0;
-  width: 150px;
+  width: $burgerContainer;
+  right: 0;
+  opacity: 0;
 
   a {
-    height: $scrolledHeight / $linkAmount;
+    height: math.div($scrolledHeight, $linkAmount);
     margin: $linkMargin 0;
     color: white;
   }
@@ -212,13 +218,17 @@ $linkAmount: 3;
   align-items: center;
 
   .burgerWrapper {
-    right: ($burgerContainer - $scrolledHeight) / 2;
+    // right: math.div($burgerContainer, 2) - math.div($scrolledHeight, 2);
+    width: 100%;
+    background: $bg2;
+    border-bottom: 2px solid transparentize($color: $color, $amount: 0.2);
   }
 
   .burgerLinks {
     padding: $scrolledHeight 20px 0 20px;
-    height: $scrolledHeight + ($scrolledHeight / 4) * $linkAmount + $linkMargin *
-      3 * $linkAmount + 1em;
+    height: $scrolledHeight + math.div($scrolledHeight, 4) * $linkAmount +
+      $linkMargin * 3 * $linkAmount + 1em;
+    opacity: 1;
   }
 
   .firstLine {

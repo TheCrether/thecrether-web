@@ -48,9 +48,21 @@ Since at least one part of the project had to be written in Java, [Adrian][2] de
 
 ## What we accomplished
 
-We basically accomplished all the functionalities detailed before, except for one. This one is the "executing commands in a terminal" because we were not able to spawn interactive shells to Java, which meant that we were only able to mimic SSH functionality by sending a command and receiving the response line by line (still asynchronous though). Some of the features were easy to implement, since I already had a strong foundation for displaying files and implementing navigation from [TermFTP][4].
+We basically accomplished all the functionalities detailed before, except for one. This one is the "executing commands in a terminal", at least not fully because we were not able to spawn interactive shells in Java, which meant that we were only able to mimic SSH functionality by sending a command and receiving the response line by line (still asynchronous though). Some of the other features were easy to implement, since I already had a strong foundation for displaying files and implementing navigation between folders from [TermFTP][4].
 
 Still, I was able to also learn alot, especially when creating more accessible web applications.
+
+## Screenshots
+
+I also took additional screenshots of the interface, highlighting the file list itself and the searchbox at the top.
+
+<div class="image">
+<img src="/images/projects/networkexplorer_file-list.png" alt="NetworkExplorer File List">
+</div>
+
+<div class="image">
+<img src="/images/projects/networkexplorer_search-box.png" alt="NetworkExplorer Search Box">
+</div>
 
 [1]: https://github.com/NetworkExplorer/frontend
 [2]: https://github.com/0Adiber
