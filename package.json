@@ -44,7 +44,7 @@
     "react-dom": "^16.14.0",
     "remark": "^12.0.1",
     "remark-html": "^13.0.2",
-    "sass": "^1.39.0",
+    "sass": "^1.39.2",
     "smoothscroll-polyfill": "^0.4.4",
     "tsconfig-paths-webpack-plugin": "^3.5.1",
     "webp-loader": "^0.6.0"
