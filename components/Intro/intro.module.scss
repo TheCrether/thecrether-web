@@ -22,7 +22,7 @@
       font-size: 2.5em;
       background-color: transparentize($color: $bg3, $amount: 0.4);
       padding: 20px 40px;
-      transition: margin $duration;
+      transition: margin $duration ease;
     }
   }
 }

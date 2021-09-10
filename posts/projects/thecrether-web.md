@@ -3,6 +3,7 @@ title: "TheCrether Web"
 date: "2020-07-07"
 language: "TypeScript"
 website: "https://thecrether.at"
+github: "https://github.com/TheCrether/thecrether-web"
 desc: "The website you are on right now :)"
 imgPath: "projects/thecrether-web.png"
 ---

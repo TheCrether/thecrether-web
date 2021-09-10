@@ -13,7 +13,8 @@ export interface ProjectPost {
 	title: string;
 	date: Date;
 	language: string;
-	website: string;
+	website?: string;
+	github?: string;
 	imgPath: string;
 	desc: string;
 	content: string;

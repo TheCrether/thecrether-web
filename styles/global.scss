@@ -52,7 +52,7 @@ a,
   color: $link !important;
   text-decoration: none;
   cursor: pointer;
-  transition: text-decoration $duration, background $duration ease;
+  transition: background $duration ease;
   background: transparent;
   border-radius: 3px;
   padding: 0 2px;
@@ -62,13 +62,16 @@ a,
   }
 
   &:hover {
+    text-decoration: underline;
+  }
+
+  &.hover-bg:hover {
     background-color: rgba(255, 255, 255, 0.1);
   }
-}
 
-a:hover,
-.link:hover {
-  text-decoration: underline;
+  svg {
+    color: #fff !important;
+  }
 }
 
 a:focus {
@@ -110,7 +113,6 @@ header {
   height: 100%;
   padding: 10px 0;
   flex-direction: column;
-  transition: max-width $duration;
   flex-direction: column;
   overflow: hidden;
   padding: 0 4%;
@@ -146,7 +148,6 @@ section {
 
   & > p {
     width: 70%;
-    transition: width $duration;
   }
 
   &:nth-child(2n) {

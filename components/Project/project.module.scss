@@ -12,7 +12,7 @@
 .project {
   margin: 20px;
   border-radius: 5px;
-  background-color: $bg;
+  background-color: $bg2;
   width: 17em;
   height: fit-content;
   min-height: 11em;
@@ -21,7 +21,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  transition: margin $duration, transform $duration;
+  transition: margin $duration ease, transform $duration ease;
   // will-change: transform;
   transform-style: preserve-3d;
   backface-visibility: hidden;
@@ -36,7 +36,7 @@
     img {
       position: absolute;
       width: 100%;
-      transition: transform $duration;
+      transition: transform $duration ease;
       // will-change: transform;
       transform-style: preserve-3d;
       backface-visibility: hidden;
@@ -70,7 +70,7 @@
       transform: translateX(0);
       opacity: 1;
       text-decoration: underline;
-      @include elevation(5);
+      @include elevation(2);
     }
 
     .topImg img {
@@ -83,7 +83,8 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  transition: transform $duration, opacity $duration, box-shadow $duration;
+  transition: transform $duration ease, opacity $duration ease,
+    box-shadow $duration ease;
   opacity: 0.5;
   transform: translateX(100%);
   background-color: $color;

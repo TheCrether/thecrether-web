@@ -12,13 +12,16 @@ import styles from "./post.module.scss";
 import { flex } from "@lib/utils";
 import Head from "next/head";
 import { NextSeo } from "next-seo";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 interface Props {
   projectData: ProjectPost;
 }
 
 export default function ProjectPage({ projectData }: Props) {
-  const { imgPath, date, language, title, website, content, desc } =
+  const { imgPath, date, language, title, website, content, desc, github } =
     projectData;
 
   return (
@@ -53,11 +56,26 @@ export default function ProjectPage({ projectData }: Props) {
         <div className={flex(styles.info)}>
           <Container>
             <div className={flex(styles.properties)}>
-              <div>
-                Written on {date && <Date dateString={date.toString()}></Date>}
-              </div>
-              <p>Language: {language}</p>
-              {website && <Blank href={website}>Website</Blank>}
+              {date && (
+                <div>
+                  <Date dateString={date.toString()}></Date>
+                </div>
+              )}
+              <Image
+                path={`skills/${language.toLowerCase()}.png`}
+                alt={`${language} Logo`}
+                className={styles.menuItemImg}
+              ></Image>
+              {github && (
+                <Blank hover href={github} className="flex">
+                  <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
+                </Blank>
+              )}
+              {website && (
+                <Blank hover href={website} className="flex">
+                  <FontAwesomeIcon icon={faGlobe}></FontAwesomeIcon>
+                </Blank>
+              )}
             </div>
             <h1>{title}</h1>
           </Container>

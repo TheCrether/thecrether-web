@@ -45,7 +45,7 @@ $socialWidth: 9em;
     margin: 15px;
     color: $color !important;
     border-radius: 50%;
-    transition: background-color 500ms;
+    transition: background-color $duration ease;
     position: relative;
 
     &:hover {

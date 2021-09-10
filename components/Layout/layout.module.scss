@@ -9,7 +9,7 @@
   z-index: 2;
   padding-top: $notScrolled;
   // background: linear-gradient(transparentize($bg2, 0), $bg);
-  transition: padding $duration;
+  transition: padding $duration ease;
 }
 
 .main,

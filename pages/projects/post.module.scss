@@ -29,26 +29,27 @@ $skewDeg: -3deg;
   position: relative;
   // max-width: 1500px;
   overflow: hidden;
+  margin: auto;
+  width: calc(100% - 4% * 2);
 
   @media #{$mq-medium} {
-    margin: 0 7.5%;
+    width: calc(100% - 7.5% * 2);
   }
 
   @media #{$mq-large} {
-    margin: 0 11%;
+    width: calc(100% - 11% * 2);
   }
 
   @media #{$mq-xlarge} {
-    margin: 0 16%;
+    width: calc(100% - 16% * 2);
   }
 
   .info {
     transform-origin: top left;
     transform: rotate($skewDeg) skewY($skewDeg);
-    transition: transform $duration;
+    transition: transform $duration ease;
     z-index: 5;
     width: 104%;
-    height: 16vh;
     background: $bg2;
     z-index: 1;
     align-items: flex-start;
@@ -64,8 +65,21 @@ $skewDeg: -3deg;
       flex-wrap: wrap;
       justify-content: center;
       width: 100%;
-      & > * {
-        margin: 10px 25px;
+      gap: 10px;
+
+      a {
+        border-radius: 10px;
+        width: 2rem;
+        height: 2rem;
+      }
+
+      picture {
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+
+      svg {
+        font-size: 1.6em;
       }
     }
 

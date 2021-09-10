@@ -2,7 +2,7 @@
 title: "NetworkExplorer"
 date: "2021-08-06"
 language: "TypeScript"
-website: "https://github.com/NetworkExplorer"
+github: "https://github.com/NetworkExplorer"
 desc: "A project for my 4th grade programming class"
 imgPath: "projects/networkexplorer.png"
 ---

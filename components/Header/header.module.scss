@@ -4,7 +4,8 @@
 
 .header {
   height: $notScrolled;
-  transition: height $duration, padding $duration, border $duration;
+  transition: height $duration ease, padding $duration ease,
+    border $duration ease;
   position: fixed;
   top: -1px;
   padding: 0;
@@ -12,7 +13,8 @@
 
   img {
     border-radius: 50%;
-    transition: width $duration, height $duration, padding $duration;
+    transition: width $duration ease, height $duration ease,
+      padding $duration ease;
     height: $scrolledHeight - 1.2em;
     width: $scrolledHeight - 1.2em;
   }
@@ -31,7 +33,7 @@
 
   #notScrolled {
     height: $notScrolled;
-    transition: top $duration;
+    transition: top $duration ease;
     @include fixed(0, 50%, -50%, 0);
 
     .centerProfile {
@@ -50,14 +52,14 @@
   }
 
   :global .container {
-    transition: transform $duration;
+    transition: transform $duration ease;
     transform: translateY(-$notScrolled);
   }
 
   #right {
     overflow: hidden;
     text-overflow: clip;
-    transition: transform 500ms;
+    transition: transform $duration ease;
     height: 100%;
 
     a {
@@ -80,7 +82,7 @@
     font-size: 1.4em;
     margin: 0;
     color: white;
-    transition: padding $duration;
+    transition: padding $duration ease;
     font-weight: bold;
   }
 }
@@ -128,7 +130,7 @@ $burgerSize: 2.1em;
   position: fixed;
   top: 0;
   right: 0;
-  transition: transform $duration;
+  transition: transform $duration ease;
   transform: translateX(120%);
   align-items: flex-end;
   flex-direction: column;
@@ -250,7 +252,7 @@ $linkAmount: 3;
     width: 100%;
     background: $bg2;
     // border-bottom: 2px solid transparentize($color: $color, $amount: 0.2);
-    transition: width $duration ease $duration;
+    transition: width $duration ease;
 
     &:after {
       width: 100%;
@@ -268,11 +270,11 @@ $linkAmount: 3;
   .burgerLinks {
     height: $scrolledHeight + math.div($scrolledHeight, 4) * $linkAmount +
       $linkMargin * 3 * $linkAmount + 1em;
-    transition: height $duration ease $duration * 2;
+    transition: height $duration ease $duration;
 
     & > div {
       opacity: 1;
-      transition: opacity $duration ease $duration * 2;
+      transition: opacity $duration ease $duration;
     }
   }
 
