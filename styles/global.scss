@@ -30,15 +30,15 @@ body {
   }
 
   @media #{$mq-large} {
-    font-size: $base-font-size * 1.35;
+    font-size: $base-font-size * 1.3;
   }
 
   @media #{$mq-xlarge} {
-    font-size: $base-font-size * 1.5;
+    font-size: $base-font-size * 1.4;
   }
 
   @media #{$mq-xxlarge} {
-    font-size: $base-font-size * 1.6;
+    font-size: $base-font-size * 1.5;
   }
 }
 
@@ -52,11 +52,17 @@ a,
   color: $link !important;
   text-decoration: none;
   cursor: pointer;
-  transition: text-decoration $duration;
+  transition: text-decoration $duration, background $duration ease;
   background: transparent;
+  border-radius: 3px;
+  padding: 0 2px;
 
   &:visited {
     color: inherit;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
   }
 }
 

@@ -69,7 +69,7 @@ export function Header({ home, projectPost, scrolled }: Props) {
   ));
 
   return (
-    <header className={className}>
+    <header className={`${className} ${navOpen ? styles.clicked : ""}`}>
       <div id={styles.notScrolled} className="flex">
         {!home && (
           <Link href="/">
@@ -96,11 +96,11 @@ export function Header({ home, projectPost, scrolled }: Props) {
       </Container>
       {/* this burger thing is taken from https://www.parkside-interactive.com/ */}
       <div
-        className={flex(` ${navOpen ? styles.clicked : ""} ${styles.burger}`)}
+        className={flex(`  ${styles.burger}`)}
         style={{ opacity: currScrolled ? 1 : 0 }}
       >
         <div
-          className={flex(styles.burgerWrapper)}
+          className={styles.burgerWrapper}
           onClick={() => setNavOpen(!navOpen)}
         >
           <div className={styles.burgerIcon}>
@@ -109,7 +109,9 @@ export function Header({ home, projectPost, scrolled }: Props) {
             <div className={styles.thirdLine}></div>
           </div>
         </div>
-        <div className={flex(styles.burgerLinks)}>{links}</div>
+        <div className={flex(styles.burgerLinks)}>
+          <div className="flex">{links}</div>
+        </div>
       </div>
     </header>
   );

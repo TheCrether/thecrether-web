@@ -58,6 +58,7 @@
     overflow: hidden;
     text-overflow: clip;
     transition: transform 500ms;
+    height: 100%;
 
     a {
       padding: 1em 2em;
@@ -67,7 +68,6 @@
 
   #notScrolledLinks a,
   #right a {
-    transition: background-color 300ms;
     padding: 0.5em 1em;
 
     &:hover {
@@ -100,7 +100,16 @@
 .scrolled {
   composes: header;
   height: $scrolledHeight;
-  border-bottom: 2px solid transparentize($color: $color, $amount: 0.2);
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    border-bottom: 2px solid transparentize($color: $color, $amount: 0.2);
+    width: 100%;
+    transition: width $duration ease $duration * 2;
+  }
+  // border-bottom: 2px solid transparentize($color: $color, $amount: 0.2);
 
   #notScrolled {
     top: -$notScrolled;
@@ -119,7 +128,7 @@ $burgerSize: 2.1em;
   position: fixed;
   top: 0;
   right: 0;
-  transition: transform $duration, opacity $duration;
+  transition: transform $duration;
   transform: translateX(120%);
   align-items: flex-end;
   flex-direction: column;
@@ -128,14 +137,28 @@ $burgerSize: 2.1em;
 
 .burgerWrapper {
   width: $scrolledHeight;
-  height: calc(#{$scrolledHeight} - 1px);
+  height: $scrolledHeight;
   position: absolute;
-  transition: width $duration ease $duration, border-bottom ease;
+  transition: width $duration ease;
   // transition-delay: $duration;
+  // border-bottom: 0px solid transparentize($color: $color, $amount: 0.2);
   right: 0;
   top: 0;
   cursor: pointer;
   z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    right: 0;
+    border-bottom: 2px solid transparentize($color: $color, $amount: 0.2);
+    width: 0;
+    transition: width $duration ease $duration * 2;
+  }
 }
 
 .burgerIcon {
@@ -198,15 +221,20 @@ $linkAmount: 3;
   justify-content: center;
   overflow: hidden;
   text-overflow: clip;
-  height: 0;
-  padding: 0 20px;
-  transition: padding $duration ease, height $duration ease,
-    opacity $duration ease;
+  height: calc(#{$scrolledHeight} - 4px);
+  padding: $scrolledHeight 20px 0 20px;
+  transition: height $duration ease $duration;
   position: absolute;
   top: 0;
   width: $burgerContainer;
   right: 0;
-  opacity: 0;
+  // opacity: 0;
+
+  & > div {
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity $duration ease;
+  }
 
   a {
     height: math.div($scrolledHeight, $linkAmount);
@@ -221,14 +249,31 @@ $linkAmount: 3;
     // right: math.div($burgerContainer, 2) - math.div($scrolledHeight, 2);
     width: 100%;
     background: $bg2;
-    border-bottom: 2px solid transparentize($color: $color, $amount: 0.2);
+    // border-bottom: 2px solid transparentize($color: $color, $amount: 0.2);
+    transition: width $duration ease $duration;
+
+    &:after {
+      width: 100%;
+      transition: width $duration ease;
+    }
+  }
+
+  &.scrolled {
+    &:after {
+      width: calc(100% - #{$burgerContainer});
+      transition: width $duration ease;
+    }
   }
 
   .burgerLinks {
-    padding: $scrolledHeight 20px 0 20px;
     height: $scrolledHeight + math.div($scrolledHeight, 4) * $linkAmount +
       $linkMargin * 3 * $linkAmount + 1em;
-    opacity: 1;
+    transition: height $duration ease $duration * 2;
+
+    & > div {
+      opacity: 1;
+      transition: opacity $duration ease $duration * 2;
+    }
   }
 
   .firstLine {
