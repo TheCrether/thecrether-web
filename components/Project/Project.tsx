@@ -20,7 +20,11 @@ export function Project({ id, title, imgPath, desc, index }: Props) {
       >
         <div className={flex(imgPath ? styles.project : styles.noImg)}>
           {imgPath && (
-            <Image className={flex(styles.topImg)} path={imgPath}></Image>
+            <Image
+              className={flex(styles.topImg)}
+              path={imgPath}
+              objectFit="cover"
+            ></Image>
           )}
           <div className={styles.bottom}>
             <p className={styles.title}>{title}</p>

@@ -74,7 +74,11 @@ export function Header({ home, projectPost, scrolled }: Props) {
         {!home && (
           <Link href="/">
             <a className={styles.centerProfile}>
-              <Image path="profile.jpg" alt="Profile Picture"></Image>
+              <Image
+                path="profile.jpg"
+                alt="Profile Picture"
+                className={styles.centerProfile}
+              ></Image>
             </a>
           </Link>
         )}
@@ -85,8 +89,12 @@ export function Header({ home, projectPost, scrolled }: Props) {
 
       <Container className="container">
         <Link href="/">
-          <a id={styles.left} className="flex">
-            <Image path="profile.jpg" alt="Profile Picture"></Image>
+          <a className="flex">
+            <Image
+              path="profile.jpg"
+              alt="Profile Picture"
+              className={styles.leftPfp}
+            ></Image>
             <p>TheCrether</p>
           </a>
         </Link>

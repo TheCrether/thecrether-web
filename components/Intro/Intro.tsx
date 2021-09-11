@@ -1,6 +1,8 @@
 import styles from "./intro.module.scss";
 import Image, { getBackground, checkWebp } from "components/Image";
 import { CSSProperties, useEffect, useState, useRef } from "react";
+import NextImage from "next/image";
+import profile from "../../public/images/profile.jpg";
 
 export type IntroType = "home" | "projects";
 
@@ -28,6 +30,16 @@ export function Intro({ introType, title, height }: Props) {
   let image: JSX.Element = <></>;
   if (introType === "home") {
     image = (
+      // <div id={styles.homeProfilePic}>
+      //   <NextImage
+      //     src={profile}
+      //     alt="Profile picture"
+      //     layout="fill"
+      //     objectPosition="center center"
+      //     objectFit="contain"
+      //     unoptimized={true}
+      //   ></NextImage>
+      // </div>
       <Image
         path="profile.jpg"
         alt="Profile Picture"
@@ -38,9 +50,9 @@ export function Intro({ introType, title, height }: Props) {
 
   useEffect(() => {
     if (!style.backgroundImage) {
-      setStyle({
-        backgroundImage: `${getBackground(backgroundNames[introType])}`,
-      });
+      // setStyle({
+      //   backgroundImage: `${getBackground(backgroundNames[introType])}`,
+      // });
     }
   });
 

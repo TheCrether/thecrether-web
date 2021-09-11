@@ -1,17 +1,38 @@
+import NextImage from "next/image";
+
 interface Props {
   path: string;
   className?: string;
   id?: string;
   alt?: string;
+  position?: "relative" | "absolute" | "static";
+  layout?: "fill" | "responsive" | "intrinsic" | "fixed";
+  objectFit?: "cover" | "fill" | "none" | "scale-down";
 }
 
-export function Image({ path, className, id, alt }: Props) {
+export function Image({
+  path,
+  className,
+  id,
+  alt,
+  position,
+  layout,
+  objectFit,
+}: Props) {
   return (
-    <picture className={`${className || ""}`}>
-      <source srcSet={require(`images/${path}?webp`)} type="image/webp" />
-      <source srcSet={require(`images/${path}?png`)} type="image/png" />
-      <img src={require(`images/${path}?jpg`)} alt={alt || ""} id={id || ""} />
-    </picture>
+    <div
+      id={id}
+      className={className}
+      style={{ position: position || "relative" }}
+    >
+      <NextImage
+        src={`/images/${path}`}
+        alt={alt}
+        id={id}
+        layout={layout || "fill"}
+        objectFit={objectFit}
+      ></NextImage>
+    </div>
   );
 }
 

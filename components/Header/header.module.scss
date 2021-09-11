@@ -13,8 +13,9 @@
 
   img {
     border-radius: 50%;
-    transition: width $duration ease, height $duration ease,
-      padding $duration ease;
+  }
+
+  .leftPfp {
     height: $scrolledHeight - 1.2em;
     width: $scrolledHeight - 1.2em;
   }
@@ -39,11 +40,6 @@
     .centerProfile {
       width: $notScrolled - $homeMargin;
       height: $notScrolled - $homeMargin;
-
-      img {
-        width: 100%;
-        height: 100%;
-      }
     }
 
     #notScrolledLinks {
