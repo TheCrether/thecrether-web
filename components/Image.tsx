@@ -28,7 +28,6 @@ export function Image({
       <NextImage
         src={`/images/${path}`}
         alt={alt}
-        id={id}
         layout={layout || "fill"}
         objectFit={objectFit}
       ></NextImage>

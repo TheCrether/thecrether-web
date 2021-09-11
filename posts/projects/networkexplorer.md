@@ -7,6 +7,10 @@ desc: "A project for my 4th grade programming class"
 imgPath: "projects/networkexplorer.png"
 ---
 
+<div class="image image-logo">
+<img src="/_next/image?url=%2Fimages%2Fprojects%2Fnetworkexplorer_logo.png&w=128&q=100" />
+</div>
+
 [NetworkExplorer][1] is a tool made to be used in the home network. It is like a NAS interface but open-source and can be run on basically any computer. It was done within the scope of my programming class in my 4th year at HTBLA Kaindorf, but I also spent a lot of time on it outside of school.
 
 The web interface and design is my work, but every amazing user interface needs a well-designed backend. Since this was a team project, my great friend and school colleague Adrian ([@0Adiber][2]) created the server behind it. I will focus on the frontend of the application, since I almost exclusively worked on it.

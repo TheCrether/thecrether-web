@@ -29,8 +29,9 @@ $skewDeg: -3deg;
   position: relative;
   // max-width: 1500px;
   overflow: hidden;
-  margin: auto;
+  margin: 0 auto;
   width: calc(100% - 4% * 2);
+  max-height: 1000px;
 
   @media #{$mq-medium} {
     width: calc(100% - 7.5% * 2);
@@ -89,17 +90,26 @@ $skewDeg: -3deg;
     }
   }
 
-  picture {
+  #topImg {
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    // height: 40vh;
-    overflow: hidden;
+
+    & > div {
+      position: unset !important;
+    }
 
     img {
-      width: 100%;
+      width: 100% !important;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      // height: 40vh;
+      overflow: hidden;
+      position: unset !important;
+      height: unset !important;
+      width: unset !important;
+      min-height: unset !important;
+      max-height: 500px !important;
     }
   }
 }
@@ -152,4 +162,9 @@ $skewDeg: -3deg;
 
 .main :global .image {
   text-align: center;
+
+  &.image-logo img {
+    height: 64px;
+    width: 64px;
+  }
 }

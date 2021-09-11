@@ -52,7 +52,14 @@ export default function ProjectPage({ projectData }: Props) {
         className={flex(imgPath ? styles.topPart : styles.noImg)}
         id="topPart"
       >
-        {imgPath && <Image id="topImg" path={projectData.imgPath}></Image>}
+        {imgPath && (
+          <Image
+            id={styles.topImg}
+            path={projectData.imgPath}
+            layout="fill"
+            objectFit="contain"
+          ></Image>
+        )}
         <div className={flex(styles.info)}>
           <Container>
             <div className={flex(styles.properties)}>

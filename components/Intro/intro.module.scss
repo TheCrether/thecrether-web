@@ -30,13 +30,13 @@
   height: $notScrolled * 2;
   border-radius: 50%;
   margin: 10px;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 48em) {
   .intro > div {
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     padding: 0;
 
     h1 {
