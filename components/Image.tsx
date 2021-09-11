@@ -7,7 +7,7 @@ interface Props {
   alt?: string;
   position?: "relative" | "absolute" | "static";
   layout?: "fill" | "responsive" | "intrinsic" | "fixed";
-  objectFit?: "cover" | "fill" | "none" | "scale-down";
+  objectFit?: "cover" | "fill" | "none" | "scale-down" | "contain";
 }
 
 export function Image({

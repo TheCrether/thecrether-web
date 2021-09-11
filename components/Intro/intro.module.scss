@@ -7,22 +7,21 @@
   width: 100%;
   margin-top: $notScrolled;
   height: 4 * $notScrolled;
+  position: relative;
 
-  & > div {
-    background: linear-gradient(
-      transparentize($bg2, 0.1) 20%,
-      transparentize($bg2, 0.5) 45%,
-      rgba(0, 0, 0, 0)
-    );
+  & > div:not(.bg) {
     width: 100%;
     height: 100%;
     padding: 50px;
+    z-index: 5;
+    position: absolute;
 
     h1 {
       font-size: 2.5em;
-      background-color: transparentize($color: $bg3, $amount: 0.4);
+      background-color: transparentize($color: $bg3, $amount: 0.3);
       padding: 20px 40px;
       transition: margin $duration ease;
+      text-shadow: 1px 1px 10px transparentize($color: #fff, $amount: 0.7);
     }
   }
 }
@@ -45,4 +44,10 @@
       text-align: center;
     }
   }
+}
+
+.bg {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }

@@ -24,42 +24,29 @@ const backgroundNames: Urls = {
 export function Intro({ introType, title, height }: Props) {
   const [style, setStyle] = useState<CSSProperties>({});
 
-  if (height) {
-    if (!style.height) setStyle({ height, ...style });
-  }
-  let image: JSX.Element = <></>;
-  if (introType === "home") {
-    image = (
-      // <div id={styles.homeProfilePic}>
-      //   <NextImage
-      //     src={profile}
-      //     alt="Profile picture"
-      //     layout="fill"
-      //     objectPosition="center center"
-      //     objectFit="contain"
-      //     unoptimized={true}
-      //   ></NextImage>
-      // </div>
-      <Image
-        path="profile.jpg"
-        alt="Profile Picture"
-        id={styles.homeProfilePic}
-      ></Image>
-    );
-  }
-
   useEffect(() => {
-    if (!style.backgroundImage) {
-      // setStyle({
-      //   backgroundImage: `${getBackground(backgroundNames[introType])}`,
-      // });
+    if (height) {
+      setStyle({ height, ...style });
     }
-  });
+  }, []);
 
   return (
-    <div className={styles.intro} style={style}>
+    <div className={styles.intro}>
+      <Image
+        path={`bg/${backgroundNames[introType]}`}
+        layout="fill"
+        className={styles.bg}
+        objectFit="cover"
+        position="absolute"
+      ></Image>
       <div className="flex">
-        {image}
+        {introType === "home" && (
+          <Image
+            path="profile.jpg"
+            alt="Profile Picture"
+            id={styles.homeProfilePic}
+          ></Image>
+        )}
         <h1 id="introTitle">{title}</h1>
       </div>
     </div>
