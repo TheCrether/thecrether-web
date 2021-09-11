@@ -58,6 +58,7 @@ export default function ProjectPage({ projectData }: Props) {
             path={projectData.imgPath}
             layout="fill"
             objectFit="contain"
+            alt={`Image for project ${title}`}
           ></Image>
         )}
         <div className={flex(styles.info)}>

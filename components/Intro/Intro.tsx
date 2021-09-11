@@ -38,6 +38,7 @@ export function Intro({ introType, title, height }: Props) {
         className={styles.bg}
         objectFit="cover"
         position="absolute"
+        alt="Homepage Star Background"
       ></Image>
       <div className="flex">
         {introType === "home" && (

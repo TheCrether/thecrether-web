@@ -8,7 +8,7 @@ imgPath: "projects/networkexplorer.png"
 ---
 
 <div class="image image-logo">
-<img src="/_next/image?url=%2Fimages%2Fprojects%2Fnetworkexplorer_logo.png&w=128&q=100" />
+<img src="/_next/image?url=%2Fimages%2Fprojects%2Fnetworkexplorer_logo.png&w=128&q=100" alt="NetworkExplorer logo" />
 </div>
 
 [NetworkExplorer][1] is a tool made to be used in the home network. It is like a NAS interface but open-source and can be run on basically any computer. It was done within the scope of my programming class in my 4th year at HTBLA Kaindorf, but I also spent a lot of time on it outside of school.

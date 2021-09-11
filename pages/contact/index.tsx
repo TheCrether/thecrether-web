@@ -41,28 +41,40 @@ export default function ContactPage() {
         <title>Contact me!</title>
       </Head>
       <Header scrolled></Header>
-      <div>
+      <div className={styles.beginning}>
         <h2>Contact me!</h2>
         Because I do not want to put my email into the wild, here are my socials
         where I am pretty active
       </div>
       <div className={`${styles.content} flex`}>
         <div className={flex(styles.socials)}>
-          <Blank href="https://twitter.com/thecrether" className="flex">
+          <Blank
+            href="https://twitter.com/thecrether"
+            className="flex"
+            ariaLabel="Twitter @TheCrether"
+          >
             <Ring className={styles.ring}></Ring>
             <FontAwesomeIcon
               className={styles.icon}
               icon={faTwitter}
             ></FontAwesomeIcon>
           </Blank>
-          <Blank href="https://github.com/TheCrether" className="flex">
+          <Blank
+            href="https://github.com/TheCrether"
+            className="flex"
+            ariaLabel="GitHub @TheCrether"
+          >
             <Ring className={styles.ring}></Ring>
             <FontAwesomeIcon
               className={styles.icon}
               icon={faGithub}
             ></FontAwesomeIcon>
           </Blank>
-          <Blank href="https://instagram.com/thecrether" className="flex">
+          <Blank
+            href="https://instagram.com/thecrether"
+            className="flex"
+            ariaLabel="Instagram @TheCrether"
+          >
             <Ring className={styles.ring}></Ring>
             <FontAwesomeIcon
               className={styles.icon}
@@ -72,6 +84,7 @@ export default function ContactPage() {
           <Blank
             href="https://www.linkedin.com/in/denis-imeri"
             className="flex"
+            ariaLabel="LinkedIn @TheCrether"
           >
             <Ring className={styles.ring}></Ring>
             <FontAwesomeIcon

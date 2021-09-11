@@ -24,6 +24,7 @@ export function Project({ id, title, imgPath, desc, index }: Props) {
               className={flex(styles.topImg)}
               path={imgPath}
               objectFit="cover"
+              alt={`Image for project ${title}`}
             ></Image>
           )}
           <div className={styles.bottom}>

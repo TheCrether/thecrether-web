@@ -171,10 +171,10 @@ $burgerSize: 2.1em;
     right: 0.8em;
     width: 50%;
     display: block;
-    background: white;
+    background: white !important;
 
     &::after {
-      background: #fff;
+      background: #fff !important;
       bottom: 0;
       content: "";
       height: 100%;
@@ -295,7 +295,7 @@ $linkAmount: 3;
   }
 }
 
-@media screen and (max-width: 30em) {
+@media screen and (max-width: 35em) {
   #right {
     transform: translateX(120%);
   }
