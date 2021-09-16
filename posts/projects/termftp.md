@@ -19,9 +19,17 @@ The main reason we came up with this idea because we do not like the design of c
 
 ## Project Management
 
-We are required to use the [SCRUM](https://en.wikipedia.org/wiki/Scrum_(software_development)) framework for project management, since this project was done for our project management class.
+We are required to use the [SCRUM](https://en.wikipedia.org/wiki/Scrum_(software_development)) framework for project management, since this project was done for our project management class. We were able to choose the length of our sprint cycles, and settled on four weeks.
 
-Trello
+<div class="image">
+<img src="/images/projects/termftp_trello.png" alt="TermFTP Trello" />
+</div>
+
+In order to apply the SCRUM techniques we learned in school, we used [Trello](https://trello.com). We did not use any template, but we used automation for applying labels and adding due dates on cards.
+
+## Functionalities
+
+
 
 [1]: https://github.com/0Adiber
 [2]: https://github.com/eliaswil

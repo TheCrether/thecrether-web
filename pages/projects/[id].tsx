@@ -57,7 +57,7 @@ export default function ProjectPage({ projectData }: Props) {
             id={styles.topImg}
             path={projectData.imgPath}
             layout="fill"
-            objectFit="contain"
+            objectFit="cover"
             alt={`Image for project ${title}`}
           ></Image>
         )}
