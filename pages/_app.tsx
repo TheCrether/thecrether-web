@@ -22,7 +22,7 @@ export default function App({ Component, pageProps }: AppProps) {
           description: "@TheCrether's personal website",
           images: [
             {
-              url: "/images/profile.jpg",
+              url: "/images/profile.png",
               alt: "@TheCrether's profile picture",
             },
           ],

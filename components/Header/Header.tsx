@@ -75,7 +75,7 @@ export function Header({ home, projectPost, scrolled }: Props) {
           <Link href="/">
             <a className={styles.centerProfile}>
               <Image
-                path="profile.jpg"
+                path="profile.png"
                 alt="Profile Picture"
                 className={styles.centerProfile}
               ></Image>
@@ -91,7 +91,7 @@ export function Header({ home, projectPost, scrolled }: Props) {
         <Link href="/">
           <a className="flex">
             <Image
-              path="profile.jpg"
+              path="profile.png"
               alt="Profile Picture"
               className={styles.leftPfp}
             ></Image>

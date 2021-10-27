@@ -34,7 +34,6 @@
     "@types/smoothscroll-polyfill": "^0.3.1",
     "date-fns": "^2.23.0",
     "gray-matter": "^4.0.3",
-    "imagemin-mozjpeg": "^9.0.0",
     "imagemin-optipng": "^8.0.0",
     "next": "^11.1.2",
     "next-compose-plugins": "^2.2.1",

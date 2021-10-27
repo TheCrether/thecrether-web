@@ -1,8 +1,6 @@
 import styles from "./intro.module.scss";
 import Image, { getBackground, checkWebp } from "components/Image";
 import { CSSProperties, useEffect, useState, useRef } from "react";
-import NextImage from "next/image";
-import profile from "../../public/images/profile.jpg";
 
 export type IntroType = "home" | "projects";
 
@@ -43,7 +41,7 @@ export function Intro({ introType, title, height }: Props) {
       <div className="flex">
         {introType === "home" && (
           <Image
-            path="profile.jpg"
+            path="profile.png"
             alt="Profile Picture"
             id={styles.homeProfilePic}
           ></Image>
