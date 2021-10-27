@@ -4,7 +4,7 @@ date: "2020-07-08"
 language: "TypeScript"
 github: "https://github.com/SYP-DHIF17/ProjectManager"
 desc: "A project management tool"
-imgPath: "projects/vortex.png"
+imgPath: "projects/vortex/vortex.png"
 ---
 
 This post is about a project-management tool we built as a school project in our project management class.
@@ -18,7 +18,7 @@ After agreeing to realise this, we got to work and took some ideas from the "adv
 ## How
 
 <div class="image">
-<img src="/images/projects/vortex-figma.png" alt="Vortex Figma">
+<img src="/images/projects/vortex/vortex-figma.png" alt="Vortex Figma">
 </div>
 
 The frontend team consisted of [@elitru][5] & I. We started with a basic design in [Figma][2] with how we wanted the fundamental UI to look. You can see how that looked like in the screenshot above. We then decided on [Angular][3] because we had a lot of experience with it and also because the use of services for sharing data between components would be very fitting for this case.
@@ -26,7 +26,7 @@ The frontend team consisted of [@elitru][5] & I. We started with a basic design 
 At first, we wanted to do a lot more, but then we just removed a lot of functions to get the project ready in time for presenting it. [@elitru][5] built most of the "actual frontend" and I built most of the structure like models, the data & login service, etc.
 
 <div class="image">
-	<img src="/images/projects/vortex-erd.png" alt="Vortex ERD">
+<img src="/images/projects/vortex/vortex-erd.png" alt="Vortex ERD">
 </div>
 
 The backend team consisted of [@realSuffix][1] & [@eliaswil][6]. After some talking, they agreed on using the [actix][4] framework (Rust). The ERD for the database can be found in screenshot above. We, as a team, decided on the structure together since designing stuff like this is very hard as one or two persons and more input is always good to have. We also talked about what we all thought was needed in the models/tables, and agreed on it, but of course changed it during the course of the project multiple times.

@@ -23,7 +23,7 @@ export default function Home() {
 
       <section>
         <h2>About</h2>
-        <p>I am a 17-year old student</p>
+        <p>I am a 18-year old student</p>
         <p>
           I am from Austria and go to HTBLA Kaindorf. I do a lot of different
           stuff and if you would like to find out more about me, click on the

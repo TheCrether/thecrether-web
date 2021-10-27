@@ -27,7 +27,7 @@ export default function AboutPage() {
       <h1>About Me</h1>
       <p>Thank you for trying to find out more about me!</p>
       <p>
-        I am a 17-year old student from Austria studying Informatics at HTBLA
+        I am a 18-year old student from Austria studying Informatics at HTBLA
         Kaindorf and below you{"'"}ll find out a lot of stuff about me
       </p>
 

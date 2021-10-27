@@ -4,11 +4,11 @@ date: "2021-08-06"
 language: "TypeScript"
 github: "https://github.com/NetworkExplorer"
 desc: "A project for my 4th grade programming class"
-imgPath: "projects/networkexplorer.png"
+imgPath: "projects/ne/ne.png"
 ---
 
 <div class="image image-logo">
-<img src="/_next/image?url=%2Fimages%2Fprojects%2Fnetworkexplorer_logo.png&w=128&q=100" alt="NetworkExplorer logo" />
+<img src="/_next/image?url=%2Fimages%2Fprojects%2Fne%2Fne_logo.png&w=128&q=100" alt="NetworkExplorer logo" />
 </div>
 
 [NetworkExplorer][1] is a tool made to be used in the home network. It is like a NAS interface but open-source and can be run on basically any computer. It was done within the scope of my programming class in my 4th year at HTBLA Kaindorf, but I also spent a lot of time on it outside of school.
@@ -22,7 +22,7 @@ The project is split up into two repositories, one for the [frontend][1] and one
 One of the important parts of the project was project management. We were required to use the [SCRUM](https://en.wikipedia.org/wiki/Scrum_(software_development)) framework for organising all tasks that had to be done and were free to choose how long our sprint cycles were.
 
 <div class="image">
-<img src="/images/projects/networkexplorer_trello.png" alt="NetworkExplorer Trello board">
+<img src="/images/projects/ne/ne_trello.png" alt="NetworkExplorer Trello board">
 </div>
 
 In order to apply the SCRUM techniques we learned in school, we used [Trello](https://trello.com/). We started off with a [Kanban template](https://trello.com/templates/engineering/kanban-template-LGHXvZNL) which did not really fit for SCRUM, but we kept the idea for the card covers (Git, Design etc.) because we thought that it added a nice flair. Above, you are able to see how our board looks after we "completed" our project and presented it to our class.
@@ -41,7 +41,7 @@ After settling on the project idea, we were tasked to make a list of functionali
 We accomplished all the tasks listed above and even added some extra features like a "search box" for folder paths. One of the first tasks I did was, of course, setting up the frontend and creating some basic mockups of how I wanted things to look. For this, I used my favourite design tool, [Figma](https://figma.com).
 
 <div class="image">
-<img src="/images/projects/networkexplorer_figma.png" alt="NetworkExplorer Figma Design">
+<img src="/images/projects/ne/ne_figma.png" alt="NetworkExplorer Figma Design">
 </div>
 
 ## Technologies
@@ -58,14 +58,14 @@ Still, I was able to also learn alot, especially when creating more accessible w
 
 ## Screenshots
 
-I also took additional screenshots of the interface, highlighting the file list itself and the searchbox at the top.
+Here some screenshots of the actual interface, highlighting the file list itself and the searchbox at the top.
 
 <div class="image">
-<img src="/images/projects/networkexplorer_file-list.png" alt="NetworkExplorer File List">
+<img src="/images/projects/ne/ne_file-list.png" alt="NetworkExplorer File List">
 </div>
 
 <div class="image">
-<img src="/images/projects/networkexplorer_search-box.png" alt="NetworkExplorer Search Box">
+<img src="/images/projects/ne/ne_search-box.png" alt="NetworkExplorer Search Box">
 </div>
 
 [1]: https://github.com/NetworkExplorer/frontend
