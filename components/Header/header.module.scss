@@ -36,6 +36,7 @@
     height: $notScrolled;
     transition: top $duration ease;
     @include fixed(0, 50%, -50%, 0);
+    z-index: 5;
 
     .centerProfile {
       width: $notScrolled - $homeMargin;
@@ -107,10 +108,13 @@
     width: 100%;
     transition: width $duration ease $duration * 2;
   }
-  // border-bottom: 2px solid transparentize($color: $color, $amount: 0.2);
 
   #notScrolled {
     top: -$notScrolled;
+  }
+
+  .burger {
+    pointer-events: unset;
   }
 
   :global .container {
@@ -131,6 +135,7 @@ $burgerSize: 2.1em;
   align-items: flex-end;
   flex-direction: column;
   width: $burgerContainer;
+  pointer-events: none;
 }
 
 .burgerWrapper {
