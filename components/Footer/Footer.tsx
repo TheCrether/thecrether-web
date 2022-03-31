@@ -10,7 +10,7 @@ export function Footer() {
   return (
     <footer>
       <Container className={flex(styles.footer)}>
-        <p>© 2020 TheCrether</p>
+        <p>© 2022 Denis Imeri</p>
         <div className={flex(styles.socials)}>
           <Blank href="https://github.com/TheCrether" className="flex">
             <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>Github
