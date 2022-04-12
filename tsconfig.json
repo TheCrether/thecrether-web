@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -16,16 +20,39 @@
     "baseUrl": "./",
     "downlevelIteration": true,
     "paths": {
-      "@components": ["components"],
-      "@styles": ["components/styles"],
-      "@pages": ["pages"],
-      "@lib": ["lib"],
-      "@components/*": ["components/*"],
-      "@styles/*": ["styles/*"],
-      "@pages/*": ["pages/*"],
-      "@lib/*": ["lib/*"]
-    }
+      "@components": [
+        "components"
+      ],
+      "@styles": [
+        "components/styles"
+      ],
+      "@pages": [
+        "pages"
+      ],
+      "@lib": [
+        "lib"
+      ],
+      "@components/*": [
+        "components/*"
+      ],
+      "@styles/*": [
+        "styles/*"
+      ],
+      "@pages/*": [
+        "pages/*"
+      ],
+      "@lib/*": [
+        "lib/*"
+      ]
+    },
+    "incremental": true
   },
-  "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ]
 }

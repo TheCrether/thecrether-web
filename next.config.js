@@ -26,7 +26,6 @@ const nextConf = {
 
     return config;
   },
-  target: "serverless",
   postcssLoaderOptions: { parser: true, autoprefixer: true },
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
