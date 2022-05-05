@@ -34,9 +34,9 @@ export default function Recommendations() {
           would like to read.
         </p>
         <p className={flex(styles.booklist)}>
-          {ReadBooks}
-          {WantToRead}
-          {CurrentlyReading}
+          <ReadBooks></ReadBooks>
+          <WantToRead></WantToRead>
+          <CurrentlyReading></CurrentlyReading>
         </p>
       </div>
       <div className="section">
@@ -48,15 +48,24 @@ export default function Recommendations() {
           always rack up listening time for specific songs.
         </p>
         <p style={{ width: "100%" }}>
-          <div className={styles.spotify}>
-            <iframe
+          <span className={styles.spotify} suppressHydrationWarning={true}>
+            {/* <iframe
               src="https://open.spotify.com/embed/playlist/0eZah9iH4ml2GCsjL0nwzw"
               width="500"
               height="380"
               frameBorder="0"
               allow="encrypted-media"
+            ></iframe> */}
+            <iframe
+              style={{ borderRadius: "12px" }}
+              src="https://open.spotify.com/embed/playlist/5bKDu6H0fg7curRGuLf1pm?utm_source=generator"
+              width="600"
+              height="380"
+              frameBorder="0"
+              allowFullScreen={true}
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             ></iframe>
-          </div>
+          </span>
         </p>
       </div>
       <div className="section">
