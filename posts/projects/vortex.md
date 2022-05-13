@@ -11,7 +11,7 @@ This post is about a project-management tool we built as a school project in our
 
 ## Why
 
-The idea first came up when Martin ([@realSuffix][1]) and I talked about making an advanced todo list tool. We had a lot of ideas for it, but never actually realised them. Then, after entering third grade, we were confronted with finding a project that we could do as a team. This was for our project management class and because of that we had the idea to actually make something that we could use in practice and not only learn the theoritcal bits of working as a team etc.o
+The idea first came up when Martin ([@realSuffix][1]) and I talked about making an advanced todo list tool. We had a lot of ideas for it, but never actually realised them. Then, after entering third grade, we were confronted with finding a project that we could do as a team. This was for our project management class and because of that we had the idea to actually make something that we could use in practice and not only learn the theoritcal bits of working as a team etc.
 
 After agreeing to realise this, we got to work and took some ideas from the "advanced todo tool". We, of course, also wanted to have the features that actually have something to do with the topic project management.
 

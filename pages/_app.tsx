@@ -12,7 +12,6 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <Component {...pageProps} />
       <DefaultSeo
         title="TheCrether's website"
         description="@TheCrether's personal website"
@@ -32,6 +31,8 @@ export default function App({ Component, pageProps }: AppProps) {
           cardType: "summary_large_image",
         }}
       ></DefaultSeo>
+      {/* Component has to come after DefaultSeo because it would otherwise override the SEO changes made in the children */}
+      <Component {...pageProps} />
     </>
   );
 }

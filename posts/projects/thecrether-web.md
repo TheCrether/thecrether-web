@@ -23,13 +23,13 @@ Then at the beginning of this year, I decided that I want to/at least try to red
 
 For this year's website (2020), I started with a simple Figma sketch and figuring out the fonts to use. In the end I did not use the fonts that I selected because I found the fonts that were used in the [Next.js tutorial][3]. That brings me to the technologies used. This project is pretty much only Next.js with a modified config for optimizing images, using autoprefixer and using ts-paths (stuff like `@components` when importing).
 
-I first did all of the [Next.js tutorial][3] and then thought about the structure of how I wanted to build the components/pages etc. At first I only thought about three pages, Homepage, Projects and About. After some thinking, I added the contact page a bit later.
+I first did all of the [Next.js tutorial][3] and then thought about the structure of how I wanted to build the components/pages etc. At first I only thought about three pages, Homepage, Projects and About. After some thinking, I decided to add a contact page.
 
 In terms of keeping track of my ideas and issues that had to be fixed, I used Trello because I want to use it more to better organize my projects and always know if there is something to do. I just used basic labels for "TODO", "In Progress" and "Done" and also used the free Butler automation stuff.
 
 Then it just came to thinking of ideas and implementing them. This happened in the span of around 3 weeks, I think. Most of the work at the beginning was foundational stuff and not really much content. One design feature that I found pretty cool, is on the [Projects page][4], and its a so-called "marquee" effect. Credit goes to [this article][5] written by Mary Lou on tympnanus.net.
 
-One design aspect which was very important for me, was that there were not too many animations, but still some fancy animations. The last thing I want to talk about, is optimisation for the phone, which is just a must in my opinion. Websites that don't understand the importance of mobile layouts or the concept using space well (e.x sites that use only fixed values). That's why I used a lot of flexbox and relative values/flex-grow to make it as responsive as possible.
+One design aspect which was very important for me, was that there were not too many animations, but still some fancy animations. The last thing I want to talk about, is optimisation for the phone, which is a must in my opinion. Websites that don't understand the importance of mobile layouts or the concept of using space well (i.e. sites that use only fixed values). That's why I used a lot of flexbox and relative values/flex-grow to make it as responsive as possible.
 
 ## Conclusion
 

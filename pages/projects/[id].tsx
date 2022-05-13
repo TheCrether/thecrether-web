@@ -45,7 +45,6 @@ export default function ProjectPage({ projectData }: Props) {
       ></NextSeo>
       <Head>
         <link rel="stylesheet" href="/ash-min.css" />
-        <title>{title} | Project</title>
       </Head>
       <Header projectPost></Header>
       <div

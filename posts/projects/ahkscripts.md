@@ -7,7 +7,7 @@ desc: "My AutoHotkey scripts for when I'm using Windows"
 imgPath: "projects/autohotkey.png"
 ---
 
-This is my repository where my AutoHotkey scripts are.
+This is [my repository](https://github.com/TheCrether/ahkscripts) where my AutoHotkey scripts are.
 
 ## Why do I have them?
 
