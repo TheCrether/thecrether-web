@@ -58,7 +58,7 @@ export default function Recommendations() {
             ></iframe> */}
             <iframe
               style={{ borderRadius: "12px" }}
-              src="https://open.spotify.com/embed/playlist/5bKDu6H0fg7curRGuLf1pm?utm_source=generator"
+              src="https://open.spotify.com/embed/playlist/1kw0wgi3ZcUGuDle0U7voL?utm_source=generator"
               width="600"
               height="380"
               frameBorder="0"
