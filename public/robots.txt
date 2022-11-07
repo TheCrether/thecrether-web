@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://thecrether.at
+
+# Sitemaps
+Sitemap: https://thecrether.at/sitemap.xml
