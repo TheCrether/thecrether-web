@@ -1,5 +1,5 @@
 import styles from "./ring.module.scss";
-import { useState, CSSProperties } from "react";
+import { useState, CSSProperties } from "react"; //eslint-disable-line
 
 interface Props {
   className: string;

@@ -3,7 +3,7 @@ import Document, {
   Head,
   Main,
   NextScript,
-  DocumentContext,
+  DocumentContext, //eslint-disable-line
 } from "next/document";
 
 class MyDocument extends Document {

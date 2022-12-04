@@ -1,18 +1,10 @@
-import React, { useEffect, useState } from "react";
+/* eslint @next/next/no-img-element: 0 */
+import React from "react";
 import { flex } from "./utils";
 import Script from "next/script";
 
-const SSR = typeof window === "undefined";
-
 export const ReadBooks = () => {
-  const [isSSR, setIsSSR] = useState(true);
-
-  useEffect(() => {
-    // setIsSSR(false);
-  }, []);
-  return !isSSR ? (
-    <></>
-  ) : (
+  return (
     <span suppressHydrationWarning={true}>
       <style type="text/css" media="screen">
         {`.gr_custom_container_1625235322 {
@@ -268,14 +260,7 @@ export const ReadBooks = () => {
 };
 
 export const CurrentlyReading = () => {
-  const [isSSR, setIsSSR] = useState(true);
-
-  useEffect(() => {
-    // setIsSSR(false);
-  }, []);
-  return !isSSR ? (
-    <></>
-  ) : (
+  return (
     <span suppressHydrationWarning={true}>
       <style type="text/css" media="screen">
         {`.gr_custom_container_1625235374 {
@@ -407,14 +392,7 @@ export const CurrentlyReading = () => {
 };
 
 export const WantToRead = () => {
-  const [isSSR, setIsSSR] = useState(true);
-
-  useEffect(() => {
-    // setIsSSR(false);
-  }, []);
-  return !isSSR ? (
-    <></>
-  ) : (
+  return (
     <span suppressHydrationWarning={true}>
       <style type="text/css" media="screen">
         {`.gr_custom_container_1625238189 {

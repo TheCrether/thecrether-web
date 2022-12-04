@@ -24,7 +24,7 @@
   },
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
-    "no-unused-vars": "off",
+    "no-unused-vars": "warn",
     "no-empty": "warn",
     "comma-dangle": "off",
     "semi": ["error", "always"],

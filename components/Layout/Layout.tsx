@@ -1,6 +1,5 @@
 import Head from "next/head";
 import styles from "./layout.module.scss";
-import Link from "next/link";
 import { Header, Footer, Container } from "@components";
 import { flex } from "@lib/utils";
 

@@ -7,14 +7,14 @@ import {
   BackLink,
   Blank,
 } from "@components";
-import { getAllProjectIds, ProjectPost, getProjectData } from "@lib/projects";
+import { getAllProjectIds, ProjectPost, getProjectData } from "@lib/projects"; // eslint-disable-line
 import styles from "./post.module.scss";
 import { flex } from "@lib/utils";
-import Head from "next/head";
 import { NextSeo } from "next-seo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import ash from "./ash.module.scss";
 
 interface Props {
   projectData: ProjectPost;
@@ -43,12 +43,11 @@ export default function ProjectPage({ projectData }: Props) {
           handle: "@TheCrether",
         }}
       ></NextSeo>
-      <Head>
-        <link rel="stylesheet" href="/ash-min.css" />
-      </Head>
       <Header projectPost></Header>
       <div
-        className={flex(imgPath ? styles.topPart : styles.noImg)}
+        className={`${flex(imgPath ? styles.topPart : styles.noImg)} ${
+          ash.post
+        }`}
         id="topPart"
       >
         {imgPath && (
@@ -90,8 +89,7 @@ export default function ProjectPage({ projectData }: Props) {
       </div>
       <div
         dangerouslySetInnerHTML={{ __html: content }}
-        className="container"
-        id="post"
+        className={`container ${ash.post}`}
       ></div>
       <BackLink msg="Back to Projects" href="/projects"></BackLink>
     </Layout>

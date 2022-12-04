@@ -8,17 +8,10 @@ import {
   faGithub,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import { useState } from "react";
 import { NextSeo } from "next-seo";
 import Head from "next/head";
 
 export default function ContactPage() {
-  const [hovered, setHovered] = useState(-1);
-
-  function onHover(index: number) {
-    setHovered(index);
-  }
-
   return (
     <Layout
       className={styles.contact}

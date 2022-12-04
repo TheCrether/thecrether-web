@@ -1,7 +1,7 @@
 import { Layout, Intro, Image, Project, BackLink } from "@components";
 import Head from "next/head";
 import styles from "./projects.module.scss";
-import { getProjectsByCategory, ProjectPosts } from "@lib/projects";
+import { getProjectsByCategory, ProjectPosts } from "@lib/projects"; //eslint-disable-line
 import { flex, intersectionAnimator } from "@lib/utils";
 import { useEffect } from "react";
 import { NextSeo } from "next-seo";

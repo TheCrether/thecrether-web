@@ -1,4 +1,4 @@
-import NextImage from "next/image";
+import NextImage from "next/legacy/image";
 
 interface Props {
   path: string;
@@ -33,21 +33,6 @@ export function Image({
       ></NextImage>
     </div>
   );
-}
-
-export function getBackground(path: string, webp = false) {
-  if (webp) return "url(" + require(`images/bg/${path}?webp`) + ")";
-  else return "url(" + require(`images/bg/${path}`) + ")";
-}
-
-export function checkWebp(): boolean {
-  var elem = document.createElement("canvas");
-  if (elem.getContext && elem.getContext("2d")) {
-    // was able or not to get WebP representation
-    return elem.toDataURL("image/webp").indexOf("data:image/webp") == 0;
-  }
-  // very old browser like IE 8, canvas not supported
-  return false;
 }
 
 export default Image;

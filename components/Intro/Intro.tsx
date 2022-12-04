@@ -1,6 +1,6 @@
 import styles from "./intro.module.scss";
-import Image, { getBackground, checkWebp } from "components/Image";
-import { CSSProperties, useEffect, useState, useRef } from "react";
+import Image from "components/Image";
+import { CSSProperties, useEffect, useState } from "react"; // eslint-disable-line
 
 export type IntroType = "home" | "projects";
 

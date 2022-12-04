@@ -116,10 +116,10 @@ $skewDeg: -3deg;
 
 @media screen and (min-width: 1450px) {
   .info {
-    transform: rotate($skewDeg * 0.85) skewY($skewDeg * 0.85) !important;
+    transform: rotate($skewDeg * 0.8) skewY($skewDeg * 0.8) !important;
 
     & > div {
-      transform: rotate($skewDeg * 0.85) skewY(-($skewDeg * 0.85)) !important;
+      transform: rotate($skewDeg * 0.8) skewY(-($skewDeg * 0.8)) !important;
     }
   }
 }

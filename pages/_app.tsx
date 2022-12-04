@@ -1,5 +1,5 @@
 import "../styles/global.scss";
-import { AppProps } from "next/app";
+import { AppProps } from "next/app"; //eslint-disable-line
 import { useEffect } from "react";
 import smoothscroll from "smoothscroll-polyfill";
 import { DefaultSeo } from "next-seo";
