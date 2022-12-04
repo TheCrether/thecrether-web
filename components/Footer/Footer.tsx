@@ -19,8 +19,8 @@ export function Footer() {
             <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>Twitter
           </Blank>
         </div>
-        <Link href="/contact">
-          <a style={{ fontWeight: "bold" }}>Contact</a>
+        <Link href="/contact" style={{ fontWeight: "bold" }}>
+          Contact
         </Link>
       </Container>
     </footer>

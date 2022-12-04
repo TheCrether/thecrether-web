@@ -29,9 +29,7 @@ export default function Home() {
           stuff and if you would like to find out more about me, click on the
           link below!
         </p>
-        <Link href="/about">
-          <a>find out more on my About page →</a>
-        </Link>
+        <Link href="/about">find out more on my About page →</Link>
       </section>
       <section>
         <h2>Projects</h2>
@@ -40,9 +38,7 @@ export default function Home() {
           about them and I describe them more in detail. Click on the link below
           to find out more about my recent projects.
         </p>
-        <Link href="/projects">
-          <a>find out more about my Projects!</a>
-        </Link>
+        <Link href="/projects">find out more about my Projects!</Link>
       </section>
       <section>
         <h2>Contact</h2>
@@ -50,9 +46,7 @@ export default function Home() {
           You can contact me through the all normal social media portals! You
           can find them by clicking on the link below!
         </p>
-        <Link href="/contact">
-          <a>Contact me!</a>
-        </Link>
+        <Link href="/contact">Contact me!</Link>
       </section>
     </Layout>
   );

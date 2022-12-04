@@ -63,8 +63,8 @@ export function Header({ home, projectPost, scrolled }: Props) {
   }
 
   const links = routes.map((route) => (
-    <Link key={route} href={`/${route.toLowerCase()}`}>
-      <a className="flex">{route}</a>
+    <Link key={route} href={`/${route.toLowerCase()}`} className="flex">
+      {route}
     </Link>
   ));
 
@@ -72,14 +72,12 @@ export function Header({ home, projectPost, scrolled }: Props) {
     <header className={`${className} ${navOpen ? styles.clicked : ""}`}>
       <div id={styles.notScrolled} className="flex">
         {!home && (
-          <Link href="/">
-            <a className={styles.centerProfile}>
-              <Image
-                path="profile.png"
-                alt="Profile Picture"
-                className={styles.centerProfile}
-              ></Image>
-            </a>
+          <Link href="/" className={styles.centerProfile}>
+            <Image
+              path="profile.png"
+              alt="Profile Picture"
+              className={styles.centerProfile}
+            ></Image>
           </Link>
         )}
         <div id={styles.notScrolledLinks} className="flex">
@@ -88,15 +86,13 @@ export function Header({ home, projectPost, scrolled }: Props) {
       </div>
 
       <Container className="container">
-        <Link href="/">
-          <a className="flex">
-            <Image
-              path="profile.png"
-              alt="Profile Picture"
-              className={styles.leftPfp}
-            ></Image>
-            <p>TheCrether</p>
-          </a>
+        <Link href="/" className="flex">
+          <Image
+            path="profile.png"
+            alt="Profile Picture"
+            className={styles.leftPfp}
+          ></Image>
+          <p>TheCrether</p>
         </Link>
         <div id={styles.right} className="flex">
           {links}

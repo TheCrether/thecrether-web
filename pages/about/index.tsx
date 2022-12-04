@@ -70,7 +70,7 @@ export default function AboutPage() {
         </p>
         {/* </div> */}
         <Link href="/about/whatgotmeinto">
-          <a>find out more about my adventure!</a>
+          find out more about my adventure!
         </Link>
       </div>
 
@@ -102,9 +102,7 @@ export default function AboutPage() {
       <div className="section">
         <h2>Recommendations</h2>
         <Link href="/about/recommendations">
-          <a>
-            click here to find out what content creators and artists I recommend
-          </a>
+          click here to find out what content creators and artists I recommend
         </Link>
       </div>
 
