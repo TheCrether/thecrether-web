@@ -27,7 +27,7 @@ export default function AboutPage() {
       <h1>About Me</h1>
       <p>Thank you for trying to find out more about me!</p>
       <p>
-        I am a 18-year old student from Austria studying Informatics at HTBLA
+        I am a 20-year old developer (and currently paramedic) from Austria. I studied Informatics at HTBLA
         Kaindorf and below you{"'"}ll find out a lot of stuff about me
       </p>
 
@@ -40,7 +40,7 @@ export default function AboutPage() {
         I have..
         <ul className={styles.list}>
           <li>
-            programmed in various languages like TypeScript, C, Java and more!
+            programmed in various languages like TypeScript, Go, Java and more!
           </li>
           <li>a love for making my code efficient and documenting it</li>
           <li>good communication skills when working in a team</li>
