@@ -23,9 +23,9 @@ export default function Home() {
 
       <section>
         <h2>About</h2>
-        <p>I am a 18-year old student</p>
+        <p>I am a 20-year old Austrian developer (and currently paramedic)</p>
         <p>
-          I am from Austria and go to HTBLA Kaindorf. I do a lot of different
+          I went to HTBLA Kaindorf where I studied Informatics. I do a lot of different
           stuff and if you would like to find out more about me, click on the
           link below!
         </p>
