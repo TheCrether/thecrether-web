@@ -86,7 +86,7 @@ export default function Projects({ posts }: Props) {
       </nav>
       <div className={`container ${styles.projects}`}>
         {languages.map((lang) => {
-          let projects = posts[lang.name.toLowerCase()];
+          const projects = posts[lang.name.toLowerCase()];
           return (
             <div key={lang.name}>
               <h1 id={lang.name.toLowerCase()}>{lang.name}</h1>
@@ -114,7 +114,7 @@ export default function Projects({ posts }: Props) {
 }
 
 function getSpans(name: string, amount: number, margin: string) {
-  let spans = [];
+  const spans = [];
   for (let i = 0; i < amount; i++) {
     spans.push(
       <span key={`${name}-span${i}`} style={{ margin: `${margin}` }}>

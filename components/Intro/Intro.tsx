@@ -11,6 +11,8 @@ interface Props {
 }
 
 type Urls = {
+  // TODO check if eslint has a bug or if this is possible in another way
+  // eslint-disable-next-line no-unused-vars
   [type in IntroType]: string;
 };
 

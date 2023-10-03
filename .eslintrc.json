@@ -28,7 +28,8 @@
     "no-empty": "warn",
     "comma-dangle": "off",
     "semi": ["error", "always"],
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "prefer-const": "warn"
   },
   "settings": {
     "react": {
