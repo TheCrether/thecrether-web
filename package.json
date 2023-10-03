@@ -43,7 +43,6 @@
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^12.3.4",
-    "@types/date-fns": "^2.6.0",
     "@types/node": "^13.13.52",
     "@types/react": "^16.14.34",
     "@types/smoothscroll-polyfill": "^0.3.1",
