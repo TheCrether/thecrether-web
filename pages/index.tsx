@@ -23,7 +23,7 @@ export default function Home() {
 
       <section>
         <h2>About</h2>
-        <p>I am a 20-year old Austrian developer (and currently paramedic)</p>
+        <p>I am a 20-year old Smallworld Developer at GRINTEC GmbH and voluntary paramedic for the Styrian Red Cross in Graz</p>
         <p>
           I went to HTBLA Kaindorf where I studied Informatics. I do a lot of different
           stuff and if you would like to find out more about me, click on the
