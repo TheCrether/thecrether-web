@@ -1,6 +1,5 @@
 import { Layout } from "@components";
-import { CurrentlyReading, ReadBooks, WantToRead } from "@lib/book-widgets";
-import { flex, intersectionAnimator } from "@lib/utils";
+import { intersectionAnimator } from "@lib/utils";
 import { NextSeo } from "next-seo";
 import Head from "next/head";
 import { useEffect } from "react";
@@ -33,11 +32,6 @@ export default function Recommendations() {
           if you want to know more about what books I like and would books I
           would like to read.
         </p>
-        <p className={flex(styles.booklist)}>
-          <ReadBooks></ReadBooks>
-          <WantToRead></WantToRead>
-          <CurrentlyReading></CurrentlyReading>
-        </p>
       </div>
       <div className="section">
         <h2>Music</h2>
@@ -56,7 +50,7 @@ export default function Recommendations() {
               frameBorder="0"
               allow="encrypted-media"
             ></iframe> */}
-            <iframe
+            {/* <iframe
               style={{ borderRadius: "12px" }}
               src="https://open.spotify.com/embed/playlist/1kw0wgi3ZcUGuDle0U7voL?utm_source=generator"
               width="600"
@@ -64,6 +58,16 @@ export default function Recommendations() {
               frameBorder="0"
               allowFullScreen={true}
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            ></iframe> */}
+            <iframe
+              style={{ borderRadius: "12px" }}
+              src="https://open.spotify.com/embed/playlist/2nrEO6KRLqTzgePE0gqXZp?utm_source=generator"
+              width="600"
+              height="380"
+              frameBorder="0"
+              allowFullScreen={true}
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
             ></iframe>
           </span>
         </p>
@@ -97,7 +101,6 @@ export default function Recommendations() {
               </a>
             </li>
           </ul>
-          <p>... and more</p>
         </p>
       </div>
     </Layout>
