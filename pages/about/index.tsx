@@ -27,7 +27,7 @@ export default function AboutPage() {
       <h1>About Me</h1>
       <p>Thank you for trying to find out more about me!</p>
       <p>
-        I am a 20-year old Smallworld developer and voluntary paramedic from
+        I am a 21-year old Smallworld developer and voluntary paramedic from
         Austria. I studied Informatics at HTBLA Kaindorf and below you{"'"}ll
         find out a lot of stuff about me
       </p>
