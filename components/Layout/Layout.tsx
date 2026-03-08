@@ -1,11 +1,12 @@
 import Head from "next/head";
+import type { ReactElement, ReactNode } from "react";
 import styles from "./layout.module.scss";
 import { Header, Footer, Container } from "@components";
 import { flex } from "@lib/utils";
 
 interface Props {
-  children: React.ReactNode;
-  intro?: JSX.Element;
+  children: ReactNode;
+  intro?: ReactElement;
   home?: boolean;
   maxWidth?: boolean;
   customHeader?: boolean;

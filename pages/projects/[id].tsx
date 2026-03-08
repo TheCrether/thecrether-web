@@ -7,10 +7,10 @@ import {
   BackLink,
   Blank,
 } from "@components";
-import { getAllProjectIds, ProjectPost, getProjectData } from "@lib/projects"; // eslint-disable-line
+import { getAllProjectIds, ProjectPost, getProjectData } from "@lib/projects";
 import styles from "./post.module.scss";
 import { flex } from "@lib/utils";
-import { NextSeo } from "next-seo";
+import { NextSeo } from "@components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";

@@ -3,7 +3,7 @@ import styles from "./about.module.scss";
 import Link from "next/link";
 import { useEffect } from "react";
 import { intersectionAnimator } from "@lib/utils";
-import { NextSeo } from "next-seo";
+import { NextSeo } from "@components";
 import Head from "next/head";
 
 export default function AboutPage() {

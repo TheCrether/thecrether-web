@@ -16,8 +16,7 @@ if (
  * @type {import('next').NextConfig}
  */
 const nextConf = {
-  // eslint-disable-next-line
-  webpack: (config, options) => {
+  webpack: (config) => {
     if (config.resolve.plugins) {
       config.resolve.plugins.push(new TsconfigPathsPlugin());
     } else {

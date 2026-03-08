@@ -1,6 +1,6 @@
 import styles from "./intro.module.scss";
 import Image from "components/Image";
-import { CSSProperties, useEffect, useState } from "react"; // eslint-disable-line
+import { CSSProperties, useEffect, useState } from "react";
 
 export type IntroType = "home" | "projects";
 
@@ -11,8 +11,6 @@ interface Props {
 }
 
 type Urls = {
-  // TODO check if eslint has a bug or if this is possible in another way
-  // eslint-disable-next-line no-unused-vars
   [type in IntroType]: string;
 };
 

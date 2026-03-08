@@ -8,7 +8,7 @@ import {
   faGithub,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import { NextSeo } from "next-seo";
+import { NextSeo } from "@components";
 import Head from "next/head";
 
 export default function ContactPage() {
