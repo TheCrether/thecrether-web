@@ -42,3 +42,4 @@ Thumbs.db
 .now
 
 public/sitemap.xml
+public/sitemap-*.xml
