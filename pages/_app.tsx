@@ -1,8 +1,8 @@
 import "../styles/global.scss";
-import { AppProps } from "next/app"; //eslint-disable-line
+import { AppProps } from "next/app";
 import { useEffect } from "react";
 import smoothscroll from "smoothscroll-polyfill";
-import { DefaultSeo } from "next-seo";
+import { DefaultSeo } from "@components";
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {

@@ -1,6 +1,8 @@
+import type { ReactNode } from "react";
+
 interface Props {
   href: string;
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
   hover?: boolean;
   ariaLabel?: string;

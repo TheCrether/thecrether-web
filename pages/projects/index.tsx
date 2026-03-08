@@ -1,10 +1,10 @@
 import { Layout, Intro, Image, Project, BackLink } from "@components";
 import Head from "next/head";
 import styles from "./projects.module.scss";
-import { getProjectsByCategory, ProjectPosts } from "@lib/projects"; //eslint-disable-line
+import { getProjectsByCategory, ProjectPosts } from "@lib/projects";
 import { flex, intersectionAnimator } from "@lib/utils";
 import { useEffect } from "react";
-import { NextSeo } from "next-seo";
+import { NextSeo } from "@components";
 
 const languages = [
   {

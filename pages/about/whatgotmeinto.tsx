@@ -1,7 +1,7 @@
 import { Layout } from "@components";
 import { useEffect } from "react";
 import { intersectionAnimator } from "@lib/utils";
-import { NextSeo } from "next-seo";
+import { NextSeo } from "@components";
 import Head from "next/head";
 
 export default function Page() {

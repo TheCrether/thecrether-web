@@ -1,8 +1,9 @@
+import type { ReactNode } from "react";
 import styles from "./Layout/layout.module.scss";
 import { flex } from "@lib/utils";
 
 interface Props {
-  children: React.ReactNode;
+  children: ReactNode;
   id?: string;
   className?: string;
   maxWidth?: boolean;

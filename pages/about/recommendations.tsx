@@ -1,6 +1,6 @@
 import { Layout } from "@components";
 import { intersectionAnimator } from "@lib/utils";
-import { NextSeo } from "next-seo";
+import { NextSeo } from "@components";
 import Head from "next/head";
 import { useEffect } from "react";
 import styles from "./about.module.scss";
