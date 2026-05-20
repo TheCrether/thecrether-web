@@ -1,3 +1,5 @@
+@use "sass:map";
+
 @mixin fixed($top, $left, $translateX, $translateY) {
   position: fixed;
   top: $top;
@@ -115,7 +117,7 @@ $ambient-shadow-map: (
 
 // If you don't want all the classes can also just include this mixin and provide an elevation value in any class
 @mixin elevation($elevation) {
-  box-shadow: map-get($key-shadow-umbra-map, $elevation),
-    map-get($key-shadow-penumbra-map, $elevation),
-    map-get($ambient-shadow-map, $elevation);
+  box-shadow: map.get($key-shadow-umbra-map, $elevation),
+    map.get($key-shadow-penumbra-map, $elevation),
+    map.get($ambient-shadow-map, $elevation);
 }
