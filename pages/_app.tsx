@@ -1,6 +1,7 @@
 import "../styles/global.scss";
 import { AppProps } from "next/app";
 import { useEffect } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import smoothscroll from "smoothscroll-polyfill";
 import { DefaultSeo } from "@components";
 
@@ -12,6 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      <SpeedInsights />
       <DefaultSeo
         title="TheCrether's website"
         description="@TheCrether's personal website"
