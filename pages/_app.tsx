@@ -3,6 +3,7 @@ import { AppProps } from "next/app";
 import { useEffect } from "react";
 import smoothscroll from "smoothscroll-polyfill";
 import { DefaultSeo } from "@components";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -33,6 +34,7 @@ export default function App({ Component, pageProps }: AppProps) {
       ></DefaultSeo>
       {/* Component has to come after DefaultSeo because it would otherwise override the SEO changes made in the children */}
       <Component {...pageProps} />
+      <SpeedInsights />
     </>
   );
 }
