@@ -1,4 +1,5 @@
-@import "../../styles/variables";
+@use "sass:color";
+@use "../../styles/variables" as *;
 
 .contact {
   flex-direction: column;
@@ -53,7 +54,7 @@ $socialWidth: 9em;
     position: relative;
 
     &:hover {
-      background-color: transparentize($color: $bg, $amount: 0.2);
+      background-color: color.adjust($bg, $alpha: -0.2);
     }
 
     .icon {

@@ -1,5 +1,6 @@
-@import "../../styles/mixins";
-@import "../../styles/variables";
+@use "sass:color";
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
 
 .intro {
   @include centerBG;
@@ -17,10 +18,10 @@
 
     h1 {
       font-size: 2.5em;
-      background-color: transparentize($color: $bg3, $amount: 0.3);
+      background-color: color.adjust($bg3, $alpha: -0.3);
       padding: 20px 40px;
       transition: margin $duration ease;
-      text-shadow: 1px 1px 10px transparentize($color: #fff, $amount: 0.7);
+      text-shadow: 1px 1px 10px color.adjust(#fff, $alpha: -0.7);
     }
   }
 }
