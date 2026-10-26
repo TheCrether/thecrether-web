@@ -1,4 +1,4 @@
-import Head from "next/head";
+ import Head from "next/head";
 import { Layout, Intro, siteTitle } from "@components";
 import Link from "next/link";
 import styles from "./index.module.scss";
@@ -23,7 +23,7 @@ export default function Home() {
 
       <section>
         <h2>About</h2>
-        <p>I am a 21-year old Smallworld Developer at GRINTEC GmbH and voluntary paramedic for the Styrian Red Cross in Graz</p>
+        <p>I am a 23-year old Smallworld and Tooling Developer at GRINTEC GmbH and student at the Technical University of Graz studying Information and Computer Engineering</p>
         <p>
           I went to HTBLA Kaindorf where I studied Informatics. I do a lot of different
           stuff and if you would like to find out more about me, click on the
